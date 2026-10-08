@@ -12,6 +12,7 @@ import { topics } from "@/lib/topics";
 import { societies } from "@/lib/societies";
 import { techPages } from "@/lib/tech-pages";
 import { isDuplicateTopic, sitemapPriority } from "@/lib/seo-focus";
+import { hirePages } from "@/lib/hire-developers";
 
 export type SitemapGroupKey =
   | "core"
@@ -25,7 +26,8 @@ export type SitemapGroupKey =
   | "portfolio"
   | "blog"
   | "topics"
-  | "legal";
+  | "legal"
+  | "hire";
 
 export type SitemapEntry = MetadataRoute.Sitemap[number];
 
@@ -120,6 +122,16 @@ export function getSitemapGroups(now = staticUpdated): Record<SitemapGroupKey, S
         priority: 0.3,
       }),
     ),
+    hire: [
+      entry("/hire-developers", { lastModified: now, changeFrequency: "monthly", priority: 0.8 }),
+      ...hirePages.map((page) =>
+        entry(`/hire-developers/${page.slug}`, {
+          lastModified: now,
+          changeFrequency: "monthly",
+          priority: 0.7,
+        }),
+      ),
+    ],
   };
 }
 
@@ -139,6 +151,7 @@ export const sitemapIndexItems: { key: SitemapGroupKey; path: string; label: str
   { key: "blog", path: "/sitemaps/blog.xml", label: "Blog articles" },
   { key: "topics", path: "/sitemaps/topics.xml", label: "Software topic guides" },
   { key: "legal", path: "/sitemaps/legal.xml", label: "Legal pages" },
+  { key: "hire", path: "/sitemaps/hire.xml", label: "Hire developers pages" },
 ];
 
 export function publishedSitemapIndexItems() {

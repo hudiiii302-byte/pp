@@ -6,7 +6,6 @@ import { siteConfig } from "@/lib/site";
 import { CheckIcon } from "@/components/icons";
 
 const STORAGE_KEY = "wordbitx-visitor-reviews";
-const googleSearch = siteConfig.googleReviewsUrl;
 const googleWrite = siteConfig.googleWriteReviewUrl;
 
 type FormState = {
@@ -205,13 +204,22 @@ export function ReviewSlider() {
       <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-2xl">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-600">Client reviews</p>
-          <h2 className="mt-3 text-3xl font-semibold text-ink-900 sm:text-4xl">What clients write about WordbitX</h2>
+          <h2 className="mt-3 text-3xl font-semibold text-ink-900 sm:text-4xl">Real reviews only — nothing invented</h2>
           <p className="mt-4 text-sm leading-relaxed text-ink-500">
-            Written reviews from medical, real estate, e-commerce, software and demo-site work — and you can leave one
-            here too.
+            We do not buy reviews and we do not write fake testimonials. Reviews here come from people who actually
+            worked with us — on Google or through the form below. If you have, the quickest way to help other buyers
+            is to publish one.
           </p>
         </div>
         <div className="flex flex-wrap gap-3">
+          <a
+            href={googleWrite}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center rounded-xl bg-brand-500 px-4 py-2.5 text-sm font-semibold text-white hover:bg-brand-600"
+          >
+            Review us on Google
+          </a>
           <button
             type="button"
             onClick={() => {
@@ -219,18 +227,10 @@ export function ReviewSlider() {
               setStatus("idle");
               setServerMessage("");
             }}
-            className="inline-flex items-center rounded-xl bg-brand-500 px-4 py-2.5 text-sm font-semibold text-white hover:bg-brand-600"
+            className="inline-flex items-center rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-ink-800 hover:border-brand-300"
           >
             {writing ? "Close form" : "Write a review"}
           </button>
-          <a
-            href={googleSearch}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-ink-800 hover:border-brand-300"
-          >
-            Google listing
-          </a>
         </div>
       </div>
 
@@ -381,9 +381,59 @@ export function ReviewSlider() {
         onPointerCancel={onPointerCancel}
       >
         {visible.length === 0 ? (
-          <p className="rounded-2xl border border-dashed border-slate-200 bg-white px-5 py-10 text-center text-sm text-ink-500">
-            No reviews in this category yet. Be the first to write one.
-          </p>
+          <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+            <h3 className="text-lg font-semibold text-ink-900">No reviews published yet — here is what you can verify today</h3>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink-500">
+              We would rather show you nothing than show you invented praise. The moment a client publishes a review
+              on Google or through the form above, it appears in this slider. Until then, everything below is real and
+              clickable:
+            </p>
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              <a
+                href="https://propertiespak.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded-xl border border-slate-200 bg-slate-50 p-4 transition-colors hover:border-brand-300"
+              >
+                <p className="text-sm font-semibold text-ink-900">Properties Pak — a live product we operate</p>
+                <p className="mt-1.5 text-sm leading-relaxed text-ink-500">
+                  A real Pakistan property portal: live listings, map-led search, dealer enquiries. Open it and poke
+                  around — it is not a screenshot.
+                </p>
+                <span className="mt-2 inline-block text-xs font-semibold text-brand-600 group-hover:underline">
+                  Visit propertiespak.com →
+                </span>
+              </a>
+              <a
+                href="https://clutch.co/profile/wordbitx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded-xl border border-slate-200 bg-slate-50 p-4 transition-colors hover:border-brand-300"
+              >
+                <p className="text-sm font-semibold text-ink-900">Our Clutch profile</p>
+                <p className="mt-1.5 text-sm leading-relaxed text-ink-500">
+                  Verified company details on a third-party platform — including the fact that we currently have zero
+                  reviews. We would rather that be true than inflated.
+                </p>
+                <span className="mt-2 inline-block text-xs font-semibold text-brand-600 group-hover:underline">
+                  View profile →
+                </span>
+              </a>
+              <a
+                href="/about"
+                className="group rounded-xl border border-slate-200 bg-slate-50 p-4 transition-colors hover:border-brand-300"
+              >
+                <p className="text-sm font-semibold text-ink-900">A registered company</p>
+                <p className="mt-1.5 text-sm leading-relaxed text-ink-500">
+                  SECP-registered private limited company and FBR-registered, founded in 2021, based in Lahore. The
+                  registration details are on the About page.
+                </p>
+                <span className="mt-2 inline-block text-xs font-semibold text-brand-600 group-hover:underline">
+                  See the details →
+                </span>
+              </a>
+            </div>
+          </div>
         ) : (
           <div key={index} className="review-slide grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {visible.map((review, slot) => (

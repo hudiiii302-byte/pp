@@ -47,7 +47,7 @@ import type { Faq } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Software Company for Worldwide Businesses | WordbitX",
+    absolute: "Software Development Company in Pakistan | WordbitX",
   },
   description: siteConfig.seoDescription,
   alternates: { canonical: "/" },
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     url: "/",
-    title: "Software Development Company for Businesses Worldwide | WordbitX",
+    title: "Software Development Company in Pakistan | WordbitX",
     description: siteConfig.seoDescription,
   },
 };

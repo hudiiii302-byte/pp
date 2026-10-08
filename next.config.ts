@@ -84,7 +84,9 @@ const nextConfig: NextConfig = {
       { source: "/software-development-cost", destination: "/pricing", permanent: true },
       { source: "/website-cost", destination: "/pricing", permanent: true },
       { source: "/app-development-cost", destination: "/pricing", permanent: true },
-      { source: "/hire-developers", destination: "/careers", permanent: true },
+      // Note: /hire-developers is now a real page cluster (17 pages) and is
+      // no longer redirected to /careers. /careers keeps the "What you can hire"
+      // postings and links out to the cluster.
       { source: "/hire-software-developers", destination: "/pricing", permanent: true },
       { source: "/favicon.ico", destination: "/icon.svg", permanent: false },
     ];

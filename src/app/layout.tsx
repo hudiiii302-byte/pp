@@ -12,7 +12,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Software Development Company for Businesses Worldwide",
+    default: "Software Development Company in Pakistan",
     template: "%s | WordbitX",
   },
   description: siteConfig.seoDescription,
@@ -41,14 +41,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "Software Development Company for Businesses Worldwide | WordbitX",
+    title: "Software Development Company in Pakistan | WordbitX",
     description: siteConfig.seoDescription,
   },
   twitter: {
     card: "summary_large_image",
     site: siteConfig.twitterHandle,
     creator: siteConfig.twitterHandle,
-    title: "WordbitX | Software Development Company",
+    title: "WordbitX | Software Development Company in Pakistan",
     description: siteConfig.seoDescription,
   },
   robots: {

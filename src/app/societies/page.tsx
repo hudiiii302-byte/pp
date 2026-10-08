@@ -8,7 +8,7 @@ import { societies } from "@/lib/societies";
 import { propertiesPak, showcaseRel } from "@/lib/demos";
 
 export const metadata: Metadata = {
-  title: "Housing Society Portal Software | DHA, Bahria & Smart Cities",
+  title: "Society & Housing Portal Software | DHA, Bahria",
   description:
     "Property portal and management software for DHA, Bahria, Capital Smart City and other Pakistani societies — we build the software, not brokerage.",
   alternates: { canonical: "/societies" },
