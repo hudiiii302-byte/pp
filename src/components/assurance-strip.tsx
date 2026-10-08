@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ShieldIcon, ClockIcon, LayersIcon, GlobeIcon, CheckIcon } from "@/components/icons";
-import { TrustBadges } from "@/components/trust-badges";
 
 /**
  * Premium assurance band directly under the hero.
@@ -39,11 +38,7 @@ export function AssuranceStrip() {
         className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-500/50 to-transparent"
       />
       <div className="container-page">
-        {/* CERTIFICATIONS — SECP/FBR registration badges, placed under the
-            hero the way Lahore peers (Rextech) surface theirs. */}
-        <TrustBadges />
-
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">
             How we work — in writing, every time
           </p>

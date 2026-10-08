@@ -5,6 +5,7 @@ import { Section, SectionHeading, ButtonLink, Eyebrow } from "@/components/ui";
 import { ServiceCard, PostCard, ProjectCard } from "@/components/cards";
 import { DemosSection } from "@/components/demos-section";
 import { AssuranceStrip } from "@/components/assurance-strip";
+import { CertificationsBand } from "@/components/certifications-band";
 import { IndustryStrip } from "@/components/industry-strip";
 import { ReviewSlider } from "@/components/review-slider";
 import { ServiceIndex, ServiceNavFootnote } from "@/components/service-nav";
@@ -340,8 +341,9 @@ export default function HomePage() {
           of the page for the cost of one line of text. */}
       <IndustryStrip />
 
-      {/* ASSURANCE STRIP — premium trust band directly under the hero */}
-      <AssuranceStrip />
+      {/* CERTIFICATIONS — dark band under the hero, the way Lahore peers
+          (Rextech) surface their SECP/FBR registration marks. */}
+      <CertificationsBand />
 
       {/* ================= WHY US =================
           Sits above the services grid at the owner's request: the team
@@ -876,6 +878,11 @@ export default function HomePage() {
           ))}
         </div>
       </Section>
+
+      {/* ASSURANCE STRIP — the "how we work" commitments, kept on the page
+          but moved down: the certifications band gets the prime slot under
+          the hero (owner request), so this lands just before the FAQ. */}
+      <AssuranceStrip />
 
       {/* FAQ */}
       <Section tone="muted">
