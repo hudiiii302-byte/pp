@@ -1,69 +1,132 @@
 /**
  * Dark "Certifications" band, modelled on the way Lahore peers (Rextech)
- * display their marks under the hero — now with the OFFICIAL logos on white
- * tiles (the earlier hand-drawn SVG wordmarks read as amateur, so they were
- * replaced per owner feedback on 2026-10-08).
+ * display their marks under the hero: monochrome white wordmarks on a dark
+ * background, scrolling horizontally. No claims beyond what is actually held.
  *
- * Tiles in the loop (official artwork, processed into /public/logos):
- *  - SECP: official emblem of the Securities and Exchange Commission of
- *    Pakistan — a registration the company actually holds.
- *  - FBR: official Federal Board of Revenue logo — registration held.
- *  - Odoo: official wordmark — a platform mark, added at the owner's
- *    explicit request (technology we build on, not a government body).
+ * Marks in the loop:
+ *  - SECP + FBR: the two registrations Wordbit X Technology SMC – Pvt. Ltd.
+ *    holds (the only authority marks allowed).
+ *  - Odoo: a platform mark — added at the owner's explicit request (2026-10-08).
+ *    It signals a technology we build on, not a government registration.
+ *  - Pvt. Ltd. + Est. 2021: factual statements about the company, not
+ *    third-party endorsements.
  *
  * PRA / PSEB / Lahore Chamber marks must NOT be added until those
  * registrations are actually complete (see BACKLINK-PLAYBOOK-2026-10-08.md
- * Phase 1) — add them as further white tiles in the same loop when ready.
+ * Phase 1).
  *
- * Motion: seamless CSS marquee (keyframes `cert-marquee` in globals.css) —
- * two identical sets, animated to -50%. Pauses on hover; under
- * prefers-reduced-motion it falls back to a static, centre-wrapped row.
- * Responsive: tiles scale from h-16 on phones to h-20 on larger screens.
+ * Motion: the logo row is a seamless CSS marquee (keyframes `cert-marquee`
+ * in globals.css) — two identical sets, animated to -50%. It pauses on
+ * hover, and under prefers-reduced-motion it falls back to a static,
+ * centre-wrapped row (motion-reduce: classes below). Fully responsive:
+ * logos scale down on phones and the loop keeps working at any width.
  */
 
-const TILES = [
-  {
-    src: "/logos/secp.jpg",
-    alt: "SECP — Securities and Exchange Commission of Pakistan (registered)",
-    width: 664,
-    height: 694,
-  },
-  {
-    src: "/logos/fbr.png",
-    alt: "FBR — Federal Board of Revenue, Pakistan (registered)",
-    width: 465,
-    height: 218,
-  },
-  {
-    src: "/logos/odoo.png",
-    alt: "Odoo — ERP and CRM platform",
-    width: 621,
-    height: 196,
-  },
-] as const;
+const LOGO_CLASS = "h-16 w-auto sm:h-24";
+
+function SecpMark() {
+  return (
+    <svg viewBox="0 0 150 64" className={LOGO_CLASS} aria-label="SECP — Securities and Exchange Commission of Pakistan" role="img">
+      <path
+        d="M75 4l3.6 8.6 9.3.8-7 6 2.1 9.1-8-4.9-8 4.9 2.1-9.1-7-6 9.3-.8z"
+        fill="currentColor"
+      />
+      <text x="75" y="44" textAnchor="middle" fill="currentColor" fontFamily="Georgia, 'Times New Roman', serif" fontSize="24" fontWeight="bold" letterSpacing="2">
+        SECP
+      </text>
+      <text x="75" y="55" textAnchor="middle" fill="currentColor" fontFamily="Arial, Helvetica, sans-serif" fontSize="7" letterSpacing="1.3" opacity="0.85">
+        SECURITIES &amp; EXCHANGE
+      </text>
+      <text x="75" y="62.5" textAnchor="middle" fill="currentColor" fontFamily="Arial, Helvetica, sans-serif" fontSize="7" letterSpacing="1.3" opacity="0.85">
+        COMMISSION OF PAKISTAN
+      </text>
+    </svg>
+  );
+}
+
+function FbrMark() {
+  return (
+    <svg viewBox="0 0 150 64" className={LOGO_CLASS} aria-label="FBR — Federal Board of Revenue, Pakistan" role="img">
+      <path d="M8 26c22-16 62-24 104-20 12 1 24 4 30 8" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+      <path d="M8 33c22-16 62-24 104-20 12 1 24 4 30 8" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
+      <text x="75" y="42" textAnchor="middle" fill="currentColor" fontFamily="Georgia, 'Times New Roman', serif" fontSize="30" fontWeight="bold" letterSpacing="1">
+        FBR
+      </text>
+      <text x="75" y="56" textAnchor="middle" fill="currentColor" fontFamily="Arial, Helvetica, sans-serif" fontSize="9" letterSpacing="4" opacity="0.85">
+        PAKISTAN
+      </text>
+    </svg>
+  );
+}
+
+function OdooMark() {
+  return (
+    <svg viewBox="0 0 150 64" className={LOGO_CLASS} aria-label="Odoo — ERP and CRM platform" role="img">
+      <text x="75" y="38" textAnchor="middle" fill="currentColor" fontFamily="'Trebuchet MS', 'Segoe UI', Arial, sans-serif" fontSize="30" fontWeight="bold" letterSpacing="2">
+        odoo
+      </text>
+      <text x="75" y="55" textAnchor="middle" fill="currentColor" fontFamily="Arial, Helvetica, sans-serif" fontSize="7.2" letterSpacing="1.6" opacity="0.85">
+        ERP · CRM · AUTOMATION
+      </text>
+    </svg>
+  );
+}
+
+function PvtLtdMark() {
+  return (
+    <svg viewBox="0 0 150 64" className={LOGO_CLASS} aria-label="Registered private limited company" role="img">
+      <path
+        d="M60 6h30l6 10H54zM54 16h42v6H54zM58 24h6v14h-6zM72 24h6v14h-6zM86 24h6v14h-6zM52 40h46v4H52z"
+        fill="currentColor"
+      />
+      <text x="75" y="55" textAnchor="middle" fill="currentColor" fontFamily="Georgia, 'Times New Roman', serif" fontSize="16" fontWeight="bold" letterSpacing="2">
+        PVT. LTD.
+      </text>
+      <text x="75" y="62.5" textAnchor="middle" fill="currentColor" fontFamily="Arial, Helvetica, sans-serif" fontSize="6.8" letterSpacing="1.4" opacity="0.85">
+        REGISTERED COMPANY
+      </text>
+    </svg>
+  );
+}
+
+function EstMark() {
+  return (
+    <svg viewBox="0 0 150 64" className={LOGO_CLASS} aria-label="Established 2021 in Lahore, Pakistan" role="img">
+      <circle cx="75" cy="16" r="10" fill="none" stroke="currentColor" strokeWidth="2" />
+      <path d="M75 8v8l5.5 3.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <text x="75" y="47" textAnchor="middle" fill="currentColor" fontFamily="Georgia, 'Times New Roman', serif" fontSize="19" fontWeight="bold" letterSpacing="2">
+        EST. 2021
+      </text>
+      <text x="75" y="60" textAnchor="middle" fill="currentColor" fontFamily="Arial, Helvetica, sans-serif" fontSize="7.6" letterSpacing="1.8" opacity="0.85">
+        LAHORE · PAKISTAN
+      </text>
+    </svg>
+  );
+}
 
 function LogoSet({ duplicate = false }: { duplicate?: boolean }) {
   return (
     <div
       aria-hidden={duplicate || undefined}
-      className={`flex shrink-0 items-center gap-x-6 pr-6 sm:gap-x-10 sm:pr-10 ${
+      className={`flex shrink-0 items-center gap-x-12 pr-12 sm:gap-x-20 sm:pr-20 ${
         duplicate ? "motion-reduce:hidden" : ""
       }`}
     >
-      {TILES.map((t) => (
-        <span
-          key={t.src}
-          className="flex h-16 shrink-0 items-center rounded-2xl bg-white px-5 shadow-[0_6px_24px_rgba(0,0,0,0.35)] sm:h-20 sm:px-7"
-        >
-          <img
-            src={t.src}
-            alt={t.alt}
-            width={t.width}
-            height={t.height}
-            className="h-full w-auto object-contain"
-          />
-        </span>
-      ))}
+      <span className="opacity-90 transition-opacity hover:opacity-100">
+        <SecpMark />
+      </span>
+      <span className="opacity-90 transition-opacity hover:opacity-100">
+        <FbrMark />
+      </span>
+      <span className="opacity-90 transition-opacity hover:opacity-100">
+        <OdooMark />
+      </span>
+      <span className="opacity-80 transition-opacity hover:opacity-100">
+        <PvtLtdMark />
+      </span>
+      <span className="opacity-80 transition-opacity hover:opacity-100">
+        <EstMark />
+      </span>
     </div>
   );
 }
@@ -92,7 +155,7 @@ export function CertificationsBand() {
           className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-navy-950 to-transparent sm:w-24"
         />
         <div className="overflow-hidden">
-          <div className="flex w-max motion-reduce:flex-wrap motion-reduce:w-full motion-reduce:justify-center motion-safe:animate-[cert-marquee_18s_linear_infinite] motion-safe:group-hover:[animation-play-state:paused]">
+          <div className="flex w-max motion-reduce:flex-wrap motion-reduce:w-full motion-reduce:justify-center motion-safe:animate-[cert-marquee_26s_linear_infinite] motion-safe:group-hover:[animation-play-state:paused]">
             <LogoSet />
             <LogoSet duplicate />
           </div>
