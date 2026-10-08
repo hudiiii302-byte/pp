@@ -1,0 +1,1042 @@
+@import "tailwindcss";
+
+@theme {
+  /* NAVY — the dark surface scale. 950-800 are page and card backgrounds and
+     are deliberately unchanged; the owner asked for the dark scheme to stay.
+     700 is the logo lockup navy, sampled from public/brand/wordbitx-lockup.png,
+     so the mid-tone that actually reads as a colour is the brand's own. */
+  --color-navy-950: #030814;
+  --color-navy-900: #050d21;
+  --color-navy-850: #071531;
+  --color-navy-800: #0a1c3f;
+  --color-navy-700: #052767;
+  --color-navy-600: #1a3a68;
+  --color-navy-500: #2a4f83;
+
+  /* BRAND GREEN — anchored on #1ca830, the exact green sampled from
+     public/brand/wordbitx-lockup.png. The site previously ran on an emerald
+     (#0eb473) that matched neither logo file, so the logo and the buttons read
+     as two different companies. Lighter tints drop saturation so the family
+     stays the logo's leaf green rather than turning neon.
+
+     Contrast against the old ramp (white text, except where noted):
+       400 2.36:1 (was 2.07)   500 3.14:1 (was 2.69)
+       600 4.88:1 (was 3.98 — now clears AA for body text on white)
+       700 7.06:1 (was 5.81)   200 on navy-900 12.32:1 (was 13.76) */
+  --color-brand-50: #eef9ef;
+  --color-brand-100: #cbeed0;
+  --color-brand-200: #9fdda8;
+  --color-brand-300: #61d171;
+  --color-brand-400: #2ec243;
+  --color-brand-500: #1ca830;
+  --color-brand-600: #148323;
+  --color-brand-700: #0e671b;
+  --color-brand-800: #0b5015;
+
+  --color-ink-900: #0b1524;
+  --color-ink-700: #2c3a4e;
+  --color-ink-500: #5a6a80;
+  --color-ink-300: #93a1b3;
+
+  /* These four were used across ~35 call sites but never defined, so Tailwind
+     emitted no rule at all and the elements silently fell back to whatever
+     colour they inherited. Worst affected were the review slider (7 uses) and
+     every `hover:text-brand-800` link, whose hover state simply did nothing.
+     Values interpolate the existing steps rather than inventing a new ramp. */
+  --color-ink-400: #768599;
+  --color-ink-600: #435267;
+  --color-ink-800: #1b2739;
+
+  --font-sans: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif;
+
+  --shadow-soft: 0 20px 45px -25px rgba(6, 20, 45, 0.35);
+  --shadow-card: 0 24px 60px -30px rgba(5, 13, 33, 0.45);
+}
+
+@layer base {
+  * {
+    border-color: rgb(226 232 240 / 1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: clip;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: var(--color-ink-900);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.022em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-brand-400);
+    color: #04101f;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 80rem;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-page {
+    padding-inline: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-page {
+    padding-inline: 2rem;
+  }
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(148, 175, 214, 0.09) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 175, 214, 0.09) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.site-cursor-dot,
+.site-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+  pointer-events: none;
+  border-radius: 9999px;
+  will-change: transform;
+}
+
+.site-cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #1ca830;
+}
+
+.site-cursor-ring {
+  width: 34px;
+  height: 34px;
+  border: 1.6px solid rgba(28, 168, 48, 0.5);
+  transition:
+    width 0.22s ease,
+    height 0.22s ease,
+    background 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.site-cursor-ring.is-hot {
+  width: 62px;
+  height: 62px;
+  background: rgba(28, 168, 48, 0.08);
+  border-color: transparent;
+}
+
+body.hide-site-cursor .site-cursor-dot,
+body.hide-site-cursor .site-cursor-ring {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.services-mega-scroll {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
+.services-mega-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.services-mega-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.services-mega-scroll::-webkit-scrollbar-thumb {
+  background: rgb(46 194 67 / 0.38);
+  border-radius: 999px;
+}
+
+.services-mega-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgb(46 194 67 / 0.55);
+}
+
+.pillar-card {
+  background-color: #050d21;
+  animation: pillar-float 9s ease-in-out infinite;
+  transition:
+    transform 1.15s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 1.15s ease,
+    border-color 1.15s ease;
+}
+
+.pillar-card::after {
+  content: "";
+  position: absolute;
+  inset: -30% -70%;
+  background: linear-gradient(105deg, transparent 42%, rgba(255, 255, 255, 0.16) 50%, transparent 58%);
+  transform: translateX(-85%) rotate(8deg);
+  pointer-events: none;
+}
+
+.pillar-card:hover {
+  animation-play-state: paused;
+  transform: translateY(-5px);
+}
+
+.pillar-card:hover::after {
+  animation: sheen-sweep 1.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes pillar-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes sheen-sweep {
+  from {
+    transform: translateX(-85%) rotate(8deg);
+  }
+  to {
+    transform: translateX(85%) rotate(8deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pillar-card,
+  .pillar-card:hover,
+  .pillar-card:hover::after {
+    animation: none;
+    transform: none;
+  }
+}
+
+@keyframes tile-in {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-tile-in {
+  animation: tile-in 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.text-gradient-brand {
+  background: linear-gradient(100deg, #61d171 0%, #2ec243 45%, #6fb8ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glow-brand {
+  box-shadow: 0 0 0 1px rgba(46, 194, 67, 0.25), 0 18px 60px -22px rgba(28, 168, 48, 0.55);
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise {
+  animation: rise-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-reveal {
+  animation: reveal-up 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes assist-in {
+  from {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translate3d(12px, 28px, 0) scale(0.88);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.animate-assist-in {
+  animation: assist-in 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes assist-msg {
+  from {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-assist-msg {
+  animation: assist-msg 0.42s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes assist-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(28, 168, 48, 0.45),
+      0 10px 24px -12px rgba(28, 168, 48, 0.7);
+  }
+  50% {
+    box-shadow:
+      0 0 0 4px rgba(28, 168, 48, 0.2),
+      0 12px 28px -10px rgba(28, 168, 48, 0.85);
+  }
+}
+
+.animate-assist-glow {
+  animation: assist-glow 2.4s ease-in-out infinite;
+}
+
+.assist-robot-antenna {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  animation: assist-antenna 1.6s ease-in-out infinite;
+}
+
+.assist-robot-eyes {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: assist-blink 3.4s ease-in-out infinite;
+}
+
+@keyframes assist-antenna {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.4px);
+  }
+}
+
+@keyframes assist-blink {
+  0%,
+  88%,
+  100% {
+    transform: scaleY(1);
+  }
+  92% {
+    transform: scaleY(0.12);
+  }
+}
+
+.assist-orb {
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  border: 1px solid rgba(49, 196, 116, 0.55);
+  animation: assist-orb 3s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes assist-orb {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.06);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.7;
+  }
+}
+
+@keyframes assist-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.assist-header-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #1ca830, #7ee0b5, #6fb8ff, #1ca830, transparent);
+  background-size: 200% 100%;
+  animation: assist-shimmer 2.8s linear infinite;
+}
+
+@keyframes soft-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(46, 194, 67, 0.04);
+  }
+  50% {
+    box-shadow: 0 0 0 9px rgba(46, 194, 67, 0.08);
+  }
+}
+
+.animate-soft-pulse {
+  animation: soft-pulse 3.2s ease-in-out infinite;
+}
+
+@keyframes sheen {
+  from {
+    transform: translateX(-120%);
+  }
+  to {
+    transform: translateX(120%);
+  }
+}
+
+@keyframes demo-scroll {
+  0%,
+  12% {
+    transform: translateY(0);
+  }
+  48%,
+  60% {
+    transform: translateY(-42%);
+  }
+  88%,
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.demo-laptop-scroll {
+  animation: demo-scroll 18s cubic-bezier(0.45, 0, 0.25, 1) infinite;
+}
+
+.demo-laptop-scroll:hover,
+.demo-laptop-scroll:has(iframe:hover) {
+  animation-play-state: paused;
+}
+
+.hover-sheen {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 1.15s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 1.15s ease,
+    border-color 1.15s ease,
+    background-color 1.15s ease;
+}
+
+.hover-sheen:hover {
+  transform: translateY(-5px);
+}
+
+.hover-sheen::after {
+  content: "";
+  position: absolute;
+  inset: -30% -70%;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 42%, rgba(28, 168, 48, 0.16) 50%, transparent 58%);
+  transform: translateX(-90%) rotate(8deg);
+}
+
+.hover-sheen:hover::after {
+  animation: sheen-sweep 1.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hover-sheen-sky::after {
+  background: linear-gradient(105deg, transparent 42%, rgba(56, 189, 248, 0.18) 50%, transparent 58%);
+}
+
+.hover-sheen-dark::after {
+  background: linear-gradient(105deg, transparent 42%, rgba(255, 255, 255, 0.14) 50%, transparent 58%);
+}
+
+.image-sheen {
+  position: relative;
+  isolation: isolate;
+}
+
+.image-sheen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 32%;
+  pointer-events: none;
+  will-change: transform;
+  background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.13), transparent);
+  transform: translateX(-120%);
+  /* Was `infinite`: an always-running compositor animation on every image kept
+     the main thread and GPU busy for the whole session. Three passes give the
+     same premium feel, then it settles and costs nothing. */
+  animation: sheen 7s ease-in-out 3;
+}
+
+/* Skip rendering work for images that are not on screen. */
+.image-sheen {
+  contain: paint;
+}
+
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-float {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+@keyframes marquee-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee-x 38s linear infinite;
+}
+
+/* Hovering a marquee row freezes it so a name can actually be read. Pointer
+   events still pass through — the chips are not interactive. */
+.marquee-row:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+/* Replayed on every auto-advance of the review slider (the grid is re-keyed
+   on index), so the change reads as movement rather than a pop. */
+@keyframes review-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.review-slide {
+  animation: review-slide-in 420ms ease-out;
+}
+
+@keyframes trust-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.trust-orbit {
+  animation: trust-spin 32s linear infinite;
+}
+
+.trust-orbit-item {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 84%;
+  margin: 0;
+  transform: translate(-50%, -50%) rotate(var(--orbit-angle));
+}
+
+.trust-orbit-face {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  animation: trust-spin 32s linear infinite reverse;
+}
+
+/**
+ * The orbit icons are links, and a moving click target is genuinely hard to
+ * hit. Hovering or tabbing anywhere into the ring freezes both the ring and
+ * the counter-rotation, so the icon stays put long enough to be clicked.
+ */
+.trust-orbit-shell:hover .trust-orbit,
+.trust-orbit-shell:hover .trust-orbit-face,
+.trust-orbit-shell:focus-within .trust-orbit,
+.trust-orbit-shell:focus-within .trust-orbit-face {
+  animation-play-state: paused;
+}
+
+/* ------------------------------------------------------------------
+ * Service hive
+ * ------------------------------------------------------------------ */
+
+/**
+ * A pointy-top hexagon. Written here rather than as a Tailwind arbitrary
+ * value because the same polygon is applied to three stacked layers (rim,
+ * fill, content mask) and one definition keeps them identical.
+ */
+.hex-clip {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/**
+ * Rows overlap by a quarter of a cell, so a hovered tile would otherwise be
+ * painted under the row below it. Lifting it on hover/focus keeps the lit
+ * edge complete.
+ */
+.hex-cell {
+  z-index: 0;
+}
+
+.hex-cell:hover,
+.hex-cell:focus-visible,
+.hex-cell:focus-within {
+  z-index: 1;
+}
+
+.hire-posting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-inline: -0.7rem;
+  padding: 0.85rem 0.7rem;
+  border-bottom: 1px solid rgb(226 232 240);
+  color: var(--color-ink-700);
+  transition:
+    background-color 0.22s ease,
+    color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.hire-posting-job {
+  padding-block: 1.05rem;
+}
+
+.hire-posting:hover,
+.hire-posting:focus-visible {
+  background: var(--color-brand-50);
+  color: var(--color-brand-700);
+  box-shadow: inset 3px 0 0 var(--color-brand-500);
+}
+
+.hire-posting:hover .text-ink-500,
+.hire-posting:focus-visible .text-ink-500 {
+  color: var(--color-brand-600);
+}
+
+.hire-posting-arrow {
+  color: var(--color-ink-300);
+  transition:
+    transform 0.22s ease,
+    color 0.22s ease;
+}
+
+.hire-posting:hover .hire-posting-arrow,
+.hire-posting:focus-visible .hire-posting-arrow {
+  color: var(--color-brand-600);
+  transform: translateX(5px);
+}
+
+.hiring-live-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgb(46 194 67 / 0.55);
+  background: transparent;
+  padding: 0.28rem 0.72rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #fff;
+  box-shadow: 0 0 0 0 rgb(46 194 67 / 0.4);
+  animation: hiring-live-ring 1.85s ease-out infinite;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.hiring-live-chip:hover {
+  border-color: rgb(97 209 113 / 0.9);
+  background: rgb(46 194 67 / 0.1);
+  color: #d9ffe9;
+}
+
+@keyframes hiring-live-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgb(46 194 67 / 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgb(46 194 67 / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgb(46 194 67 / 0);
+  }
+}
+
+.marquee-mask {
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise,
+  .animate-reveal,
+  .animate-float,
+  .animate-marquee,
+  .animate-soft-pulse,
+  .animate-tile-in,
+  .trust-orbit,
+  .trust-orbit-face,
+  .review-slide,
+  .hiring-live-chip,
+  .hire-posting-arrow,
+  .image-sheen::after,
+  .hover-sheen::after,
+  .hover-sheen:hover::after {
+    animation: none !important;
+  }
+  .hover-sheen:hover,
+  .pillar-card:hover {
+    transform: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.prose-article :where(a) {
+  color: var(--color-brand-600);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
+.prose-article :where(a):hover {
+  color: var(--color-brand-700);
+}
+
+
+/* ------------------------------------------------------------------ *
+ * Performance utilities
+ * ------------------------------------------------------------------ */
+
+/**
+ * Long marketing pages render dozens of sections the visitor may never scroll
+ * to. `content-visibility: auto` lets the browser skip layout, paint and style
+ * work for off-screen sections, which cuts first render time and Total
+ * Blocking Time noticeably on mobile. `contain-intrinsic-size` keeps the
+ * scrollbar stable so nothing jumps.
+ */
+.defer-paint {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
+}
+
+@media print {
+  .defer-paint {
+    content-visibility: visible;
+  }
+}
+
+/* Stop infinite decorative animations when the element is off screen. */
+@media (prefers-reduced-motion: no-preference) {
+  .trust-orbit,
+  .animate-marquee {
+    will-change: transform;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Showcase staging — see src/components/showcase-stage.tsx
+ *
+ * The device frame is tilted back a few degrees and settles upright on
+ * hover. Three degrees is deliberately small: enough to read as a real
+ * object standing in a space, not enough to distort the screenshot or
+ * make the text inside it unreadable, which is what kills most
+ * "3D mockup" treatments.
+ * ------------------------------------------------------------------ */
+.showcase-stage {
+  perspective: 1500px;
+  perspective-origin: 50% 80%;
+}
+
+.showcase-device {
+  transform: rotateX(3.2deg) scale(0.995);
+  transform-origin: 50% 100%;
+  transition:
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.group:hover .showcase-device,
+.group:focus-within .showcase-device {
+  transform: rotateX(0deg) translateY(-5px) scale(1.012);
+}
+
+/* A whisper of grain over the stage. Flat digital gradients are the single
+   clearest "rendered, not photographed" tell; 3% noise removes it. Inlined
+   as a data URI so it costs no request. */
+.showcase-grain {
+  opacity: 0.16;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .showcase-device,
+  .group:hover .showcase-device,
+  .group:focus-within .showcase-device {
+    transform: none;
+    transition: none;
+  }
+}
+
+
+/* ------------------------------------------------------------------ *
+ * Header call-to-action — always-visible attention animation
+ * ------------------------------------------------------------------ */
+
+/**
+ * A light sweep plus a slow halo ring, so the primary CTA keeps drawing the
+ * eye without the visitor having to hover. Both layers animate only
+ * `transform` and `opacity`, so they stay on the compositor and cost
+ * essentially nothing on the main thread.
+ */
+.cta-live {
+  position: relative;
+  overflow: hidden;
+}
+
+/**
+ * Premium surface for the primary CTA: a shallow vertical gradient plus a 1px
+ * inner highlight along the top edge and a 1px shade along the bottom, so the
+ * button reads as a lit physical surface instead of a flat fill.
+ *
+ * The ramp is a deep emerald rather than brand-400/500 because the label is
+ * white. #188f29 is the lightest shade on the brand hue that still gives white
+ * text 4.5:1, so the gradient clears WCAG AA across the whole button —
+ * 4.55:1 at the top, 5.81:1 at the bottom — while staying at least 3.4:1
+ * against the navy header so the button does not sink into the bar.
+ *
+ * Hover deliberately does NOT lighten the fill; that would drop the label back
+ * under AA. It brightens the inner highlight, adds a thin brand-400 rim and
+ * deepens the outer glow instead.
+ */
+.cta-surface {
+  background-image: linear-gradient(180deg, #188f29 0%, var(--color-brand-700) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    inset 0 -1px 0 rgba(3, 8, 20, 0.35),
+    0 16px 38px -18px rgba(28, 168, 48, 0.95);
+}
+
+.cta-surface:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -1px 0 rgba(3, 8, 20, 0.3),
+    0 0 0 1px rgba(46, 194, 67, 0.45),
+    0 22px 48px -18px rgba(28, 168, 48, 1);
+}
+
+.cta-live > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* moving light sweep */
+.cta-live::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 55%;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    var(--cta-sweep-color, rgba(255, 255, 255, 0.45)) 50%,
+    transparent 100%
+  );
+  transform: translateX(-180%) skewX(-12deg);
+  animation: cta-sweep 3.4s cubic-bezier(0.5, 0, 0.3, 1) infinite;
+}
+
+@keyframes cta-sweep {
+  0% {
+    transform: translateX(-180%) skewX(-12deg);
+  }
+  55%,
+  100% {
+    transform: translateX(320%) skewX(-12deg);
+  }
+}
+
+/* soft halo that breathes outwards */
+.cta-halo {
+  position: relative;
+}
+
+.cta-halo::after {
+  content: "";
+  position: absolute;
+  /* must extend past the button, otherwise the solid button hides it */
+  inset: -7px;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    closest-side,
+    var(--cta-halo-color, rgba(28, 168, 48, 0.45)),
+    transparent
+  );
+  opacity: 0;
+  transform: scale(0.9);
+  animation: cta-halo 4.8s ease-out infinite;
+}
+
+@keyframes cta-halo {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.94);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-live::before,
+  .cta-halo::after {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+/* ------------------------------------------------------------------
+ * Global trust sphere
+ * ------------------------------------------------------------------ */
+
+/**
+ * Two counter-rotating copies of the same wireframe mesh. Rotating one layer
+ * against the other is what stops a flat projection from reading as a spinning
+ * wheel — the crossing lines give parallax and the thing reads as a turning
+ * globe. Both layers animate `transform` only, so they stay on the compositor.
+ */
+.sphere-spin {
+  animation: sphere-spin 88s linear infinite;
+}
+
+.sphere-spin-rev {
+  animation: sphere-spin 124s linear infinite reverse;
+}
+
+@keyframes sphere-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Badges drift on their own clocks (duration and a negative delay are passed
+   per badge) so the group never bobs in unison. */
+.trust-float {
+  animation: trust-float var(--float-duration, 9s) ease-in-out infinite;
+  animation-delay: var(--float-delay, 0s);
+  will-change: transform;
+}
+
+@keyframes trust-float {
+  0%,
+  100% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sphere-spin,
+  .sphere-spin-rev,
+  .trust-float {
+    animation: none;
+  }
+}
+
+/* Sector rail under the hero — see <IndustryStrip />.
+   On phones the thirteen chips are a horizontal scroller. A visible
+   scrollbar under a single row of pills looks broken, and the rail already
+   signals that it scrolls with its right-edge fade, so the bar is hidden
+   rather than styled. Desktop drops out of overflow entirely and wraps. */
+.industry-rail {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.industry-rail::-webkit-scrollbar {
+  display: none;
+}

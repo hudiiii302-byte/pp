@@ -1,0 +1,25 @@
+# WordbitX
+
+> WordbitX (Wordbit X TECHNOLOGY SMC – PVT. LTD.) is a Pakistan-based software development company serving businesses in the USA, UK, UAE, Canada, Australia and worldwide.
+
+## What we do
+- Custom websites and web apps
+- Shopify, WooCommerce and custom e-commerce
+- Flutter, Android and iOS apps
+- POS, CRM/ERP and industry portals (healthcare, real estate, education, retail)
+- SEO and digital marketing
+- Practical AI in products where it helps the workflow
+
+Clients own the code, repositories and accounts. Demos at *.wordbitxtech.com are sample sites, not case studies.
+
+## Primary pages
+- https://www.wordbitxtech.com/
+- https://www.wordbitxtech.com/services
+- https://www.wordbitxtech.com/pricing
+- https://www.wordbitxtech.com/portfolio
+- https://www.wordbitxtech.com/contact
+
+## Contact
+- Email: info@wordbitxtech.com
+- Pakistan: +92 325 1888841
+- USA: +1 (929) 619-7699

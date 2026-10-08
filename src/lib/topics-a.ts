@@ -1,0 +1,426 @@
+import type { Topic } from "@/lib/topic-types";
+
+export const topicsA: Topic[] = [
+  {
+    slug: "what-is-custom-software",
+    title: "What Is Custom Software?",
+    h1: "What Is Custom Software — and When Do You Need It?",
+    category: "Software",
+    summary: "Software built around your workflow instead of a monthly tool you have to squeeze into.",
+    metaTitle: "What Is Custom Software? | When to Build vs Buy",
+    metaDescription:
+      "What custom software is, when it beats SaaS, and how WordbitX scopes a first release you actually own.",
+    keywords: ["what is custom software", "custom software development", "bespoke software", "build vs buy software"],
+    overview: [
+      "Custom software is an application written for one company’s process: the roles, approvals, reports and integrations that off-the-shelf tools only approximate. You own the code and the data. You also own the maintenance.",
+      "It is the wrong choice for a problem a well-known SaaS already solves well. It is the right choice when you are paying five tools and still running the real work in Excel.",
+    ],
+    useCases: ["Internal ops platforms", "Client portals", "Industry-specific billing", "Replacing a pile of spreadsheets"],
+    services: ["custom-software-development", "saas-application-development", "it-consulting"],
+    posts: ["custom-software-vs-ready-made-software", "saas-mvp-development-cost"],
+    faqs: [
+      { question: "Is custom always more expensive?", answer: "Up front, usually. Over three years it can be cheaper than per-seat tools that still need a human workaround." },
+      { question: "Do we own the source?", answer: "Yes, if the contract says so. Ours does. Ask any vendor this before you pay a deposit." },
+    ],
+  },
+  {
+    slug: "hospital-management-system",
+    title: "Hospital Management System",
+    h1: "Hospital Management System Software for Clinics and Hospitals",
+    category: "Healthcare software",
+    summary: "OPD, IPD, pharmacy, labs and billing in one system — software, not medical advice.",
+    metaTitle: "Hospital Management System Software | HMS Development",
+    metaDescription:
+      "Hospital management system (HMS) software: OPD, IPD, pharmacy, lab and billing workflows built by WordbitX. We build software; we do not practise medicine.",
+    keywords: ["hospital management system", "HMS software", "hospital management software", "hospital information system"],
+    overview: [
+      "An HMS is operational software: appointments, admissions, pharmacy stock, lab orders and invoices. It is not a diagnosis tool and it is not a substitute for a clinician.",
+      "WordbitX builds or integrates these modules around how the hospital already works — including batch and expiry if a medical store sits on site. Licensed clinical decisions stay with the hospital.",
+    ],
+    useCases: ["OPD queues", "IPD / bed status", "Pharmacy dispensing", "Lab orders", "Patient invoices"],
+    services: ["hospital-medical-portals", "inventory-management-software", "custom-software-development"],
+    posts: ["how-ai-automation-helps-businesses", "custom-software-vs-ready-made-software"],
+    faqs: [
+      { question: "Do you give medical advice?", answer: "No. We build and integrate software. Clinical protocols belong to the hospital’s licensed staff." },
+      { question: "Can you replace our existing HIS?", answer: "Sometimes a module at a time. A big-bang replacement is rarely the first recommendation." },
+    ],
+  },
+  {
+    slug: "clinic-management-software",
+    title: "Clinic Management Software",
+    h1: "Clinic Management Software for Appointments, Notes and Billing",
+    category: "Healthcare software",
+    summary: "Smaller than a full HMS: appointments, patient records and invoices for clinics.",
+    metaTitle: "Clinic Management Software | Appointments & Billing",
+    metaDescription:
+      "Clinic management software for appointments, patient records and billing. WordbitX builds clinic systems — not treatment plans.",
+    keywords: ["clinic management software", "clinic software", "doctor appointment software", "clinic billing software"],
+    overview: [
+      "Clinics do not need a 40-module hospital suite. They need a calendar that does not double-book, a record the next doctor can read, and a bill that matches the visit.",
+      "We keep the first release small. Prescription printing and lab integrations come after the front desk stops using a register.",
+    ],
+    useCases: ["Multi-doctor calendars", "Visit notes", "Follow-up reminders", "Simple pharmacy"],
+    services: ["hospital-medical-portals", "custom-web-application-development", "mobile-app-development"],
+    posts: ["website-or-mobile-app-first", "custom-software-vs-ready-made-software"],
+    faqs: [
+      { question: "Is this telemedicine?", answer: "It can add video later. Day one is usually in-clinic flow. See our telemedicine topic if remote consults are the product." },
+    ],
+  },
+  {
+    slug: "telemedicine-app-development",
+    title: "Telemedicine App Development",
+    h1: "Telemedicine App Development for Remote Consults",
+    category: "Healthcare software",
+    summary: "Scheduling, video and records for remote clinics — built as software, run under the provider’s licence.",
+    metaTitle: "Telemedicine App Development | Video Consult Software",
+    metaDescription:
+      "Telemedicine app development: scheduling, video consults and records. WordbitX engineers the product; the clinic holds the medical licence.",
+    keywords: ["telemedicine app development", "telehealth app", "online doctor app", "video consultation software"],
+    overview: [
+      "A telemedicine app is a product: identity, booking, a stable video session, notes and a payment. It is not a medical device unless you are building one under a regulatory programme — we will say if a request crosses that line.",
+      "Most clinics need reliability and a simple follow-up, not an AI that “diagnoses”. We will not market diagnostic claims we cannot support.",
+    ],
+    useCases: ["Follow-up visits", "Cross-city specialists", "Prescription refill workflows (where lawful)"],
+    services: ["mobile-app-development", "flutter-app-development", "hospital-medical-portals"],
+    posts: ["mobile-app-development-guide", "flutter-vs-react-native"],
+    faqs: [
+      { question: "Can you operate a clinic for us?", answer: "No. You need licensed practitioners and local telehealth rules. We deliver the software." },
+    ],
+  },
+  {
+    slug: "pharmacy-management-software",
+    title: "Pharmacy Management Software",
+    h1: "Pharmacy Management Software with Batch and Expiry Control",
+    category: "Healthcare software",
+    summary: "Retail and hospital pharmacy stock, batch, expiry and invoicing — not clinical advice.",
+    metaTitle: "Pharmacy Management Software | Batch, Expiry & Billing",
+    metaDescription:
+      "Pharmacy management software: batch, expiry, suppliers and counter billing. WordbitX builds pharmacy systems, not prescriptions.",
+    keywords: ["pharmacy management software", "medical store software", "pharmacy POS", "pharmacy inventory software"],
+    overview: [
+      "Pharmacy software fails when it treats medicine like T-shirts. Batch numbers, expiry and near-expiry alerts are the product. Billing is the easy part.",
+      "We model suppliers, returns and, where needed, a hospital issue window. Counselling and dispensing judgement stay with the pharmacist.",
+    ],
+    useCases: ["Medical stores", "In-hospital pharmacies", "Multi-branch stock"],
+    services: ["hospital-medical-portals", "inventory-management-software", "pos-software"],
+    posts: ["inventory-management-software-guide", "pos-software-for-retail-pakistan"],
+    faqs: [
+      { question: "Do you sell medicines?", answer: "No. We sell software to businesses that already operate pharmacies." },
+    ],
+  },
+  {
+    slug: "what-is-erp",
+    title: "What Is ERP Software?",
+    h1: "What Is ERP Software and When Is It Overkill?",
+    category: "Software",
+    summary: "ERP connects finance, stock and operations. Most growing companies only need one painful module first.",
+    metaTitle: "What Is ERP Software? | ERP vs Custom Modules",
+    metaDescription:
+      "What ERP software is, when a full suite is overkill, and when WordbitX builds one module instead of buying a 200-screen product.",
+    keywords: ["what is ERP", "ERP software", "enterprise resource planning", "ERP vs CRM"],
+    overview: [
+      "ERP (enterprise resource planning) is a suite that tries to run stock, purchasing, finance and sometimes HR in one database. The brochure is always complete. The implementation rarely is.",
+      "We often replace the painful gap — inventory, approvals, branch reporting — and leave accounting where it already works.",
+    ],
+    useCases: ["Multi-branch stock + finance view", "Purchasing + goods receipt", "Manufacturing light"],
+    services: ["crm-erp-solutions", "enterprise-software-solutions", "inventory-management-software"],
+    posts: ["crm-vs-erp-which-one-does-your-business-need", "custom-software-vs-ready-made-software"],
+    faqs: [
+      { question: "Should a 15-person company buy SAP?", answer: "Almost never. Start with the workflow that is breaking. Scale the suite later if the data model demands it." },
+    ],
+  },
+  {
+    slug: "what-is-crm",
+    title: "What Is CRM Software?",
+    h1: "What Is CRM Software — Pipeline, Not a Phonebook?",
+    category: "Software",
+    summary: "CRM is who you talked to, what is next, and who owns the lead. Contacts without a next action are a list.",
+    metaTitle: "What Is CRM Software? | Sales Pipeline vs Contacts",
+    metaDescription:
+      "What CRM software is, why spreadsheets fail, and when WordbitX configures a tool versus building a custom CRM.",
+    keywords: ["what is CRM", "CRM software", "customer relationship management", "sales CRM"],
+    overview: [
+      "CRM (customer relationship management) tracks leads, deals, activities and sometimes after-sales tickets. If nobody updates it, it is a graveyard. The software cannot fix a team that will not log calls.",
+      "Buy a known CRM when your process is standard. Build when commissions, plot files or wholesale terms do not fit the object model.",
+    ],
+    useCases: ["Inbound leads", "Dealer / agent networks", "Renewals"],
+    services: ["crm-erp-solutions", "custom-software-development", "digital-marketing"],
+    posts: ["custom-crm-for-growing-businesses", "crm-vs-erp-which-one-does-your-business-need"],
+    faqs: [
+      { question: "HubSpot or custom?", answer: "HubSpot (or similar) first if your sales motion is generic. Custom when the record is a plot file, a batch or a campus, not a “deal”." },
+    ],
+  },
+  {
+    slug: "inventory-management-system",
+    title: "Inventory Management System",
+    h1: "Inventory Management System for Warehouses and Multi-Branch Stock",
+    category: "Operations",
+    summary: "Stock that matches the shelf: receiving, transfers, batches and reorders.",
+    metaTitle: "Inventory Management System | Warehouse & Branch Stock",
+    metaDescription:
+      "Inventory management system software: receiving, transfers, batch/expiry and reorders for warehouses and multi-branch retailers.",
+    keywords: ["inventory management system", "warehouse management software", "stock management system", "inventory software"],
+    overview: [
+      "An inventory system is only useful if a sale, a transfer and a count hit the same number. Barcode receiving and a transfer that cannot go missing in a WhatsApp group are the usual first wins.",
+      "Batch and expiry matter in pharmacy and food. Serials matter in electronics. We do not force every client into the heaviest model.",
+    ],
+    useCases: ["Wholesale godowns", "Retail back rooms", "Hospital / pharmacy stores"],
+    services: ["inventory-management-software", "pos-software", "custom-software-development"],
+    posts: ["inventory-management-software-guide", "pos-software-for-retail-pakistan"],
+    faqs: [
+      { question: "Is this a full WMS?", answer: "A WMS adds wave picking and warehouse locations. Many clients need stock accuracy first. We will say which you are buying." },
+    ],
+  },
+  {
+    slug: "restaurant-pos-system",
+    title: "Restaurant POS System",
+    h1: "Restaurant POS System with KOT, Deals and Offline Billing",
+    category: "Operations",
+    summary: "Counter and table billing that survives a rush and a power blink.",
+    metaTitle: "Restaurant POS System | KOT, Deals & Offline Billing",
+    metaDescription:
+      "Restaurant POS system software: kitchen tickets, modifiers, deals and offline billing for Pakistan and multi-branch groups.",
+    keywords: ["restaurant POS system", "restaurant POS software", "KOT software", "hotel POS"],
+    overview: [
+      "Restaurant POS is not retail POS with a food icon. KOT routing, modifiers and deals have to be faster than the queue. Offline billing is not optional where power drops.",
+      "Delivery-app tickets and recipe-level stock are phase two if Friday night still works on paper.",
+    ],
+    useCases: ["QSR counters", "Table service", "Multi-branch menus"],
+    services: ["pos-software", "inventory-management-software", "custom-software-development"],
+    posts: ["restaurant-pos-software-pakistan", "pos-software-for-retail-pakistan"],
+    faqs: [
+      { question: "Do you sell hardware?", answer: "We specify printers and stations. You buy them locally so you can replace a cable at 11pm." },
+    ],
+  },
+  {
+    slug: "school-erp-software",
+    title: "School ERP Software",
+    h1: "School ERP Software for Fees, Attendance and Exams",
+    category: "Education software",
+    summary: "Campus records, fee vouchers and parent login — not a generic CRM with a backpack icon.",
+    metaTitle: "School ERP Software | Fees, Attendance & Parent Portal",
+    metaDescription:
+      "School ERP software: admissions, fees, attendance, exams and parent login. Buy vs build guidance from WordbitX.",
+    keywords: ["school ERP software", "school management system", "campus ERP", "student information system"],
+    overview: [
+      "School ERP is a student information system plus fees and usually a parent login. The fee voucher format is where packages die in Pakistan. Attendance that teachers will actually mark is the second filter.",
+      "One campus with standard months can buy a package. Groups with odd scholarships should talk to us before signing a five-year SaaS.",
+    ],
+    useCases: ["Schools", "Colleges", "Tuition networks"],
+    services: ["education-portals", "custom-software-development", "crm-erp-solutions"],
+    posts: ["school-management-system-software", "custom-software-vs-ready-made-software"],
+    faqs: [
+      { question: "Do you run the school?", answer: "No. We build or configure the system. Academic policy stays with the school." },
+    ],
+  },
+  {
+    slug: "learning-management-system",
+    title: "Learning Management System",
+    h1: "Learning Management System (LMS) for Courses and Cohorts",
+    category: "Education software",
+    summary: "Courses, lessons, progress and certificates — for academies and internal training.",
+    metaTitle: "Learning Management System | LMS Development",
+    metaDescription:
+      "Learning management system (LMS) development: courses, progress, quizzes and certificates for academies and companies.",
+    keywords: ["learning management system", "LMS software", "online course platform", "LMS development"],
+    overview: [
+      "An LMS delivers lessons, tracks completion and sometimes sells a course. Moodle or a known SaaS is enough for many academies. Custom is for cohort rules, local payments or a product you intend to resell.",
+      "Video hosting and copyright stay with you. We do not scrape courses.",
+    ],
+    useCases: ["Training academies", "Internal onboarding", "Paid course products"],
+    services: ["education-portals", "saas-application-development", "custom-web-application-development"],
+    posts: ["saas-mvp-development-cost", "website-or-mobile-app-first"],
+    faqs: [
+      { question: "Can you clone Udemy?", answer: "A marketplace is a different product (payouts, disputes, tax). An LMS for your own catalogue is smaller and we will quote that honestly." },
+    ],
+  },
+  {
+    slug: "real-estate-crm-software",
+    title: "Real Estate CRM Software",
+    h1: "Real Estate CRM Software for Leads, Viewings and Files",
+    category: "Operations",
+    summary: "Leads and plot files in one place — not a generic pipeline that cannot store a file number.",
+    metaTitle: "Real Estate CRM Software | Leads, Viewings & Plot Files",
+    metaDescription:
+      "Real estate CRM software for agencies: leads, viewings, plot files and commissions — modelled the way property is sold.",
+    keywords: ["real estate CRM", "property CRM software", "real estate lead management", "plot file CRM"],
+    overview: [
+      "Property CRM fails when the object is “a deal” and the business object is a file in a phase of a society. Viewings, holds and commission splits need their own fields.",
+      "We build or extend CRMs for agencies. We do not invent endorsements from DHA or any society.",
+    ],
+    useCases: ["Agencies", "Developer sales desks", "Remote investor desks"],
+    services: ["real-estate-portals", "crm-erp-solutions", "web-development"],
+    posts: ["custom-crm-for-growing-businesses", "how-to-choose-a-web-development-company"],
+    faqs: [
+      { question: "Do you sell plots?", answer: "No. We build software for people who do." },
+    ],
+  },
+  {
+    slug: "property-listing-website",
+    title: "Property Listing Website",
+    h1: "Property Listing Website and Portal Development",
+    category: "Commerce",
+    summary: "Searchable listings with filters that match how buyers actually look — city, size, budget, society.",
+    metaTitle: "Property Listing Website Development | Real Estate Portals",
+    metaDescription:
+      "Property listing website and portal development: filters, agent accounts and enquiry routing for real estate businesses.",
+    keywords: ["property listing website", "real estate portal development", "property website", "listing portal"],
+    overview: [
+      "A listing site is a search problem: maps, filters and enquiry routing. A pretty grid that cannot filter by phase is a brochure.",
+      "SEO only works if listing URLs are stable and unique. We do not duplicate the same plot across ten thin pages.",
+    ],
+    useCases: ["Agency sites", "Developer inventories", "Marketplace-style portals"],
+    services: ["real-estate-portals", "web-development", "seo-services"],
+    posts: ["how-to-choose-a-web-development-company", "website-speed-and-seo"],
+    faqs: [
+      { question: "Can you scrape other portals?", answer: "No. We list inventory you have the right to publish." },
+    ],
+  },
+  {
+    slug: "shopify-store-setup-guide",
+    title: "Shopify Store Setup",
+    h1: "Shopify Store Setup: Theme, Payments and a Catalogue You Can Run",
+    category: "Commerce",
+    summary: "A store that can take an order — not a theme with twenty unused apps.",
+    metaTitle: "Shopify Store Setup | Theme, Payments & Launch",
+    metaDescription:
+      "Shopify store setup: theme, payments, shipping and catalogue. How WordbitX launches stores you can operate the next morning.",
+    keywords: ["Shopify store setup", "Shopify development", "how to set up Shopify", "Shopify store launch"],
+    overview: [
+      "Setup means payments, shipping, tax and a product set that matches what you can ship. An empty Dawn theme is not a store.",
+      "Apps are added only when a workflow needs them. Each app is a page-speed and fee decision.",
+    ],
+    useCases: ["DTC brands", "Wholesale + retail", "International shipping"],
+    services: ["ecommerce-shopify", "google-merchant-center", "facebook-instagram-shop"],
+    posts: ["how-to-launch-a-shopify-store", "shopify-vs-woocommerce"],
+    faqs: [
+      { question: "Do you keep the Shopify login?", answer: "No. The store stays on your organisation. We work as staff." },
+    ],
+  },
+  {
+    slug: "woocommerce-vs-shopify-store",
+    title: "WooCommerce Store",
+    h1: "WooCommerce Store Development on WordPress",
+    category: "Commerce",
+    summary: "Shop and content on one CMS — if you will maintain WordPress.",
+    metaTitle: "WooCommerce Store Development | WordPress Commerce",
+    metaDescription:
+      "WooCommerce store development: catalogue, checkout and WordPress content on one site — with a plugin budget you can live with.",
+    keywords: ["WooCommerce store", "WooCommerce development", "WordPress online store", "WooCommerce website"],
+    overview: [
+      "WooCommerce is the right cart when marketing already lives in WordPress or the product type is awkward on Shopify. It is the wrong cart if nobody will apply updates.",
+      "Checkout speed is a hosting and plugin problem as much as a theme problem.",
+    ],
+    useCases: ["Content-heavy brands", "B2B price lists", "Existing WP sites"],
+    services: ["woocommerce-development", "wordpress-development", "website-maintenance"],
+    posts: ["shopify-vs-woocommerce", "wordpress-vs-custom-website"],
+    faqs: [
+      { question: "Is WooCommerce free?", answer: "The plugin is. Hosting, a proper theme, payments and the hours to keep it patched are not." },
+    ],
+  },
+  {
+    slug: "headless-commerce",
+    title: "Headless Commerce",
+    h1: "Headless Commerce: When a Custom Storefront Is Worth It",
+    category: "Commerce",
+    summary: "Shopify or a PIM on the back, your site on the front — for brands that have outgrown the theme.",
+    metaTitle: "Headless Commerce | Custom Storefronts on Shopify & APIs",
+    metaDescription:
+      "Headless commerce: custom storefronts with Shopify or a PIM behind them. When WordbitX recommends it — and when a theme is enough.",
+    keywords: ["headless commerce", "headless Shopify", "headless storefront", "composable commerce"],
+    overview: [
+      "Headless means the cart and catalogue stay in a commerce engine while the pages are a custom front end (often Next.js). You buy flexibility and speed control. You also buy a development team forever.",
+      "If you are still changing the product mix every week and have no developer, stay on a theme.",
+    ],
+    useCases: ["Content + commerce brands", "Unusual browse UX", "Multi-site catalogues"],
+    services: ["ecommerce-shopify", "ecommerce-development", "custom-web-application-development"],
+    posts: ["shopify-vs-custom-ecommerce-website", "ecommerce-website-cost-pakistan"],
+    faqs: [
+      { question: "Is headless faster for SEO?", answer: "It can be, if we render pages for crawlers. A heavy client-only cart helps nobody." },
+    ],
+  },
+  {
+    slug: "multi-vendor-marketplace",
+    title: "Multi-Vendor Marketplace",
+    h1: "Multi-Vendor Marketplace Development",
+    category: "Commerce",
+    summary: "Sellers, commissions, payouts and disputes — a different product from a single-brand store.",
+    metaTitle: "Multi-Vendor Marketplace Development | Sellers & Payouts",
+    metaDescription:
+      "Multi-vendor marketplace development: seller onboarding, commissions, payouts and disputes. Why this is not a Shopify theme.",
+    keywords: ["multi vendor marketplace", "marketplace development", "multi-seller website", "build a marketplace"],
+    overview: [
+      "A marketplace is two products: a buyer experience and a seller operations console, plus money movement. Themes that stamp “multi-vendor” on a single checkout hide the hard parts.",
+      "Version one should take one payout path live. Escrow, ads on the marketplace and an app store are later.",
+    ],
+    useCases: ["Regional product markets", "Service marketplaces", "B2B supplier networks"],
+    services: ["ecommerce-development", "saas-application-development", "api-development"],
+    posts: ["saas-mvp-development-cost", "shopify-vs-custom-ecommerce-website"],
+    faqs: [
+      { question: "Can you clone Amazon?", answer: "No, and a quote that says yes is a lie. We scope the first seller set and the first payout." },
+    ],
+  },
+  {
+    slug: "on-demand-app-development",
+    title: "On-Demand App Development",
+    h1: "On-Demand App Development (Delivery, Bookings, Services)",
+    category: "Mobile",
+    summary: "Customer, provider and admin apps that share one job — not three disconnected prototypes.",
+    metaTitle: "On-Demand App Development | Delivery & Booking Apps",
+    metaDescription:
+      "On-demand app development: customer, provider and admin apps for delivery and bookings, with one API and a realistic first city.",
+    keywords: ["on demand app development", "delivery app development", "uber like app", "booking app development"],
+    overview: [
+      "On-demand means real-time matching: a customer request, a provider accept, a status the admin can see. Most “Uber for X” quotes ignore maps cost, SMS and the second city.",
+      "We launch one geography and one job. Multi-city and wallet complexity come after the first loop works.",
+    ],
+    useCases: ["Home services", "Local delivery", "In-city bookings"],
+    services: ["mobile-app-development", "flutter-app-development", "api-development"],
+    posts: ["mobile-app-development-guide", "flutter-vs-react-native"],
+    faqs: [
+      { question: "How much for an Uber clone?", answer: "A clone of Uber is not a product we sell. A booking or delivery loop for one city is. Those numbers are different by an order of magnitude." },
+    ],
+  },
+  {
+    slug: "progressive-web-app",
+    title: "Progressive Web App",
+    h1: "Progressive Web Apps (PWA): When You Do Not Need the Stores Yet",
+    category: "Mobile",
+    summary: "Installable web apps with offline and push — useful before you pay two store reviews.",
+    metaTitle: "Progressive Web App Development | PWA vs Native",
+    metaDescription:
+      "Progressive web app (PWA) development: offline, install and push on the web. When WordbitX recommends a PWA instead of Flutter.",
+    keywords: ["progressive web app", "PWA development", "PWA vs native app", "installable web app"],
+    overview: [
+      "A PWA is a website that can install, cache and (on supported browsers) push. It skips App Store fees. It cannot match every native API and iOS still limits some features.",
+      "Good for internal tools and content apps. Weak for camera-heavy or background-GPS products.",
+    ],
+    useCases: ["Field checklists", "Catalogues", "Internal dashboards"],
+    services: ["web-development", "custom-web-application-development", "mobile-app-development"],
+    posts: ["website-or-mobile-app-first", "website-speed-and-seo"],
+    faqs: [
+      { question: "Will it be on the App Store?", answer: "Not as a PWA. If you need store presence, we wrap or rebuild in Flutter later." },
+    ],
+  },
+  {
+    slug: "nextjs-website-development",
+    title: "Next.js Website Development",
+    h1: "Next.js Website Development for Fast, Search-Ready Sites",
+    category: "Software",
+    summary: "Server-rendered React with metadata, sitemaps and a performance budget — not a CRA toy.",
+    metaTitle: "Next.js Website Development | SEO-Ready React Sites",
+    metaDescription:
+      "Next.js website development from WordbitX: server rendering, metadata, sitemaps and Core Web Vitals for marketing and product sites.",
+    keywords: ["Next.js website development", "Next.js development company", "React SEO website", "Next.js agency"],
+    overview: [
+      "Next.js is how we ship most marketing and product sites: HTML that crawlers can read, image optimisation, and routes that match the sitemap. A client-only React app is a common reason “the site does not rank”.",
+      "The framework does not replace content or links. It stops the technology from being the blocker.",
+    ],
+    useCases: ["Company sites", "Headless storefronts", "Authenticated apps"],
+    services: ["web-development", "custom-web-application-development", "technical-seo"],
+    posts: ["website-speed-and-seo", "how-to-choose-a-web-development-company"],
+    faqs: [
+      { question: "WordPress or Next.js?", answer: "WordPress if editors must live in wp-admin and the site is a brochure. Next.js if performance, custom apps or a headless CMS matter." },
+    ],
+  },
+];

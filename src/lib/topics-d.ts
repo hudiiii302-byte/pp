@@ -1,0 +1,805 @@
+import type { Topic } from "@/lib/topic-types";
+
+export const topicsD: Topic[] = [
+  {
+    slug: "google-search-console-setup",
+    title: "Google Search Console Setup",
+    h1: "Google Search Console Setup on the Canonical www Host",
+    category: "Growth",
+    summary: "One property, one sitemap index — not five files listing the same URLs.",
+    metaTitle: "Google Search Console Setup | Domain Property & Sitemap",
+    metaDescription:
+      "Google Search Console setup: www canonical, one sitemap-index, and why apex redirects should not be requested for indexing.",
+    keywords: ["Google Search Console setup", "submit sitemap Search Console", "GSC domain property", "www vs non-www SEO"],
+    overview: [
+      "Search Console only helps if you inspect the host Google should index. For WordbitX that is www. Submitting every child sitemap twice is how “discovered URLs” inflate.",
+      "Redirect URLs are not bugs. Do not request indexing on them.",
+    ],
+    useCases: ["New domains", "Migrations", "Cleanup after a rebuild"],
+    services: ["technical-seo", "seo-services", "web-development"],
+    posts: ["seo-guide-for-businesses", "website-speed-and-seo"],
+    faqs: [
+      { question: "Request indexing on every new page?", answer: "No. Crawl the index. Request a handful of money pages after deploy, not 200 URLs." },
+    ],
+  },
+  {
+    slug: "schema-markup-for-local-business",
+    title: "Schema Markup for Local Business",
+    h1: "Schema Markup for Local Business and Professional Services",
+    category: "Growth",
+    summary: "JSON-LD that matches the visible NAP — not a spam of 15 types on one page.",
+    metaTitle: "Schema Markup for Local Business | JSON-LD",
+    metaDescription:
+      "Schema markup for local and professional services: Organization, LocalBusiness and FAQ that match the page. No fake review stars.",
+    keywords: ["schema markup local business", "LocalBusiness schema", "JSON-LD SEO", "FAQ schema"],
+    overview: [
+      "Schema is a machine-readable copy of what the page already says. Fake aggregate ratings are a policy problem. We add Organization, Service and FAQ when the content is real.",
+      "One NAP everywhere. Schema that contradicts the footer is worse than none.",
+    ],
+    useCases: ["Service companies", "Clinics", "Multi-location later"],
+    services: ["technical-seo", "local-seo", "seo-services"],
+    posts: ["local-seo-for-small-business", "seo-guide-for-businesses"],
+    faqs: [
+      { question: "Will schema rank us #1?", answer: "It helps understanding. It is not a ranking cheat code." },
+    ],
+  },
+  {
+    slug: "honest-backlink-strategy",
+    title: "Honest Backlink Strategy",
+    h1: "Honest Backlink Strategy for Software Companies",
+    category: "Growth",
+    summary: "Citations, partners and pages worth citing — not a 10,000-link package.",
+    metaTitle: "Honest Backlink Strategy | Software Company Links",
+    metaDescription:
+      "Honest backlink strategy: directories you belong on, partner mentions and pages people cite. WordbitX will not sell a 10k link pack.",
+    keywords: ["backlink strategy", "software company backlinks", "ethical link building", "citations for SEO"],
+    overview: [
+      "Links follow pages people mention. A PDF of 10,000 blog comments is a penalty waiting. We help with citations, partner pages and content that can earn a link.",
+      "Competitors with 18k referring domains did that over years. There is no overnight toggle.",
+    ],
+    useCases: ["New .com brands", "Local citations", "Partnerships"],
+    services: ["seo-services", "content-marketing", "online-reputation-management"],
+    posts: ["digital-marketing-for-software-companies", "how-seo-helps-businesses-grow"],
+    faqs: [
+      { question: "Can you add 10k backlinks this month?", answer: "No. Anyone who can is selling spam." },
+    ],
+  },
+  {
+    slug: "brand-serp-management",
+    title: "Brand SERP Management",
+    h1: "Brand SERP Management — Your Name Should Show Your Site",
+    category: "Growth",
+    summary: "Owned profiles and one spelling so Google’s first page is you, not a stale LinkedIn.",
+    metaTitle: "Brand SERP Management | Own Your Name on Google",
+    metaDescription:
+      "Brand SERP management: consistent naming, owned profiles and a site that ranks for your company name. No fake review stuffing.",
+    keywords: ["brand SERP", "rank for brand name", "Google brand results", "company name SEO"],
+    overview: [
+      "If people search WordbitX and land on an old LinkedIn or a sold domain, you leak trust. One spelling, one website, real profiles.",
+      "We do not suppress news with shady networks. We publish what you control.",
+    ],
+    useCases: ["Renames", "Split brand history", "New domains"],
+    services: ["online-reputation-management", "seo-services", "content-marketing"],
+    posts: ["software-company-lahore", "local-seo-for-small-business"],
+    faqs: [
+      { question: "Can you bury a news article?", answer: "Not legally or reliably. A lawyer handles takedowns. We strengthen owned results." },
+    ],
+  },
+  {
+    slug: "multi-language-website",
+    title: "Multi-Language Website",
+    h1: "Multi-Language Website Development with Real Locales",
+    category: "Software",
+    summary: "hreflang, a content model and translators — not Google Translate glued on.",
+    metaTitle: "Multi-Language Website Development | hreflang & CMS",
+    metaDescription:
+      "Multi-language website development: locales, hreflang and a CMS your team can edit. WordbitX does not scrape machine-translated doorways.",
+    keywords: ["multi language website", "hreflang SEO", "bilingual website development", "multilingual CMS"],
+    overview: [
+      "A second language is a content operation. We add locales and hreflang when you have people who will write them. Auto-translate doorways get ignored or penalised.",
+      "Arabic, Urdu or French UI is scoped as design + content, not a plugin toggle.",
+    ],
+    useCases: ["GCC bilingual", "CA EN/FR", "Export brands"],
+    services: ["web-development", "custom-cms-development", "seo-services"],
+    posts: ["how-to-choose-a-web-development-company", "website-development-cost-pakistan"],
+    faqs: [
+      { question: "Google Translate widget?", answer: "Fine as a helper. It is not a localisation strategy and we will not sell it as one." },
+    ],
+  },
+  {
+    slug: "accessible-website-wcag",
+    title: "Accessible Website (WCAG)",
+    h1: "Accessible Website Development (WCAG-Oriented)",
+    category: "Software",
+    summary: "Keyboard, contrast and labels — we do not sell a fake certification badge.",
+    metaTitle: "Accessible Website Development | WCAG-Oriented UI",
+    metaDescription:
+      "Accessible website development: keyboard paths, contrast and labels. WordbitX implements WCAG-oriented work; we do not sell a certificate.",
+    keywords: ["accessible website", "WCAG website development", "a11y web design", "accessible React site"],
+    overview: [
+      "Accessibility is usable HTML: focus, contrast, alt, forms. A lawsuit-sticker overlay is not the same as fixing the DOM.",
+      "Legal conformance is your counsel’s call. We implement the checklist you buy.",
+    ],
+    useCases: ["Public sites", "SaaS admins", "Education portals"],
+    services: ["web-development", "ui-ux-design", "website-maintenance"],
+    posts: ["how-to-choose-a-web-development-company", "website-speed-and-seo"],
+    faqs: [
+      { question: "WCAG 2.2 AAA certified?", answer: "We do not sell certificates. We fix the issues we can measure and document what remains." },
+    ],
+  },
+  {
+    slug: "headless-cms-comparison",
+    title: "Headless CMS",
+    h1: "Headless CMS vs WordPress — Which Editors Will Survive?",
+    category: "Software",
+    summary: "API content for Next.js when the team will learn a new admin.",
+    metaTitle: "Headless CMS vs WordPress | Content for Next.js",
+    metaDescription:
+      "Headless CMS versus WordPress: when WordbitX recommends an API CMS and when wp-admin is still cheaper.",
+    keywords: ["headless CMS", "headless CMS vs WordPress", "CMS for Next.js", "contentful sanity wordpress"],
+    overview: [
+      "Headless is right when developers own the front and editors can live in a structured admin. It is wrong when the only skill on staff is WordPress.",
+      "We model types first. The vendor is second.",
+    ],
+    useCases: ["Marketing + app", "Multi-site", "Preview-heavy teams"],
+    services: ["custom-cms-development", "web-development", "wordpress-development"],
+    posts: ["wordpress-vs-custom-website", "website-development-cost-pakistan"],
+    faqs: [
+      { question: "Which headless vendor?", answer: "The one whose exit is cheap. We are not locked to a single logo." },
+    ],
+  },
+  {
+    slug: "graphql-vs-rest-apis",
+    title: "GraphQL vs REST",
+    h1: "GraphQL vs REST — Pick for the Clients You Have",
+    category: "Software",
+    summary: "REST for most business APIs. GraphQL when many clients need different shapes.",
+    metaTitle: "GraphQL vs REST | API Design for Products",
+    metaDescription:
+      "GraphQL versus REST: when WordbitX uses each, and why fashion is a bad reason to rewrite a working API.",
+    keywords: ["GraphQL vs REST", "REST API design", "GraphQL API development", "which API style"],
+    overview: [
+      "REST is enough for most CRMs and stores. GraphQL earns its complexity when mobile, web and partners each want a different slice of the same graph.",
+      "We document either way. An undocumented GraphQL is still a mess.",
+    ],
+    useCases: ["Mobile + web", "Partner APIs", "BFF layers"],
+    services: ["api-development", "saas-application-development", "mobile-app-development"],
+    posts: ["mobile-app-development-guide", "custom-software-vs-ready-made-software"],
+    faqs: [
+      { question: "Can you migrate REST to GraphQL?", answer: "Yes, incrementally. A big-bang rewrite is rarely the first step." },
+    ],
+  },
+  {
+    slug: "ci-cd-github-actions",
+    title: "CI/CD with GitHub Actions",
+    h1: "CI/CD with GitHub Actions for Web and Mobile",
+    category: "Cloud",
+    summary: "Tests, lint and a deploy button that is a pipeline — not a zip on WhatsApp.",
+    metaTitle: "CI/CD with GitHub Actions | Web & Mobile Pipelines",
+    metaDescription:
+      "CI/CD with GitHub Actions: lint, test and deploy to Vercel, stores or a VPS from the repository you own.",
+    keywords: ["GitHub Actions CI CD", "CI CD pipeline", "automated deploy Next.js", "mobile CI CD"],
+    overview: [
+      "CI/CD means every merge can produce an artefact you trust. WhatsApp APKs and FTP are how production surprises happen.",
+      "Secrets live in the host, not in the YAML you commit.",
+    ],
+    useCases: ["Next.js", "Flutter", "APIs"],
+    services: ["devops-cloud-solutions", "web-development", "flutter-app-development"],
+    posts: ["custom-software-vs-ready-made-software", "website-speed-and-seo"],
+    faqs: [
+      { question: "GitLab instead?", answer: "Yes. The idea is the same. We use the git host you already pay for." },
+    ],
+  },
+  {
+    slug: "aws-vs-gcp-for-startups",
+    title: "AWS vs GCP for Startups",
+    h1: "AWS vs GCP for Startups — Pick One Cloud and Own It",
+    category: "Cloud",
+    summary: "One bill, one IAM story. Multi-cloud on day one is usually waste.",
+    metaTitle: "AWS vs GCP for Startups | Which Cloud First",
+    metaDescription:
+      "AWS versus GCP for startups: when WordbitX picks each, and why your account — not ours — should hold the bill.",
+    keywords: ["AWS vs GCP", "cloud for startups", "GCP vs AWS", "which cloud provider"],
+    overview: [
+      "The best cloud is the one your team can operate. We default to the account you already have. Multi-cloud for an MVP is usually résumé-driven design.",
+      "You own the org. We do not hold production hostage.",
+    ],
+    useCases: ["APIs", "Object storage", "Auth + functions"],
+    services: ["devops-cloud-solutions", "web-hosting", "firebase-integration"],
+    posts: ["saas-mvp-development-cost", "custom-software-vs-ready-made-software"],
+    faqs: [
+      { question: "Azure?", answer: "Fine if that is where your identity already lives. We are not religious about logos." },
+    ],
+  },
+  {
+    slug: "website-maintenance-retainer",
+    title: "Website Maintenance Retainer",
+    h1: "Website Maintenance Retainer — Updates, Backups, Small Tickets",
+    category: "Cloud",
+    summary: "A monthly block of hours so launch is not the start of decay.",
+    metaTitle: "Website Maintenance Retainer | Updates & Support",
+    metaDescription:
+      "Website maintenance retainer: CMS updates, backups, uptime and small content tickets after launch.",
+    keywords: ["website maintenance retainer", "WordPress care plan", "website support monthly", "website updates service"],
+    overview: [
+      "Maintenance is labour: updates, backups, a ticket list. Hosting is a separate bill in your name. New features are quoted, not hidden in “care”.",
+      "If nobody will apply updates, do not start on WordPress.",
+    ],
+    useCases: ["WordPress", "Next.js content", "Stores"],
+    services: ["website-maintenance", "website-security", "web-hosting"],
+    posts: ["wordpress-vs-custom-website", "website-speed-and-seo"],
+    faqs: [
+      { question: "Is hosting included?", answer: "No. You pay the host. We pay for hours." },
+    ],
+  },
+  {
+    slug: "mobile-app-ui-design",
+    title: "Mobile App UI Design",
+    h1: "Mobile App UI Design for Android and iOS Conventions",
+    category: "Design",
+    summary: "Platform-aware UI — not a website squeezed into a rectangle.",
+    metaTitle: "Mobile App UI Design | Android & iOS Patterns",
+    metaDescription:
+      "Mobile app UI design: platform conventions, empty states and a prototype you can tap before code.",
+    keywords: ["mobile app UI design", "iOS UI design", "Android app design", "app UX design"],
+    overview: [
+      "Mobile UI fails when it copies the marketing site’s desktop grid. We design navigation, thumbs and empty states for the OS the user is on.",
+      "A tapable prototype comes before a sprint of pixels in code.",
+    ],
+    useCases: ["Flutter", "Native", "Wearables later"],
+    services: ["ui-ux-design", "flutter-app-development", "mobile-app-development"],
+    posts: ["mobile-app-development-guide", "flutter-app-development-benefits"],
+    faqs: [
+      { question: "One design for both stores?", answer: "Shared system, platform-aware components. Identical clones look ported." },
+    ],
+  },
+  {
+    slug: "dental-clinic-software",
+    title: "Dental Clinic Software",
+    h1: "Dental Clinic Software for Chairs, Charts and Recalls",
+    category: "Healthcare software",
+    summary: "Chair time and recalls — not clinical dentistry advice.",
+    metaTitle: "Dental Clinic Software | Appointments, Charts & Recalls",
+    metaDescription:
+      "Dental clinic software: chair calendars, treatment charts and recall lists. WordbitX builds software; dentists treat patients.",
+    keywords: ["dental clinic software", "dentist practice software", "dental appointment system", "dental PMS"],
+    overview: [
+      "Dental software is chair scheduling, a chart the next dentist can read, and a recall list. Treatment planning is clinical work we do not perform.",
+      "Imaging vendors stay integrations, not a lock-in we invent.",
+    ],
+    useCases: ["Single clinics", "Small groups", "Recall SMS"],
+    services: ["hospital-medical-portals", "custom-web-application-development", "mobile-app-development"],
+    posts: ["custom-software-vs-ready-made-software", "website-or-mobile-app-first"],
+    faqs: [
+      { question: "Do you read X-rays?", answer: "No." },
+    ],
+  },
+  {
+    slug: "clinic-appointment-app",
+    title: "Clinic Appointment App",
+    h1: "Clinic Appointment App for Patients and Front Desk",
+    category: "Healthcare software",
+    summary: "Book, remind, arrive — the clinic still runs the medicine.",
+    metaTitle: "Clinic Appointment App | Bookings & Reminders",
+    metaDescription:
+      "Clinic appointment app development: patient booking, reminders and a front-desk calendar. Not a diagnostic app.",
+    keywords: ["clinic appointment app", "doctor booking app", "medical appointment software", "clinic calendar app"],
+    overview: [
+      "An appointment app is a calendar with permissions. Double-booking and no-shows are the problems. We do not ship symptom checkers that pretend to diagnose.",
+    ],
+    useCases: ["OPD", "Specialists", "Multi-doctor rooms"],
+    services: ["hospital-medical-portals", "flutter-app-development", "mobile-app-development"],
+    posts: ["website-or-mobile-app-first", "mobile-app-development-guide"],
+    faqs: [
+      { question: "WhatsApp bookings instead?", answer: "Fine as overflow. They are not a calendar two doctors can share." },
+    ],
+  },
+  {
+    slug: "tuition-center-software",
+    title: "Tuition Centre Software",
+    h1: "Tuition Centre Software for Batches, Fees and Attendance",
+    category: "Education software",
+    summary: "Batches and fee months — smaller than a university ERP.",
+    metaTitle: "Tuition Centre Software | Batches, Fees & SMS",
+    metaDescription:
+      "Tuition centre software: batches, attendance and fee months for coaching centres and academies.",
+    keywords: ["tuition center software", "coaching centre software", "academy management software", "tuition fee software"],
+    overview: [
+      "Tuition centres need batches, a teacher, a fee month and a parent message. A full campus ERP is usually overkill.",
+      "We do not write curricula. We track who paid and who attended.",
+    ],
+    useCases: ["Coaching", "Test prep", "Home academies"],
+    services: ["education-portals", "custom-software-development", "web-development"],
+    posts: ["school-management-system-software", "saas-mvp-development-cost"],
+    faqs: [
+      { question: "Online classes included?", answer: "We can link Zoom/Meet. We do not become your video host." },
+    ],
+  },
+  {
+    slug: "restaurant-online-ordering",
+    title: "Restaurant Online Ordering",
+    h1: "Restaurant Online Ordering That Hits the Same KOT as Walk-ins",
+    category: "Operations",
+    summary: "Web or app orders on the same ticket printer — not a second WhatsApp number.",
+    metaTitle: "Restaurant Online Ordering | Web, App & KOT",
+    metaDescription:
+      "Restaurant online ordering: web or app orders that print on the same KOT as the floor. Delivery-app chaos is optional later.",
+    keywords: ["restaurant online ordering", "online food ordering system", "restaurant ordering website", "own branded ordering"],
+    overview: [
+      "Own-branded ordering only works if the kitchen sees one ticket stream. A website that SMS the owner is not a system.",
+      "Aggregators can stay. Your channel should not fight them on the pass.",
+    ],
+    useCases: ["QSR", "Cloud kitchens", "Multi-branch menus"],
+    services: ["pos-software", "custom-web-application-development", "mobile-app-development"],
+    posts: ["restaurant-pos-software-pakistan", "website-or-mobile-app-first"],
+    faqs: [
+      { question: "Replace Foodpanda?", answer: "You can add your own channel. Killing aggregators is a business choice, not a software miracle." },
+    ],
+  },
+  {
+    slug: "cloud-kitchen-software",
+    title: "Cloud Kitchen Software",
+    h1: "Cloud Kitchen Software for Brands, Menus and Dispatch",
+    category: "Operations",
+    summary: "Several virtual brands, one kitchen, one stock — or it is just extra WhatsApp groups.",
+    metaTitle: "Cloud Kitchen Software | Virtual Brands & Dispatch",
+    metaDescription:
+      "Cloud kitchen software: virtual brands, menus, stock and dispatch from one kitchen. WordbitX models the operations, not the recipes.",
+    keywords: ["cloud kitchen software", "virtual restaurant software", "ghost kitchen system", "multi brand kitchen"],
+    overview: [
+      "A cloud kitchen is inventory and tickets across brands that share a stove. If stock is not shared, you will cook with food you do not have.",
+      "We do not run kitchens or food safety programmes.",
+    ],
+    useCases: ["Ghost kitchens", "Multi-brand delivery", "Shared commissaries"],
+    services: ["pos-software", "inventory-management-software", "custom-software-development"],
+    posts: ["restaurant-pos-software-pakistan", "inventory-management-software-guide"],
+    faqs: [
+      { question: "Do you supply riders?", answer: "No." },
+    ],
+  },
+  {
+    slug: "franchise-management-software",
+    title: "Franchise Management Software",
+    h1: "Franchise Management Software for Royalties, Playbooks and Stores",
+    category: "Operations",
+    summary: "A store record, a royalty rule and a playbook — not 40 spreadsheets named “franchise”.",
+    metaTitle: "Franchise Management Software | Royalties & Locations",
+    metaDescription:
+      "Franchise management software: locations, royalties and playbooks for brands that actually have franchisees.",
+    keywords: ["franchise management software", "franchise royalty software", "franchisee portal", "multi location franchise"],
+    overview: [
+      "Franchise software is a contract in data: territory, fees, brand assets. We do not sell legal franchise packages. We track what you already signed.",
+    ],
+    useCases: ["F&B chains", "Tuition brands", "Retail banners"],
+    services: ["custom-software-development", "crm-erp-solutions", "pos-software"],
+    posts: ["custom-software-vs-ready-made-software", "crm-vs-erp-which-one-does-your-business-need"],
+    faqs: [
+      { question: "Can you franchise my brand?", answer: "That is a lawyer and a business model. We can build the portal after you have both." },
+    ],
+  },
+  {
+    slug: "dealer-management-system",
+    title: "Dealer Management System",
+    h1: "Dealer Management System for Inventory, Warranty and Commissions",
+    category: "Operations",
+    summary: "Dealers, stock and warranty claims — not a generic CRM with “dealer” in the title.",
+    metaTitle: "Dealer Management System | Stock, Warranty & Commission",
+    metaDescription:
+      "Dealer management system software: inventory, warranty claims and commissions for auto, equipment and spare-parts networks.",
+    keywords: ["dealer management system", "DMS software", "auto dealer software", "dealer portal"],
+    overview: [
+      "A DMS is inventory plus claims plus who earned the margin. Auto and equipment dealers have objects a vanilla CRM does not have.",
+      "We do not sell cars.",
+    ],
+    useCases: ["Auto", "Equipment", "Spare parts"],
+    services: ["crm-erp-solutions", "inventory-management-software", "custom-software-development"],
+    posts: ["custom-crm-for-growing-businesses", "inventory-management-software-guide"],
+    faqs: [
+      { question: "OEM integration?", answer: "If the OEM has an API and you have the right to use it. We do not scrape dealer extranets." },
+    ],
+  },
+  {
+    slug: "event-ticketing-system",
+    title: "Event Ticketing System",
+    h1: "Event Ticketing System for Capacity, QR and Door Lists",
+    category: "Operations",
+    summary: "A capacity number and a scan that works offline at the gate.",
+    metaTitle: "Event Ticketing System | QR, Capacity & Door",
+    metaDescription:
+      "Event ticketing system: capacity, QR check-in and door lists. WordbitX builds the system; you run the event.",
+    keywords: ["event ticketing system", "QR ticket software", "event booking website", "door list app"],
+    overview: [
+      "Ticketing is inventory of seats plus a door that still works when the mobile network dies. Fancy seating maps wait until that is true.",
+      "Payment disputes stay with the gateway and the organiser.",
+    ],
+    useCases: ["Conferences", "Campus events", "Clubs"],
+    services: ["custom-web-application-development", "mobile-app-development", "ecommerce-development"],
+    posts: ["saas-mvp-development-cost", "website-or-mobile-app-first"],
+    faqs: [
+      { question: "Ticketmaster clone?", answer: "No. A capacity + QR product for your events is a different quote." },
+    ],
+  },
+  {
+    slug: "membership-website",
+    title: "Membership Website",
+    h1: "Membership Website for Paid Content and Member Areas",
+    category: "Commerce",
+    summary: "A login, a plan and content that actually stays behind it.",
+    metaTitle: "Membership Website Development | Paid Member Areas",
+    metaDescription:
+      "Membership website development: plans, gated content and a member area. WordPress or custom — chosen after we see the offer.",
+    keywords: ["membership website", "paid members area", "subscription content site", "membership WordPress"],
+    overview: [
+      "Membership is access control plus billing. If the PDF is one Google search away, you do not have a membership product.",
+      "WordPress membership plugins are fine until they are a security hole. We will say when to leave them.",
+    ],
+    useCases: ["Courses", "Communities", "Resource libraries"],
+    services: ["wordpress-development", "saas-application-development", "web-development"],
+    posts: ["saas-mvp-development-cost", "wordpress-vs-custom-website"],
+    faqs: [
+      { question: "Community + course?", answer: "That is two products. We can phase them. Shipping both on day one is how neither works." },
+    ],
+  },
+  {
+    slug: "ngo-donation-platform",
+    title: "NGO Donation Platform",
+    h1: "NGO Donation Platform for Campaigns and Receipts",
+    category: "Operations",
+    summary: "Campaigns, receipts and a ledger — we do not run the charity.",
+    metaTitle: "NGO Donation Platform | Campaigns & Receipts",
+    metaDescription:
+      "NGO donation platform: campaigns, payment gateways and receipts. WordbitX builds software; you hold the charity registration.",
+    keywords: ["NGO donation platform", "charity donation website", "fundraising software", "donation management"],
+    overview: [
+      "Donation software is campaigns plus a receipt finance can stand behind. We do not hold charitable registrations or claim tax status.",
+      "Local payment methods matter more than a Western checkout clone.",
+    ],
+    useCases: ["NGOs", "Masjid / church funds (where lawful)", "School funds"],
+    services: ["web-development", "ecommerce-development", "custom-web-application-development"],
+    posts: ["how-to-choose-a-web-development-company", "ecommerce-website-cost-pakistan"],
+    faqs: [
+      { question: "Are donations tax deductible through you?", answer: "No. That is the NGO’s registration and the donor’s jurisdiction." },
+    ],
+  },
+  {
+    slug: "real-estate-agent-app",
+    title: "Real Estate Agent App",
+    h1: "Real Estate Agent App for Listings, Leads and Site Visits",
+    category: "Operations",
+    summary: "The agent’s pocket CRM — listings they may sell, not scraped portals.",
+    metaTitle: "Real Estate Agent App | Listings, Leads & Visits",
+    metaDescription:
+      "Real estate agent app: listings, leads and visit logs for agencies. Inventory you have the right to show — not scraped portals.",
+    keywords: ["real estate agent app", "realtor mobile app", "property agent CRM app", "site visit app"],
+    overview: [
+      "An agent app is offline listings, a lead, and a visit they logged. Scraping Zameen or Bayut is not a product we build.",
+    ],
+    useCases: ["Agencies", "Developer sales", "Remote closers"],
+    services: ["real-estate-portals", "mobile-app-development", "crm-erp-solutions"],
+    posts: ["custom-crm-for-growing-businesses", "mobile-app-development-guide"],
+    faqs: [
+      { question: "Can you list every society automatically?", answer: "We list inventory you provide. We do not invent DHA relationships." },
+    ],
+  },
+  {
+    slug: "queue-management-system",
+    title: "Queue Management System",
+    h1: "Queue Management System for Counters, Tokens and Displays",
+    category: "Operations",
+    summary: "A token, a counter and a screen — not a paper pad.",
+    metaTitle: "Queue Management System | Tokens & Counter Displays",
+    metaDescription:
+      "Queue management system: tokens, counters and display screens for clinics, banks-lite and service centres.",
+    keywords: ["queue management system", "token system software", "counter queue display", "waiting line software"],
+    overview: [
+      "Queue software is a number and a counter state. Fancy “AI wait time” can wait until tokens actually print.",
+    ],
+    useCases: ["Clinics", "Service centres", "Government-adjacent desks"],
+    services: ["custom-software-development", "custom-web-application-development", "pos-software"],
+    posts: ["custom-software-vs-ready-made-software", "website-or-mobile-app-first"],
+    faqs: [
+      { question: "Hardware?", answer: "You buy printers and TVs locally. We drive them." },
+    ],
+  },
+  {
+    slug: "visitor-management-system",
+    title: "Visitor Management System",
+    h1: "Visitor Management System for Lobbies, Badges and Hosts",
+    category: "Operations",
+    summary: "Who is in the building — a log, not a surveillance product we oversell.",
+    metaTitle: "Visitor Management System | Lobby Check-in & Badges",
+    metaDescription:
+      "Visitor management system: lobby check-in, host notify and badges. WordbitX builds the log; you set the security policy.",
+    keywords: ["visitor management system", "lobby check in software", "visitor badge system", "office visitor log"],
+    overview: [
+      "Visitor software is a log with a host and a time out. Face-recognition upsells are a different, regulated product. We start with a kiosk and an SMS to the host.",
+    ],
+    useCases: ["Offices", "Factories", "Campuses"],
+    services: ["custom-web-application-development", "custom-software-development", "website-security"],
+    posts: ["custom-software-vs-ready-made-software", "how-ai-automation-helps-businesses"],
+    faqs: [
+      { question: "Biometric visitors?", answer: "Only if you have a lawful basis and hardware. We will not push it for a brochure.",
+      },
+    ],
+  },
+  {
+    slug: "checkout-optimization",
+    title: "Checkout Optimization",
+    h1: "Checkout Optimization for Stores That Lose Carts",
+    category: "Commerce",
+    summary: "Fewer fields, clearer shipping, the price they saw in the cart.",
+    metaTitle: "Checkout Optimization | Fewer Fields, More Orders",
+    metaDescription:
+      "Checkout optimization: guest checkout, shipping clarity and payment methods that match the market. Measured in completion rate.",
+    keywords: ["checkout optimization", "reduce cart abandonment", "Shopify checkout CRO", "ecommerce checkout UX"],
+    overview: [
+      "Checkout dies on surprise shipping, forced accounts and methods the customer does not have. We measure start-to-purchase, then cut.",
+    ],
+    useCases: ["Shopify", "WooCommerce", "Custom carts"],
+    services: ["conversion-rate-optimization", "ecommerce-shopify", "woocommerce-development"],
+    posts: ["ecommerce-website-cost-pakistan", "how-to-launch-a-shopify-store"],
+    faqs: [
+      { question: "One-page checkout always?", answer: "Often. Not if legal or B2B fields are required. We test, not slogan." },
+    ],
+  },
+  {
+    slug: "magento-vs-shopify",
+    title: "Magento vs Shopify",
+    h1: "Magento vs Shopify — When Adobe Commerce Still Makes Sense",
+    category: "Commerce",
+    summary: "Shopify for most brands. Magento when you already live there or the catalogue is hostile.",
+    metaTitle: "Magento vs Shopify | Which Commerce Platform",
+    metaDescription:
+      "Magento (Adobe Commerce) versus Shopify: cost, hosting and when WordbitX recommends staying, migrating or going custom.",
+    keywords: ["Magento vs Shopify", "Adobe Commerce vs Shopify", "migrate Magento to Shopify", "which ecommerce platform"],
+    overview: [
+      "Shopify wins on operations cost for most catalogues. Magento wins when you already have a team and a catalogue Shopify’s model fights. Migrations need URL maps.",
+    ],
+    useCases: ["Replatforms", "Enterprise catalogues", "B2B heavy"],
+    services: ["ecommerce-shopify", "ecommerce-development", "seo-services"],
+    posts: ["shopify-vs-custom-ecommerce-website", "shopify-vs-woocommerce"],
+    faqs: [
+      { question: "Do you still build Magento?", answer: "We can maintain or migrate. New greenfield Magento is rare unless you insist and understand the TCO." },
+    ],
+  },
+  {
+    slug: "testflight-and-play-testing",
+    title: "TestFlight and Play Testing",
+    h1: "TestFlight and Play Internal Testing Before Review Day",
+    category: "Mobile",
+    summary: "Real devices, a closed list, and notes for review — not “it worked on my phone”.",
+    metaTitle: "TestFlight and Play Testing | Beta Before Review",
+    metaDescription:
+      "TestFlight and Play internal testing: closed testers, device matrix and store-ready builds before you burn a review cycle.",
+    keywords: ["TestFlight testing", "Play internal testing", "mobile app beta", "pre launch app testing"],
+    overview: [
+      "Stores punish sloppy first submissions. We use TestFlight and Play tracks so stakeholders install the same build QA signed off.",
+    ],
+    useCases: ["New apps", "Major versions", "IAP flows"],
+    services: ["app-store-publishing", "google-play-console", "app-maintenance"],
+    posts: ["mobile-app-development-guide", "complete-guide-to-app-store-optimization"],
+    faqs: [
+      { question: "How many testers?", answer: "Enough to cover your device list. A hundred random friends is not a plan." },
+    ],
+  },
+  {
+    slug: "push-notification-strategy",
+    title: "Push Notification Strategy",
+    h1: "Push Notification Strategy That Does Not Get You Uninstalled",
+    category: "Mobile",
+    summary: "Permission, topics and a reason — not a daily blast.",
+    metaTitle: "Push Notification Strategy | FCM & APNs",
+    metaDescription:
+      "Push notification strategy: permission UX, topics and frequency. Firebase or APNs under accounts you own.",
+    keywords: ["push notification strategy", "FCM push", "APNs notifications", "mobile push campaigns"],
+    overview: [
+      "Push is a privilege. We ask at a moment of value, send on topics you can turn off, and measure opt-out. Daily “open our app” is how ratings fall.",
+    ],
+    useCases: ["Orders", "Bookings", "Breaking ops alerts"],
+    services: ["firebase-integration", "mobile-app-development", "app-maintenance"],
+    posts: ["mobile-app-development-guide", "flutter-app-development-benefits"],
+    faqs: [
+      { question: "Can you buy push lists?", answer: "No. That is spam and a policy violation." },
+    ],
+  },
+  {
+    slug: "content-marketing-for-saas",
+    title: "Content Marketing for SaaS",
+    h1: "Content Marketing for SaaS — Pages That Can Rank and Sell",
+    category: "Growth",
+    summary: "Comparisons and use-cases that link to a trial — not 200 AI blogs.",
+    metaTitle: "Content Marketing for SaaS | Rank and Convert",
+    metaDescription:
+      "Content marketing for SaaS: comparison and use-case pages that link to a trial. Fewer URLs, better ones.",
+    keywords: ["content marketing for SaaS", "SaaS SEO content", "SaaS blog strategy", "product-led content"],
+    overview: [
+      "SaaS content that works is “vs”, “for [role]”, and “how to” that ends in the product. Thin AI posts are how you earn crawled-not-indexed.",
+    ],
+    useCases: ["B2B SaaS", "Vertical tools", "PLG"],
+    services: ["content-marketing", "seo-services", "saas-application-development"],
+    posts: ["digital-marketing-for-software-companies", "saas-mvp-development-cost"],
+    faqs: [
+      { question: "One post a day?", answer: "No. One useful URL a week beats seven empty ones." },
+    ],
+  },
+  {
+    slug: "instagram-shopping-setup",
+    title: "Instagram Shopping Setup",
+    h1: "Instagram Shopping Setup with a Catalogue That Matches Stock",
+    category: "Marketplaces",
+    summary: "Tags that open a live SKU — not a Shop tab with three expired products.",
+    metaTitle: "Instagram Shopping Setup | Catalogue & Tags",
+    metaDescription:
+      "Instagram Shopping setup: Commerce Manager, catalogue sync and tags. Checkout path depends on your country.",
+    keywords: ["Instagram Shopping setup", "Instagram shop", "product tags Instagram", "Meta catalogue Instagram"],
+    overview: [
+      "Shopping on Instagram is a catalogue problem first. We complete Commerce Manager under your Business Manager and keep prices in sync.",
+    ],
+    useCases: ["Fashion", "DTC", "Creators with SKUs"],
+    services: ["facebook-instagram-shop", "facebook-instagram-ads", "ecommerce-shopify"],
+    posts: ["how-to-launch-a-shopify-store", "digital-marketing-for-software-companies"],
+    faqs: [
+      { question: "Checkout on Instagram?", answer: "Only where Meta allows it. Otherwise the tag opens your site. We pick the legal path." },
+    ],
+  },
+  {
+    slug: "custom-crm-vs-salesforce",
+    title: "Custom CRM vs Salesforce",
+    h1: "Custom CRM vs Salesforce — Licences versus Your Object Model",
+    category: "Software",
+    summary: "Buy Salesforce when you will use it. Build when the record is not a Salesforce object.",
+    metaTitle: "Custom CRM vs Salesforce | When to Build",
+    metaDescription:
+      "Custom CRM versus Salesforce: licence cost, object model and when WordbitX recommends configure versus build.",
+    keywords: ["custom CRM vs Salesforce", "Salesforce alternative", "build vs buy CRM", "custom CRM development"],
+    overview: [
+      "Salesforce is a platform you pay per seat. It wins when your process is CRM-shaped. It loses when the noun is a plot file or a batch and you would spend a year on custom objects anyway.",
+    ],
+    useCases: ["Enterprise sales", "Odd inventory objects", "Dealer networks"],
+    services: ["crm-erp-solutions", "custom-software-development", "it-consulting"],
+    posts: ["custom-crm-for-growing-businesses", "crm-vs-erp-which-one-does-your-business-need"],
+    faqs: [
+      { question: "Do you implement Salesforce?", answer: "We can integrate and advise. A full Salesforce SI engagement is a different partner conversation." },
+    ],
+  },
+  {
+    slug: "attendance-and-shift-software",
+    title: "Attendance and Shift Software",
+    h1: "Attendance and Shift Software for Rosters and Overtime",
+    category: "Operations",
+    summary: "Who was on, who was late — payroll’s input, not a fitness tracker.",
+    metaTitle: "Attendance and Shift Software | Rosters & Overtime",
+    metaDescription:
+      "Attendance and shift software: rosters, late marks and overtime exports for multi-shift teams.",
+    keywords: ["attendance software", "shift roster software", "overtime tracking", "biometric attendance"],
+    overview: [
+      "Attendance software is a clock and a roster. We export to payroll. We do not decide labour law.",
+    ],
+    useCases: ["Factories", "Retail shifts", "Security teams"],
+    services: ["custom-software-development", "api-development", "mobile-app-development"],
+    posts: ["custom-software-vs-ready-made-software", "crm-vs-erp-which-one-does-your-business-need"],
+    faqs: [
+      { question: "Must we use your biometric brand?", answer: "No. We integrate devices you can buy locally." },
+    ],
+  },
+  {
+    slug: "digital-signage-cms",
+    title: "Digital Signage CMS",
+    h1: "Digital Signage CMS for Menus, Screens and Playlists",
+    category: "Operations",
+    summary: "A playlist and a screen that still shows something if the WAN dies.",
+    metaTitle: "Digital Signage CMS | Menus & Screen Playlists",
+    metaDescription:
+      "Digital signage CMS: playlists, menus and offline fallback for restaurant and retail screens.",
+    keywords: ["digital signage CMS", "menu board software", "screen playlist cms", "retail digital signage"],
+    overview: [
+      "Signage is a file and a schedule. Cloud-only players that go black in a cut are a bad buy. We cache.",
+    ],
+    useCases: ["Menu boards", "Retail TV", "Lobby screens"],
+    services: ["custom-web-application-development", "custom-cms-development", "pos-software"],
+    posts: ["wordpress-vs-custom-website", "custom-software-vs-ready-made-software"],
+    faqs: [
+      { question: "Do you sell the TVs?", answer: "No. You buy screens. We run the playlist." },
+    ],
+  },
+  {
+    slug: "booking-widget-for-sites",
+    title: "Booking Widget",
+    h1: "Booking Widget for Sites — Embeddable Calendars You Own",
+    category: "Software",
+    summary: "An embed that writes to your calendar, not a lead form that pretends to book.",
+    metaTitle: "Booking Widget for Websites | Embeddable Calendar",
+    metaDescription:
+      "Booking widget development: embeddable calendars for services, rooms or tables that write to a real schedule.",
+    keywords: ["booking widget", "website booking calendar", "embed appointment widget", "reservation widget"],
+    overview: [
+      "A widget is only useful if it holds a slot. Calendly-style tools are fine until the slot must know a room, a chair or a table.",
+    ],
+    useCases: ["Consultancies", "Clinics", "Small hospitality"],
+    services: ["custom-web-application-development", "web-development", "saas-application-development"],
+    posts: ["website-or-mobile-app-first", "saas-mvp-development-cost"],
+    faqs: [
+      { question: "Just use Calendly?", answer: "Yes, if a generic 30-minute slot is the product. We build when the slot has inventory." },
+    ],
+  },
+  {
+    slug: "play-app-signing",
+    title: "Play App Signing",
+    h1: "Play App Signing and Release Tracks Without Losing the Key",
+    category: "Mobile",
+    summary: "Google holds the signing key you enrol — you still own the Play account.",
+    metaTitle: "Play App Signing | Release Tracks & Keys",
+    metaDescription:
+      "Play app signing and release tracks: enrolment, internal testing and production. Keys and the developer account stay with you.",
+    keywords: ["Play app signing", "Android app signing", "Play Console release", "Android upload key"],
+    overview: [
+      "Losing an upload key without Play App Signing is a career event. We enrol signing under your Play account and document who can release.",
+    ],
+    useCases: ["New Android apps", "Takeovers", "CI deploys"],
+    services: ["google-play-console", "android-app-development", "app-maintenance"],
+    posts: ["hire-android-app-developers", "mobile-app-development-guide"],
+    faqs: [
+      { question: "Can you keep the key?", answer: "No. The account is yours. We should not be the only humans who can ship." },
+    ],
+  },
+  {
+    slug: "tiktok-ads-for-dtc",
+    title: "TikTok Ads for DTC",
+    h1: "TikTok Ads for DTC Brands That Already Have an Offer",
+    category: "Growth",
+    summary: "Native creative and a pixel — not a cropped TV ad.",
+    metaTitle: "TikTok Ads for DTC | Spark & In-Feed",
+    metaDescription:
+      "TikTok ads for DTC: Spark, in-feed and a pixel. Shop campaigns need a working Shop or landing page first.",
+    keywords: ["TikTok ads for DTC", "TikTok advertising ecommerce", "Spark Ads", "TikTok ads agency"],
+    overview: [
+      "DTC on TikTok is a hook in the first second and a product page that can checkout. We will not scale a brand with no offer.",
+    ],
+    useCases: ["Consumables", "Fashion", "Gadgets"],
+    services: ["tiktok-ads", "tiktok-shop-setup", "graphic-design"],
+    posts: ["digital-marketing-for-software-companies", "how-to-launch-a-shopify-store"],
+    faqs: [
+      { question: "Need 100k followers first?", answer: "No. Ads can run cold. Followers help Spark social proof only." },
+    ],
+  },
+  {
+    slug: "spare-parts-inventory",
+    title: "Spare Parts Inventory",
+    h1: "Spare Parts Inventory Software for SKUs, Supersessions and Bins",
+    category: "Operations",
+    summary: "Parts have supersessions. A T-shirt inventory model will lie.",
+    metaTitle: "Spare Parts Inventory Software | SKUs & Supersessions",
+    metaDescription:
+      "Spare parts inventory software: bins, supersessions and interchange. For workshops and parts counters — not generic retail.",
+    keywords: ["spare parts inventory", "auto parts software", "parts catalogue software", "supersession inventory"],
+    overview: [
+      "Parts inventory needs interchange and supersession. Selling the old SKU after it was replaced is how workshops lose trust.",
+    ],
+    useCases: ["Workshops", "Parts counters", "OEM dealers"],
+    services: ["inventory-management-software", "pos-software", "custom-software-development"],
+    posts: ["inventory-management-software-guide", "pos-software-for-retail-pakistan"],
+    faqs: [
+      { question: "Do you supply parts?", answer: "No. We track yours." },
+    ],
+  },
+  {
+    slug: "grocery-delivery-app",
+    title: "Grocery Delivery App",
+    h1: "Grocery Delivery App — Catalogue, Slots and a Rider Status",
+    category: "Mobile",
+    summary: "One catchment, real slots, substitutions — not “Uber for groceries” on a slide.",
+    metaTitle: "Grocery Delivery App Development | Slots & Catalogue",
+    metaDescription:
+      "Grocery delivery app development: catalogue, delivery slots and rider status for one catchment. A realistic first city, not a global clone.",
+    keywords: ["grocery delivery app", "online grocery app development", "supermarket delivery app", "quick commerce app"],
+    overview: [
+      "Grocery is inventory freshness plus a slot. Dark-store economics are yours. We ship one catchment with substitutions the shopper can accept.",
+    ],
+    useCases: ["Single store", "Small chains", "Cloud grocery"],
+    services: ["mobile-app-development", "inventory-management-software", "ecommerce-development"],
+    posts: ["mobile-app-development-guide", "website-or-mobile-app-first"],
+    faqs: [
+      { question: "10-minute delivery?", answer: "That is a warehouse and rider density problem. Software cannot invent it." },
+    ],
+  },
+];
