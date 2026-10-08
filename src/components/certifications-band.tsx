@@ -22,7 +22,7 @@
  * logos scale down on phones and the loop keeps working at any width.
  */
 
-const LOGO_CLASS = "h-16 w-auto sm:h-24";
+const LOGO_CLASS = "h-14 w-auto sm:h-20";
 
 function SecpMark() {
   return (
