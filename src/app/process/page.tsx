@@ -8,9 +8,9 @@ import { ArrowRight } from "@/components/icons";
 import { processFaqs, processSteps } from "@/lib/process";
 
 export const metadata: Metadata = {
-  title: "Software Development Process | Discovery to Launch",
+  title: "Software Development Process | Scope to Launch",
   description:
-    "How WordbitX delivers software: discovery, written scope, design, sprint development, QA, launch and support. You own the repo. Overlap hours for USA, UK, UAE, Canada and Australia.",
+    "How WordbitX delivers software: discovery, written scope, design, sprint development, QA, launch and support. You own the repo, in every timezone.",
   alternates: { canonical: "/process" },
   keywords: [
     "software development process",

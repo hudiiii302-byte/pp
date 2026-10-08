@@ -32,7 +32,7 @@ export const societies: Society[] = [
     tagline: "Pakistan's benchmark premium address — strong file market across all phases.",
     metaTitle: "DHA Lahore Plots & Files | Prices, Phases and Portal",
     metaDescription:
-      "DHA Lahore plots and files: indicative price ranges for 1 kanal, 2 kanal, 5 marla and commercial plots across phases, plus property portal software for society inventory.",
+      "DHA Lahore plots: indicative price ranges for kanal and marla sizes across phases, plus the property portal software behind society inventory.",
     overview: [
       "DHA Lahore remains the reference point for premium property in the city. Files trade actively in Phases 1 to 8, with the older phases commanding higher per-marla rates due to possession and developed infrastructure.",
       "Dealers, investors and society office staff all manage large plot inventories — which is exactly what our real estate portals are built to track: phases, blocks, plot numbers, file status and instalment history.",
@@ -64,7 +64,7 @@ export const societies: Society[] = [
     tagline: "The capital's premium society with the strongest large-plot market in Pakistan.",
     metaTitle: "DHA Islamabad Plots | Prices, Phases and Property Portal",
     metaDescription:
-      "DHA Islamabad plots: indicative price ranges for 5, 10 and 20 marla plots and commercial plots across phases, plus property portal software for society inventory.",
+      "DHA Islamabad plots: indicative price ranges for 5, 10 and 20 marla and commercial plots across phases, plus society inventory portal software.",
     overview: [
       "DHA Islamabad holds the most expensive large plots in the country. Ten and twenty marla plots in central phases trade at premium rates, and the society's commercial areas serve the capital's corporate market.",
       "Transaction values are high, so dealers and investors rely heavily on accurate file records — the core reason society portals exist.",
@@ -185,7 +185,7 @@ export const societies: Society[] = [
     tagline: "The fastest-growing smart city in the capital region with strong 5 and 10 marla demand.",
     metaTitle: "Capital Smart City Plots & Files | Prices and Portal",
     metaDescription:
-      "Capital Smart City plots: indicative price ranges for 3, 5 and 10 marla residential and commercial plots, plus property portal software with ballot and instalment tracking.",
+      "Capital Smart City plots: indicative ranges for 3, 5 and 10 marla residential and commercial plots, plus portal software with ballot and instalment tracking.",
     overview: [
       "Capital Smart City has become the capital region's most searched new development. Ballot-based allocation, instalment plans and a structured master plan make it a textbook case for specialised portal tooling.",
       "5 and 10 marla residential plus 10 marla commercial are the most traded categories.",
@@ -215,7 +215,7 @@ export const societies: Society[] = [
     tagline: "Overseas-investor focused development with executive blocks near Lahore's tech corridor.",
     metaTitle: "Lahore Smart City Plots & Files | Prices and Portal",
     metaDescription:
-      "Lahore Smart City plots: indicative price ranges for overseas and executive block residential and commercial plots, plus property portal software with instalment tracking.",
+      "Lahore Smart City plots: indicative ranges for overseas and executive block plots, plus property portal software with instalment tracking.",
     overview: [
       "Lahore Smart City is positioned for overseas Pakistanis, with overseas blocks and an executive block near the city's tech and commercial corridor. Its payment plans are instalment-heavy, which makes schedule tracking essential.",
       "Search volume is strong for 5 and 10 marla files in both blocks.",

@@ -63,7 +63,7 @@ export const topicsE: Topic[] = [
       "Real-time invoice transmission to FBR, an IRN and a QR code on every receipt. What that means for the system you already run.",
     metaTitle: "FBR Digital Invoicing Software Pakistan",
     metaDescription:
-      "FBR digital invoicing explained for businesses in Pakistan: who must integrate under SRO 709(I)/2025, what the invoice must carry, how PRAL and licensed integrators fit, and what it means for your POS or ERP.",
+      "FBR digital invoicing explained: who must integrate under SRO 709(I)/2025, what the invoice must carry, and what it means for your POS or ERP system.",
     keywords: [
       "FBR digital invoicing",
       "FBR e-invoicing software",
@@ -133,7 +133,7 @@ export const topicsE: Topic[] = [
       "Real-time reporting from the till, an FBR invoice number and QR code on every receipt, and a counter that keeps selling when the line drops.",
     metaTitle: "FBR POS Integration Software Pakistan",
     metaDescription:
-      "FBR POS integration for Tier-1 retailers in Pakistan: what section 3(9A) requires at the counter, what the receipt must print, what non-integration costs under section 8B(6), and how to keep billing offline.",
+      "FBR POS integration for Tier-1 retailers: what section 3(9A) requires, what the receipt must print, non-integration costs under 8B(6), and offline billing.",
     keywords: [
       "FBR POS integration",
       "FBR integrated POS software",
@@ -203,7 +203,7 @@ export const topicsE: Topic[] = [
       "Section 2(43A) catches far more shops than owners expect. Meeting any one test is enough — including the electricity bill.",
     metaTitle: "Tier-1 Retailer POS Rules Pakistan",
     metaDescription:
-      "Tier-1 retailer definition under section 2(43A) of the Sales Tax Act, 1990: the seven tests, the Rs 1.2 million electricity threshold, what integration requires, and what non-compliance costs.",
+      "Tier-1 retailer defined under section 2(43A) of the Sales Tax Act: the seven tests, the electricity threshold, integration requirements and penalties.",
     keywords: [
       "Tier-1 retailer",
       "Tier 1 retailer Pakistan",
@@ -267,7 +267,7 @@ export const topicsE: Topic[] = [
       "Restaurants, cafés and snack bars have their own rule. Dine-in, takeaway, delivery and aggregator orders all have to reconcile.",
     metaTitle: "FBR Restaurant POS Software Pakistan",
     metaDescription:
-      "FBR-ready restaurant POS software: why restaurants must integrate regardless of Tier-1 status, how dine-in, takeaway, delivery and aggregator orders reconcile, and keeping the counter running offline.",
+      "FBR-ready restaurant POS software: why restaurants must integrate regardless of Tier-1 status, how aggregator orders reconcile, and offline counters.",
     keywords: [
       "FBR restaurant POS",
       "restaurant POS software Pakistan",

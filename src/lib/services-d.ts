@@ -116,7 +116,7 @@ export const servicesD: Service[] = [
       "Native Kotlin, Java and cross-platform Android applications with Google Play publishing, in-app billing and background service optimisation.",
     metaTitle: "Android App Development Company | Native Android & Play Store",
     metaDescription:
-      "Android app development services: native Kotlin, Java and cross-platform apps, Google Play publishing, in-app billing, push notifications and background service optimisation.",
+      "Android app development services: native Kotlin and Java, Google Play publishing, in-app billing, push notifications and background optimisation.",
     primaryKeyword: "Android app development",
     keywords: [
       "Android app development",
@@ -198,7 +198,7 @@ export const servicesD: Service[] = [
       "Native Swift and SwiftUI iOS applications with App Store submission, in-app purchases, push notifications and TestFlight beta distribution.",
     metaTitle: "iOS App Development Company | iPhone & iPad App Developers",
     metaDescription:
-      "iOS app development services: native Swift, SwiftUI and cross-platform iPhone and iPad apps, App Store submission, TestFlight distribution and in-app purchase integration.",
+      "iOS app development services: native Swift and SwiftUI, App Store submission, TestFlight distribution and in-app purchase integration.",
     primaryKeyword: "iOS app development",
     keywords: [
       "iOS app development",
@@ -280,7 +280,7 @@ export const servicesD: Service[] = [
       "Social media management, content production and paid campaigns across Instagram, Facebook, TikTok, LinkedIn and YouTube.",
     metaTitle: "Social Media Marketing Services | Instagram, Facebook, TikTok, LinkedIn",
     metaDescription:
-      "Social media marketing services: content calendars, creative production, community management and paid campaigns across Instagram, Facebook, TikTok, LinkedIn and YouTube.",
+      "Social media marketing services: content calendars, creative production, community management and paid campaigns across Instagram, Facebook and TikTok.",
     primaryKeyword: "social media marketing services",
     keywords: [
       "social media marketing services",
@@ -355,7 +355,7 @@ export const servicesD: Service[] = [
       "Mobile app monetisation with AdMob: SDK integration, ad unit strategy, mediation with multiple networks and revenue reporting.",
     metaTitle: "Google AdMob Integration Services | Mobile App Monetisation",
     metaDescription:
-      "Google AdMob integration and management: SDK setup, ad unit strategy, mediation with multiple ad networks, eCPM optimisation and revenue reporting for Android and iOS apps.",
+      "Google AdMob integration and management: SDK setup, ad unit strategy, mediation, eCPM optimisation and revenue reporting for Android and iOS apps.",
     primaryKeyword: "Google AdMob integration",
     keywords: [
       "Google AdMob integration",
@@ -435,7 +435,7 @@ export const servicesD: Service[] = [
       "Website monetisation with Google AdSense: approval preparation, ad placement, Core Web Vitals safety and RPM optimisation.",
     metaTitle: "Google AdSense Setup Services | Website Monetisation & Approval",
     metaDescription:
-      "Google AdSense setup, approval preparation and revenue optimisation: policy compliance, ad placement, Core Web Vitals safety and RPM improvement for content websites.",
+      "Google AdSense setup, approval preparation and revenue optimisation: policy compliance, ad placement and RPM improvement for content websites.",
     primaryKeyword: "Google AdSense setup",
     keywords: [
       "Google AdSense setup",
@@ -515,7 +515,7 @@ export const servicesD: Service[] = [
       "Google Play Console management: app submission, staged rollouts, in-app updates, policy compliance and review-team handling.",
     metaTitle: "Google Play Console Publishing Services | Android App Submission",
     metaDescription:
-      "Google Play Console management: app submission, staged rollouts, data safety declarations, policy compliance, review-team handling and versioned release management.",
+      "Google Play Console management: app submission, staged rollouts, data safety declarations, policy compliance and versioned release management.",
     primaryKeyword: "Google Play Console publishing",
     keywords: [
       "Google Play Console publishing",
@@ -590,7 +590,7 @@ export const servicesD: Service[] = [
       "Apple App Store publishing: developer account setup, App Store Connect configuration, review submission, TestFlight distribution and in-app purchase compliance.",
     metaTitle: "Apple App Store Publishing Services | iOS App Submission",
     metaDescription:
-      "Apple App Store publishing services: developer account setup, App Store Connect configuration, review-team submission, TestFlight distribution and in-app purchase compliance.",
+      "Apple App Store publishing services: developer account setup, App Store Connect, review submissions, TestFlight and in-app purchase compliance.",
     primaryKeyword: "Apple App Store publishing",
     keywords: [
       "Apple App Store publishing",

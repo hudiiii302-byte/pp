@@ -10,7 +10,7 @@ import { propertiesPak, showcaseRel } from "@/lib/demos";
 export const metadata: Metadata = {
   title: "Housing Society Portal Software | DHA, Bahria & Smart Cities",
   description:
-    "Real estate portal and property-management software for Pakistan housing societies — DHA, Bahria, Capital Smart City and others. Plot ranges are context only. WordbitX builds software, not a brokerage.",
+    "Property portal and management software for DHA, Bahria, Capital Smart City and other Pakistani societies — we build the software, not brokerage.",
   alternates: { canonical: "/societies" },
 
   openGraph: {

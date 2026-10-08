@@ -228,7 +228,7 @@ export const cities: City[] = [
     tagline: "For the capital's public sector, development organisations and export-facing teams.",
     metaTitle: "Software Company in Islamabad | Web, Portals & Custom Software — WordbitX",
     metaDescription:
-      "WordbitX builds websites, portals, custom software and mobile apps for Islamabad organisations — Blue Area corporates, development-sector offices, clinics and schools in the G and F sectors.",
+      "Websites, portals, custom software and apps for Islamabad organisations — Blue Area corporates, development-sector offices, clinics and schools.",
     overview: [
       "Islamabad buys software differently from Lahore or Karachi. Procurement is more formal, documentation matters more, and the buyer is often accountable to a board, a donor or a ministry rather than to a profit line. We write proposals for Islamabad with that in mind — scope, deliverables and acceptance criteria stated plainly enough to survive a committee.",
       "The capital's largest software demand sits in three places: the public and semi-public sector, the development and NGO sector that reports to international funders, and the export-facing technology and consultancy firms in Blue Area and the I-sectors.",
@@ -385,7 +385,7 @@ export const cities: City[] = [
     tagline: "Built for the textile capital — production, stock, orders and export buyers.",
     metaTitle: "Software House in Faisalabad | Textile ERP, Web & Custom Software — WordbitX",
     metaDescription:
-      "WordbitX builds production tracking, inventory, order management and export-buyer portals for Faisalabad textile mills, processing units and export houses, plus websites and e-commerce.",
+      "Production tracking, inventory, order management and export-buyer portals for Faisalabad textile mills, processing units and export houses.",
     overview: [
       "Faisalabad is a single-industry city in the most useful sense: almost every software conversation here eventually becomes a textile conversation. Weaving, processing, stitching, packing, export. That focus means we can be specific rather than generic.",
       "The recurring problem is not a missing website. It is that an order's status lives in four places — the production supervisor's register, the store's stock card, the accounts ledger and somebody's WhatsApp — and nobody can answer 'where is this order' without three phone calls. That is a solvable software problem and it pays for itself in weeks.",
@@ -465,7 +465,7 @@ export const cities: City[] = [
     tagline: "For exporters — multi-currency B2B stores, buyer portals and marketplace listings.",
     metaTitle: "Software Company in Sialkot | B2B E-Commerce & Export Software — WordbitX",
     metaDescription:
-      "WordbitX builds multi-currency B2B stores, export buyer portals, Amazon and eBay listings and production tracking for Sialkot's sports goods, surgical instrument and leather exporters.",
+      "Multi-currency B2B stores, buyer portals, Amazon and eBay listings and production tracking for Sialkot's sports goods, surgical and leather exporters.",
     overview: [
       "Sialkot is the most export-oriented city in Pakistan, and that changes the software brief completely. A Sialkot manufacturer's customer is in Germany, the UK or the US, has never visited the factory, and judges the company almost entirely on what it can see online.",
       "That makes a serious B2B web presence a commercial asset rather than a marketing expense. Prices in the buyer's currency, a downloadable catalogue, certifications visible, sample requests handled as a workflow rather than a contact form. Most Sialkot sites do none of this, which is exactly why the ones that do get the enquiry.",
@@ -541,7 +541,7 @@ export const cities: City[] = [
     tagline: "For manufacturers with dealer networks — orders, stock and after-sales in one place.",
     metaTitle: "Software House in Gujranwala | Manufacturing & Dealer Software — WordbitX",
     metaDescription:
-      "WordbitX builds dealer portals, order management, inventory and websites for Gujranwala manufacturers — fans, ceramics and sanitary ware, steel, agricultural machinery and food.",
+      "Dealer portals, order management, inventory and websites for Gujranwala manufacturers — fans, ceramics, steel, agricultural machinery and food brands.",
     overview: [
       "Gujranwala manufactures things that get sold through dealers: fans, ceramics and sanitary ware, steel and pipe, agricultural machinery, food products. Almost every software problem in the city follows from that one fact.",
       "A dealer network run on phone calls and WhatsApp means orders get missed, prices drift between dealers, credit limits are informal, and nobody knows what is actually in a dealer's warehouse. A dealer portal fixes all four, and it is usually the single highest-return system a Gujranwala manufacturer can buy.",
@@ -620,7 +620,7 @@ export const cities: City[] = [
     tagline: "For south Punjab — agriculture supply chains, distribution and growing retail.",
     metaTitle: "Software Company in Multan | Web, Agri & Retail Software — WordbitX",
     metaDescription:
-      "WordbitX builds websites, distribution software, POS and custom systems for Multan businesses — mango and citrus export, agri inputs, retail, healthcare and real estate across south Punjab.",
+      "Websites, distribution software, POS and custom systems for Multan businesses — mango and citrus export, agri inputs, retail, healthcare and real estate.",
     overview: [
       "Multan is the commercial centre of south Punjab, which means a Multan business is usually serving a large, spread-out area rather than a dense city. Distribution, route planning and dealer coverage matter more here than footfall.",
       "Agriculture sets the rhythm. Mango and citrus export, cotton, and the agri-input trade in seeds, fertiliser and pesticides all run on seasons and on credit extended down a chain of dealers and farmers. Software that ignores credit and seasonality is useless here regardless of how good it looks.",
@@ -778,7 +778,7 @@ export const cities: City[] = [
     tagline: "Built for patchy connectivity, long distances and trade that does not wait.",
     metaTitle: "Software Company in Quetta | Websites & Business Software — WordbitX",
     metaDescription:
-      "WordbitX builds websites, offline-capable business systems, inventory and clinic software for Quetta and Balochistan — fruit trade, mining services, logistics and retail.",
+      "Websites, offline-capable business systems, inventory and clinic software for Quetta and Balochistan — fruit trade, mining, logistics and retail.",
     overview: [
       "Quetta is the hardest Pakistani city to build software for, and that is a design brief rather than a complaint. Connectivity is inconsistent, distances between a head office and a site are large, and a system that assumes a steady connection will simply stop being used.",
       "So the architecture changes: offline-capable data capture, sync when a connection appears, and interfaces light enough to work on a weak mobile signal. That is a deliberate engineering choice, and it is the difference between a system that runs in Balochistan and one that runs in a demo.",
@@ -852,7 +852,7 @@ export const cities: City[] = [
     tagline: "For Sindh's second city — trade, agriculture, handicraft and the Karachi corridor.",
     metaTitle: "Software House in Hyderabad Sindh | Web & Business Software — WordbitX",
     metaDescription:
-      "WordbitX builds websites, e-commerce, inventory and POS software for Hyderabad, Sindh — bangle and handicraft makers, agriculture trade, retail and the Karachi supply corridor.",
+      "Websites, e-commerce, inventory and POS software for Hyderabad, Sindh — bangle and handicraft makers, agriculture trade, retail and supply logistics.",
     overview: [
       "Hyderabad sits close enough to Karachi to supply it and far enough to have its own economy. A great deal of what is made or grown here is sold there, which makes dispatch, credit and coordination along that corridor the recurring operational theme.",
       "The city has two things most Pakistani cities do not: a genuine handicraft manufacturing base — bangles above all — and a large agricultural hinterland feeding into it. Both are export-capable and both are almost entirely absent from online selling, which is an open opportunity rather than a saturated one.",

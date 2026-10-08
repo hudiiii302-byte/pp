@@ -9,7 +9,7 @@ import { propertiesPak } from "@/lib/demos";
 import { demoPreview } from "@/lib/demo-shots";
 
 export const metadata: Metadata = {
-  title: "Industries We Serve | Retail, Healthcare, Education, Manufacturing",
+  title: "Software for Retail, Healthcare, Education, More",
   description:
     "Industry software from WordbitX: retail, real estate, healthcare, pharmacy, education, logistics, eCommerce, hospitality, finance, legal and construction.",
   alternates: { canonical: "/industries" },

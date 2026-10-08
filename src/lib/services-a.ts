@@ -106,7 +106,7 @@ export const servicesA: Service[] = [
       "Android and iOS applications from concept to store launch, with offline support, secure APIs and analytics baked in.",
     metaTitle: "Mobile App Development Company | Android & iOS",
     metaDescription:
-      "WordBitX is a mobile app development company building custom Android and iOS apps with Flutter, React Native, Kotlin and Swift — from MVP to store launch and growth.",
+      "WordbitX is a mobile app development company: custom Android and iOS apps with Flutter, React Native, Kotlin and Swift — from MVP to store launch.",
     primaryKeyword: "mobile app development company",
     keywords: [
       "mobile app development company",
@@ -190,7 +190,7 @@ export const servicesA: Service[] = [
       "Bespoke business platforms, internal tools and integrations that remove manual work and connect your existing systems.",
     metaTitle: "Custom Software Development Company | Business Software Services",
     metaDescription:
-      "Custom software development services from WordBitX: bespoke business applications, internal tools, integrations and automation built to match your exact workflow.",
+      "Custom software development services from WordbitX: bespoke business applications, internal tools, integrations and automation for your workflow.",
     primaryKeyword: "custom software development",
     keywords: [
       "custom software development",
@@ -356,7 +356,7 @@ export const servicesA: Service[] = [
       "Custom Shopify themes, store migrations, app integrations and Shopify Plus builds with payments, shipping and analytics fully wired.",
     metaTitle: "Shopify Development Company | Custom Shopify Stores",
     metaDescription:
-      "Shopify development services: custom themes, Shopify Plus builds, headless storefronts on Shopify, app integrations, payment and shipping setup, and conversion optimisation.",
+      "Shopify development services: custom themes, Shopify Plus builds, headless storefronts, app integrations, payments, shipping and conversion optimisation.",
     primaryKeyword: "Shopify development company",
     keywords: [
       "Shopify development company",
@@ -439,7 +439,7 @@ export const servicesA: Service[] = [
       "Custom point of sale software for retail chains, restaurants and service counters, with offline billing and live stock control.",
     metaTitle: "POS Software Development | Retail & Restaurant Systems",
     metaDescription:
-      "Custom POS software development by WordBitX: offline-capable billing, inventory control, multi-branch reporting and integrations for retail and restaurant businesses.",
+      "Custom POS software development by WordbitX: offline billing, inventory control, multi-branch reporting and integrations for retail and restaurants.",
     primaryKeyword: "POS software development",
     keywords: [
       "POS software development",

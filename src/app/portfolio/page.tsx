@@ -6,7 +6,7 @@ import { CtaBand } from "@/components/cta-band";
 import { projects, projectCategories, portfolioDisclosure } from "@/lib/portfolio";
 
 export const metadata: Metadata = {
-  title: "Portfolio | Software, Web, Mobile App & eCommerce Projects",
+  title: "Portfolio | Web, Mobile & eCommerce Projects",
   description:
     "Explore WordBitX project profiles: custom POS platforms, delivery apps, Shopify storefronts, booking portals, AI document processing and marketplace websites.",
   alternates: { canonical: "/portfolio" },

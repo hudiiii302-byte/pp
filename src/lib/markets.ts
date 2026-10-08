@@ -26,7 +26,7 @@ export const markets: Market[] = [
       "Pakistan is our operating base and a core market — not the limit of who we build for.",
     metaTitle: "Software Development Company in Pakistan | WordbitX",
     metaDescription:
-      "WordbitX is a software development company based in Pakistan, building websites, mobile apps, custom software and industry portals for Pakistani businesses and international clients.",
+      "Pakistan-based software company building websites, mobile apps, custom software and industry portals for Pakistani businesses and international clients.",
     overview: [
       "WordbitX is incorporated in Pakistan and delivers from here to clients at home and abroad. Local work is shaped by how business actually runs here: COD checkouts, plot files and instalments, offline-first POS, Urdu/English receipts, and WhatsApp as a real channel — not a novelty.",
       "The same engineering standards apply to export work. Pakistani delivery capacity is the reason international clients get senior attention at a sustainable cost, not a reason to position the brand as a city-only shop.",

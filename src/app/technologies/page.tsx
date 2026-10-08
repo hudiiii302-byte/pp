@@ -8,7 +8,7 @@ import { techPages } from "@/lib/tech-pages";
 import { ArrowRight } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "Technologies We Use | React, Next.js, Flutter, Node.js, Python, Shopify",
+  title: "Technologies We Use | React, Next.js, Flutter",
   description:
     "The technologies WordbitX actually uses: React, Next.js, Flutter, Node.js, Python, Shopify and the supporting cloud, data and mobile stack.",
   alternates: { canonical: "/technologies" },

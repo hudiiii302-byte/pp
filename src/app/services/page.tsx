@@ -12,7 +12,7 @@ import { services, megaMenuGroups } from "@/lib/services";
 import type { Faq } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Software & Digital Services | Web, Apps, Shopify, SEO",
+  title: "Software Development Services | Web, Apps, SEO",
   description:
     "WordbitX services: websites, web apps, Shopify, WordPress, Flutter, Android, iOS, custom software, POS, SaaS, SEO, Google Ads, Meta ads and IT consulting.",
   alternates: { canonical: "/services" },

@@ -13,7 +13,7 @@ export const morePostsC: BlogPost[] = [
       "What actually separates a software house that ships from one that disappears after the deposit — questions, red flags and a short checklist for Lahore buyers.",
     metaTitle: "Software Company in Lahore | How to Choose (2026)",
     metaDescription:
-      "Choosing a software company in Lahore: what to ask, which red flags to walk away from, and how WordbitX scopes websites, apps and custom software before a deposit.",
+      "Choosing a software company in Lahore: what to ask, the red flags to walk away from, and how scope should be written before you pay a deposit.",
     keywords: [
       "software company Lahore",
       "software house Lahore",

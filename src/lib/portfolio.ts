@@ -434,7 +434,7 @@ const originalProjects: Project[] = [
       "An integrated hospital system covering OPD and IPD workflows, electronic records, billing, laboratory orders and pharmacy stock with batch and expiry control.",
     metaTitle: "Hospital Management & Pharmacy Inventory System | WordBitX Project",
     metaDescription:
-      "A custom hospital management system with OPD/IPD workflows, electronic medical records, billing, lab integration and pharmacy inventory with batch and expiry tracking.",
+      "Custom hospital management system with OPD/IPD workflows, electronic records, billing, lab integration and pharmacy stock with batch and expiry tracking.",
     image: media.doctorTablet,
     imageAlt: "Clinician using a hospital management system on a tablet during a ward round",
     gallery: [
@@ -497,7 +497,7 @@ const originalProjects: Project[] = [
       "A barcode-driven inventory platform with multi-warehouse stock ledgers, batch tracking, reorder automation and landed-cost profitability reporting.",
     metaTitle: "Multi-Warehouse Inventory Management System | WordBitX Project",
     metaDescription:
-      "A custom inventory management system with barcode receiving and picking, multi-warehouse stock ledgers, batch and expiry tracking, reorder automation and valuation reports.",
+      "Custom inventory system with barcode receiving and picking, multi-warehouse ledgers, batch and expiry tracking, reorder automation and valuation reports.",
     image: media.warehouseScanning,
     imageAlt: "Warehouse operator scanning inventory into a stock management system",
     gallery: [
@@ -560,7 +560,7 @@ const originalProjects: Project[] = [
       "A CRM for property agencies covering lead capture and routing, inventory of plots and units, viewing schedules, instalment plans and commission tracking.",
     metaTitle: "Real Estate CRM & Property Management Portal | WordBitX Project",
     metaDescription:
-      "A real estate CRM with lead routing, property and plot inventory, viewing scheduling, instalment payment plans, commission tracking and agency performance dashboards.",
+      "Real estate CRM with lead routing, plot inventory, viewing scheduling, instalment plans, commission tracking and agency performance dashboards.",
     image: media.realEstateKeys,
     imageAlt: "Real estate agent handing over property keys to new owners",
     gallery: [
@@ -623,7 +623,7 @@ const originalProjects: Project[] = [
       "A property portal structured around societies, phases, blocks and plot files — covering DHA Lahore, Lahore Smart City, Capital Smart City and Etihad Town style inventory with instalment tracking.",
     metaTitle: "Housing Society Property & Plot File Portal | WordBitX Project",
     metaDescription:
-      "A real estate portal with society, phase, block and plot-file inventory, instalment plan tracking, dealer CRM and lead routing built for Pakistani housing society sales.",
+      "Real estate portal with society, phase and plot-file inventory, instalment tracking, dealer CRM and lead routing for Pakistani housing sales.",
     image: media.realEstateAgent,
     imageAlt: "Property consultant reviewing plot files and society layout plans",
     gallery: [
@@ -686,7 +686,7 @@ const originalProjects: Project[] = [
       "An online jewellery store with weight and karat based dynamic pricing, live gold rate integration, certification details and secure high-value checkout.",
     metaTitle: "Jewellery E-Commerce Store with Live Gold Rates | WordBitX Project",
     metaDescription:
-      "A jewellery eCommerce store featuring weight-based dynamic pricing, live gold and silver rate integration, karat variants, hallmark certification details and secure checkout.",
+      "Jewellery eCommerce store with weight-based pricing, live gold and silver rates, karat variants, hallmark details and secure checkout.",
     image: media.jewelleryDisplay,
     imageAlt: "Gold jewellery collection displayed for an online jewellery store",
     gallery: [
@@ -749,7 +749,7 @@ const originalProjects: Project[] = [
       "Pharmacy software with fast counter billing, batch and expiry control, prescription records, supplier ledgers and multi-branch stock visibility.",
     metaTitle: "Medical Store & Pharmacy Chain Portal | WordBitX Project",
     metaDescription:
-      "Medical store software with counter billing, batch and expiry (FEFO) stock control, prescription records, supplier ledgers, reorder alerts and multi-branch reporting.",
+      "Medical store software with counter billing, FEFO batch and expiry control, prescription records, supplier ledgers and multi-branch reporting.",
     image: media.doctorSmartphone,
     imageAlt: "Pharmacy staff member using a medical store management portal",
     gallery: [
