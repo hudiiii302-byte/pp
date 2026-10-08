@@ -1040,3 +1040,13 @@ body.hide-site-cursor .site-cursor-ring {
 .industry-rail::-webkit-scrollbar {
   display: none;
 }
+
+/* Certifications band — seamless horizontal logo marquee.
+   The track holds two identical sets; animating to -50% lands exactly on
+   the second set, so the loop is invisible. Pauses on hover; under
+   prefers-reduced-motion the component switches to a static wrapped row
+   (see CertificationsBand) so this animation never plays. */
+@keyframes cert-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
