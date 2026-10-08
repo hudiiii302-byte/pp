@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Section, SectionHeading, ButtonLink, Eyebrow } from "@/components/ui";
 import { ServiceCard, PostCard, ProjectCard } from "@/components/cards";
 import { DemosSection } from "@/components/demos-section";
-import { AssuranceStrip } from "@/components/assurance-strip";
 import { CertificationsBand } from "@/components/certifications-band";
 import { IndustryStrip } from "@/components/industry-strip";
 import { ReviewSlider } from "@/components/review-slider";
@@ -524,31 +523,11 @@ export default function HomePage() {
       </AiServicesDeck>
 
       {/* ================= PROOF =================
-          Demos, project profiles and reviews, back to back. The portfolio
-          copy already said "separate from the live demo sites above" while
-          sitting nine sections below them. */}
+          Order (owner-approved arrangement, 2026-10-08): live demos, then
+          industries (fit) inserted between the two card blocks so the four
+          back-to-back card sections get one topic change in the middle,
+          then project profiles, then the mid-page CTA and reviews. */}
       <DemosSection />
-
-      {/* Trimmed bottom padding: #industries below is also light, so the two
-          section paddings stacked into 192px of empty white before the next
-          eyebrow. */}
-      <Section id="portfolio" className="pb-10 sm:pb-12 lg:pb-14">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <SectionHeading
-            eyebrow="Project Profiles"
-            title="POS, apps, Shopify and portal project profiles"
-            description="Scope write-ups of software, mobile and e-commerce work — separate from the live demo sites above. Each profile links a full project page for indexing and detail."
-          />
-          <ButtonLink href="/portfolio" variant="secondary" className="shrink-0">
-            View Full Portfolio
-          </ButtonLink>
-        </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {featuredProjects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
-          ))}
-        </div>
-      </Section>
 
       {/* ================= WHO IT'S FOR =================
           Solutions and Industries overlapped on four entries (real estate,
@@ -565,12 +544,13 @@ export default function HomePage() {
            - Funnel order is broad then narrow: thirteen sectors ("is my
              business here?") before the platform we would actually hand you.
            - The tiles are dark photography, so leading with them gives this
-             light section a visual opening even though #portfolio above it
+             light section a visual opening even though #portfolio below it
              is also light. That is why neither section needed a tone change.
 
-          The section also sits above #reviews rather than below it: sector
-          fit is a higher-intent question than social proof, and it was
-          landing at screen 14 of 24. */}
+          Position: moved ahead of #portfolio so the flow reads
+          capability → fit → proof; it still sits above #reviews, which
+          matters because sector fit is a higher-intent question than
+          social proof. */}
       <Section id="industries" className="pt-10 sm:pt-12 lg:pt-14">
         {/* One heading, not two. This section used to open with a centred H2
             and then immediately a second eyebrow + H3 + description before
@@ -696,6 +676,44 @@ export default function HomePage() {
         </div>
         </div>
       </Section>
+
+      {/* Standard bottom padding: the mid-page CTA (dark) follows #portfolio. */}
+      <Section id="portfolio">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <SectionHeading
+            eyebrow="Project Profiles"
+            title="POS, apps, Shopify and portal project profiles"
+            description="Scope write-ups of software, mobile and e-commerce work — separate from the live demo sites above. Each profile links a full project page for indexing and detail."
+          />
+          <ButtonLink href="/portfolio" variant="secondary" className="shrink-0">
+            View Full Portfolio
+          </ButtonLink>
+        </div>
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {featuredProjects.map((project) => (
+            <ProjectCard key={project.slug} project={project} />
+          ))}
+        </div>
+      </Section>
+
+      {/* Mid-page CTA — the page is long enough that a visitor convinced by
+          the proof above should not have to scroll through four more
+          sections to reach the ask. */}
+      <section className="bg-navy-950 py-10 sm:py-12">
+        <div className="container-page flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
+          <div>
+            <h2 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
+              Have a project in mind?
+            </h2>
+            <p className="mt-1.5 max-w-xl text-sm leading-relaxed text-slate-400">
+              Tell us what you need — a real engineer replies within one business day.
+            </p>
+          </div>
+          <ButtonLink href="/contact" className="shrink-0">
+            Discuss Your Project
+          </ButtonLink>
+        </div>
+      </section>
 
       <Section id="reviews" tone="muted">
         <ReviewSlider />
@@ -878,11 +896,6 @@ export default function HomePage() {
           ))}
         </div>
       </Section>
-
-      {/* ASSURANCE STRIP — the "how we work" commitments, kept on the page
-          but moved down: the certifications band gets the prime slot under
-          the hero (owner request), so this lands just before the FAQ. */}
-      <AssuranceStrip />
 
       {/* FAQ */}
       <Section tone="muted">

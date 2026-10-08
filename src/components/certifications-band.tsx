@@ -22,6 +22,10 @@
  * logos scale down on phones and the loop keeps working at any width.
  */
 
+import { services } from "@/lib/services";
+import { industries } from "@/lib/industries";
+import { markets } from "@/lib/markets";
+
 const LOGO_CLASS = "h-14 w-auto sm:h-20";
 
 function SecpMark() {
@@ -160,6 +164,29 @@ export function CertificationsBand() {
             <LogoSet duplicate />
           </div>
         </div>
+      </div>
+
+      {/* Honest stats strip — same standard the Markets section states ("we do
+          not publish numbers we cannot show"): every value below is counted
+          from the site's own data, and every one links out to real pages.
+          No invented project/client counts. */}
+      <div className="mt-12 border-t border-white/10 pt-10 sm:mt-14 sm:pt-12">
+        <div className="container-page grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4">
+          {[
+            { value: "2021", label: "Established · Lahore" },
+            { value: String(services.length), label: "Services & solutions" },
+            { value: String(industries.length), label: "Industries modelled" },
+            { value: String(markets.length), label: "Countries served" },
+          ].map((stat) => (
+            <div key={stat.label} className="text-center">
+              <p className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">{stat.value}</p>
+              <p className="mt-2 text-xs font-medium uppercase tracking-[0.14em] text-slate-400">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+        <p className="container-page mx-auto mt-8 max-w-2xl text-center text-xs leading-relaxed text-slate-500">
+          Numbers we can show — every service, industry and market above links to its own page on this site.
+        </p>
       </div>
     </section>
   );
