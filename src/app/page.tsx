@@ -272,20 +272,6 @@ export default function HomePage() {
                 </Link>
               </nav>
 
-              <dl className="mt-8 hidden max-w-lg grid-cols-3 gap-4 border-t border-white/10 pt-7 lg:grid">
-                <div>
-                  <dt className="text-xs uppercase tracking-[0.12em] text-slate-500">Services</dt>
-                  <dd className="mt-1 text-2xl font-semibold text-white">{services.length}</dd>
-                </div>
-                <div>
-                  <dt className="text-xs uppercase tracking-[0.12em] text-slate-500">Delivery</dt>
-                  <dd className="mt-1 text-2xl font-semibold text-white">Agile</dd>
-                </div>
-                <div>
-                  <dt className="text-xs uppercase tracking-[0.12em] text-slate-500">Markets</dt>
-                  <dd className="mt-1 text-2xl font-semibold text-brand-300">Worldwide</dd>
-                </div>
-              </dl>
             </div>
 
             <div className="relative">
@@ -302,20 +288,6 @@ export default function HomePage() {
               </div>
             </div>
 
-            <dl className="grid max-w-lg grid-cols-3 gap-3 border-t border-white/10 pt-4 pr-14 lg:hidden">
-              <div>
-                <dt className="text-[0.65rem] uppercase tracking-[0.1em] text-slate-500">Services</dt>
-                <dd className="mt-1 text-xl font-semibold text-white">{services.length}</dd>
-              </div>
-              <div>
-                <dt className="text-[0.65rem] uppercase tracking-[0.1em] text-slate-500">Delivery</dt>
-                <dd className="mt-1 text-xl font-semibold text-white">Agile</dd>
-              </div>
-              <div>
-                <dt className="text-[0.65rem] uppercase tracking-[0.1em] text-slate-500">Focus</dt>
-                <dd className="mt-1 text-xl font-semibold text-brand-300">AI</dd>
-              </div>
-            </dl>
           </div>
         </div>
 
