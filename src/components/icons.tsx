@@ -382,7 +382,7 @@ export function IndustryIcon({ name, className }: { name: string; className?: st
 export function Logo({
   className,
   compact = false,
-  secondaryTagline = "Pvt. Ltd.",
+  secondaryTagline = "SMC – Pvt. Ltd.",
   size = "md",
 }: {
   className?: string;
