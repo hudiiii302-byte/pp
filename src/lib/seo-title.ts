@@ -14,11 +14,10 @@ export function seoTitle(raw: string): string {
   if (core.length + suffix.length <= MAX) return `${core}${suffix}`;
 
   const budget = Math.max(24, MAX - suffix.length);
-  const clipped = core
-    .slice(0, budget)
-    .replace(/\s+\S*$/, "")
-    .replace(/[|,:;-]+$/g, "")
-    .trim();
+  let clipped = core.slice(0, budget).replace(/\s+\S*$/, "").trim();
+  // Never leave a dangling connector ("…Mobile & | WordbitX") or an empty
+  // pipe section after the word-boundary clip above.
+  clipped = clipped.replace(/[\s|,:;.&-]+$/, "").trim().replace(/\s*\|\s*$/, "").trim();
   return `${clipped}${suffix}`;
 }
 

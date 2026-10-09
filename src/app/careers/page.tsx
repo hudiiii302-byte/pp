@@ -54,6 +54,13 @@ export default function CareersPage() {
           title="What you can hire"
           description="Pick a posting. It opens a hiring enquiry for that role — not a services page."
         />
+        <p className="mt-4 text-sm leading-relaxed text-ink-500">
+          Looking for a dedicated developer or a small team by stack (React, Next.js, Laravel, Flutter…) or by your
+          market (USA, UK, UAE, Canada, Australia)?{" "}
+          <Link href="/hire-developers" className="font-semibold text-brand-700 hover:text-brand-600">
+            Browse the Hire Developers pages →
+          </Link>
+        </p>
         <div className="mt-12 space-y-12">
           {hireRoleGroups.map((group) => (
             <div key={group.title}>

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Section, SectionHeading, ButtonLink, Eyebrow } from "@/components/ui";
 import { ServiceCard, PostCard, ProjectCard } from "@/components/cards";
 import { DemosSection } from "@/components/demos-section";
-import { AssuranceStrip } from "@/components/assurance-strip";
+import { CertificationsBand } from "@/components/certifications-band";
 import { IndustryStrip } from "@/components/industry-strip";
 import { ReviewSlider } from "@/components/review-slider";
 import { ServiceIndex, ServiceNavFootnote } from "@/components/service-nav";
@@ -47,7 +47,7 @@ import type { Faq } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Software Company for Worldwide Businesses | WordbitX",
+    absolute: "Software Development Company in Pakistan | WordbitX",
   },
   description: siteConfig.seoDescription,
   alternates: { canonical: "/" },
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     url: "/",
-    title: "Software Development Company for Businesses Worldwide | WordbitX",
+    title: "Software Development Company in Pakistan | WordbitX",
     description: siteConfig.seoDescription,
   },
 };
@@ -272,20 +272,6 @@ export default function HomePage() {
                 </Link>
               </nav>
 
-              <dl className="mt-8 hidden max-w-lg grid-cols-3 gap-4 border-t border-white/10 pt-7 lg:grid">
-                <div>
-                  <dt className="text-xs uppercase tracking-[0.12em] text-slate-500">Services</dt>
-                  <dd className="mt-1 text-2xl font-semibold text-white">{services.length}</dd>
-                </div>
-                <div>
-                  <dt className="text-xs uppercase tracking-[0.12em] text-slate-500">Delivery</dt>
-                  <dd className="mt-1 text-2xl font-semibold text-white">Agile</dd>
-                </div>
-                <div>
-                  <dt className="text-xs uppercase tracking-[0.12em] text-slate-500">Markets</dt>
-                  <dd className="mt-1 text-2xl font-semibold text-brand-300">Worldwide</dd>
-                </div>
-              </dl>
             </div>
 
             <div className="relative">
@@ -302,21 +288,30 @@ export default function HomePage() {
               </div>
             </div>
 
-            <dl className="grid max-w-lg grid-cols-3 gap-3 border-t border-white/10 pt-4 pr-14 lg:hidden">
-              <div>
-                <dt className="text-[0.65rem] uppercase tracking-[0.1em] text-slate-500">Services</dt>
-                <dd className="mt-1 text-xl font-semibold text-white">{services.length}</dd>
-              </div>
-              <div>
-                <dt className="text-[0.65rem] uppercase tracking-[0.1em] text-slate-500">Delivery</dt>
-                <dd className="mt-1 text-xl font-semibold text-white">Agile</dd>
-              </div>
-              <div>
-                <dt className="text-[0.65rem] uppercase tracking-[0.1em] text-slate-500">Focus</dt>
-                <dd className="mt-1 text-xl font-semibold text-brand-300">AI</dd>
-              </div>
-            </dl>
           </div>
+        </div>
+
+        {/* Hero stats — moved here from the certifications band at the
+            owner's request (2026-10-08); the dark band under the hero is
+            logos-only again. Same honest data: every value counted from the
+            site's own records (services, industries, markets). */}
+        <div className="container-page mt-10 sm:mt-12">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-6 border-t border-white/10 pt-6 sm:grid-cols-4 sm:gap-8 sm:pt-8">
+            {[
+              { value: "2021", label: "Established · Lahore" },
+              { value: String(services.length), label: "Services & solutions" },
+              { value: String(industries.length), label: "Industries modelled" },
+              { value: String(markets.length), label: "Countries served" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <p className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">{stat.value}</p>
+                <p className="mt-2 text-xs font-medium uppercase tracking-[0.14em] text-slate-400">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-4 max-w-2xl text-xs leading-relaxed text-slate-500">
+            Numbers we can show — every service, industry and market links to its own page on this site.
+          </p>
         </div>
 
         <div className="relative mt-10 border-y border-white/10 py-4 sm:mt-14 sm:py-5">
@@ -340,8 +335,9 @@ export default function HomePage() {
           of the page for the cost of one line of text. */}
       <IndustryStrip />
 
-      {/* ASSURANCE STRIP — premium trust band directly under the hero */}
-      <AssuranceStrip />
+      {/* CERTIFICATIONS — dark band under the hero, the way Lahore peers
+          (Rextech) surface their SECP/FBR registration marks. */}
+      <CertificationsBand />
 
       {/* ================= WHY US =================
           Sits above the services grid at the owner's request: the team
@@ -522,31 +518,11 @@ export default function HomePage() {
       </AiServicesDeck>
 
       {/* ================= PROOF =================
-          Demos, project profiles and reviews, back to back. The portfolio
-          copy already said "separate from the live demo sites above" while
-          sitting nine sections below them. */}
+          Order (owner-approved arrangement, 2026-10-08): live demos, then
+          industries (fit) inserted between the two card blocks so the four
+          back-to-back card sections get one topic change in the middle,
+          then project profiles, then the mid-page CTA and reviews. */}
       <DemosSection />
-
-      {/* Trimmed bottom padding: #industries below is also light, so the two
-          section paddings stacked into 192px of empty white before the next
-          eyebrow. */}
-      <Section id="portfolio" className="pb-10 sm:pb-12 lg:pb-14">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <SectionHeading
-            eyebrow="Project Profiles"
-            title="POS, apps, Shopify and portal project profiles"
-            description="Scope write-ups of software, mobile and e-commerce work — separate from the live demo sites above. Each profile links a full project page for indexing and detail."
-          />
-          <ButtonLink href="/portfolio" variant="secondary" className="shrink-0">
-            View Full Portfolio
-          </ButtonLink>
-        </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {featuredProjects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
-          ))}
-        </div>
-      </Section>
 
       {/* ================= WHO IT'S FOR =================
           Solutions and Industries overlapped on four entries (real estate,
@@ -563,12 +539,13 @@ export default function HomePage() {
            - Funnel order is broad then narrow: thirteen sectors ("is my
              business here?") before the platform we would actually hand you.
            - The tiles are dark photography, so leading with them gives this
-             light section a visual opening even though #portfolio above it
+             light section a visual opening even though #portfolio below it
              is also light. That is why neither section needed a tone change.
 
-          The section also sits above #reviews rather than below it: sector
-          fit is a higher-intent question than social proof, and it was
-          landing at screen 14 of 24. */}
+          Position: moved ahead of #portfolio so the flow reads
+          capability → fit → proof; it still sits above #reviews, which
+          matters because sector fit is a higher-intent question than
+          social proof. */}
       <Section id="industries" className="pt-10 sm:pt-12 lg:pt-14">
         {/* One heading, not two. This section used to open with a centred H2
             and then immediately a second eyebrow + H3 + description before
@@ -694,6 +671,44 @@ export default function HomePage() {
         </div>
         </div>
       </Section>
+
+      {/* Standard bottom padding: the mid-page CTA (dark) follows #portfolio. */}
+      <Section id="portfolio">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <SectionHeading
+            eyebrow="Project Profiles"
+            title="POS, apps, Shopify and portal project profiles"
+            description="Scope write-ups of software, mobile and e-commerce work — separate from the live demo sites above. Each profile links a full project page for indexing and detail."
+          />
+          <ButtonLink href="/portfolio" variant="secondary" className="shrink-0">
+            View Full Portfolio
+          </ButtonLink>
+        </div>
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {featuredProjects.map((project) => (
+            <ProjectCard key={project.slug} project={project} />
+          ))}
+        </div>
+      </Section>
+
+      {/* Mid-page CTA — the page is long enough that a visitor convinced by
+          the proof above should not have to scroll through four more
+          sections to reach the ask. */}
+      <section className="bg-navy-950 py-10 sm:py-12">
+        <div className="container-page flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
+          <div>
+            <h2 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
+              Have a project in mind?
+            </h2>
+            <p className="mt-1.5 max-w-xl text-sm leading-relaxed text-slate-400">
+              Tell us what you need — a real engineer replies within one business day.
+            </p>
+          </div>
+          <ButtonLink href="/contact" className="shrink-0">
+            Discuss Your Project
+          </ButtonLink>
+        </div>
+      </section>
 
       <Section id="reviews" tone="muted">
         <ReviewSlider />

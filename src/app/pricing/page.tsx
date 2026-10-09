@@ -92,6 +92,18 @@ export default function PricingPage() {
             </Link>
           ))}
         </div>
+        <div className="mt-8 flex flex-col gap-4 rounded-2xl border border-brand-200 bg-brand-50/50 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+          <div className="max-w-2xl">
+            <h3 className="text-base font-semibold text-ink-900">Want a number before the call?</h3>
+            <p className="mt-1.5 text-sm leading-relaxed text-ink-500">
+              The cost calculator points sliders at your project and shows an honest PKR/USD range with the weeks it
+              usually takes — same model as the written quote you get afterwards.
+            </p>
+          </div>
+          <ButtonLink href="/tools/cost-calculator" className="shrink-0">
+            Open the cost calculator
+          </ButtonLink>
+        </div>
         <p className="mt-8 max-w-3xl text-sm leading-relaxed text-ink-500">
           Longer reads:{" "}
           <Link href="/blog/website-development-cost-pakistan" className="font-medium text-brand-700 underline-offset-4 hover:underline">

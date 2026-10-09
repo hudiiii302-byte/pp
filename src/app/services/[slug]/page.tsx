@@ -11,6 +11,7 @@ import { TechChip } from "@/components/tech-icon";
 import { CheckIcon, ArrowRight } from "@/components/icons";
 import { MegaServiceIcon } from "@/components/mega-service-icon";
 import { getService, getServices, serviceSlugs } from "@/lib/services";
+import { geoPages } from "@/lib/geo-pages";
 import { seoTitleAbsolute } from "@/lib/seo-title";
 import { contactHref } from "@/lib/site";
 import { projectsForService } from "@/lib/portfolio";
@@ -285,6 +286,23 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             <ServiceCard key={item.slug} service={item} />
           ))}
         </div>
+
+        {geoPages.filter((page) => page.serviceSlug === service.slug).length > 0 ? (
+          <div className="mt-8 flex flex-wrap gap-2.5">
+            {geoPages
+              .filter((page) => page.serviceSlug === service.slug)
+              .map((page) => (
+                <Link
+                  key={page.slug}
+                  href={`/${page.slug}`}
+                  className="group inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-ink-700 transition-colors hover:border-brand-400"
+                >
+                  {service.shortTitle} in {page.city}
+                  <ArrowRight className="h-3.5 w-3.5 text-brand-600 transition-transform group-hover:translate-x-0.5" />
+                </Link>
+              ))}
+          </div>
+        ) : null}
 
         {relatedPosts.length > 0 && (
           <>

@@ -31,6 +31,18 @@ export function OrganizationSchema() {
         email: siteConfig.email,
         telephone: siteConfig.phoneDisplay,
         foundingDate: String(siteConfig.foundingYear),
+        additionalProperty: [
+          {
+            "@type": "PropertyValue",
+            name: "Company registration",
+            value: siteConfig.registration.secp,
+          },
+          {
+            "@type": "PropertyValue",
+            name: "Tax registration",
+            value: siteConfig.registration.fbr,
+          },
+        ],
         address: {
           "@type": "PostalAddress",
           streetAddress: siteConfig.streetAddress,

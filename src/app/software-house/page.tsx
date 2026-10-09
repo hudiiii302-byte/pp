@@ -8,7 +8,7 @@ import { seoTitleAbsolute } from "@/lib/seo-title";
 
 const metaTitle = "Software House in Pakistan — City by City";
 const metaDescription =
-  "WordbitX is a Lahore-based software house serving Lahore, Karachi, Islamabad, Rawalpindi, Faisalabad, Sialkot, Gujranwala, Multan, Peshawar, Quetta and Hyderabad. Each city page covers what that market actually builds.";
+  "Lahore-based software house serving Lahore, Karachi, Islamabad, Faisalabad, Sialkot, Multan, Peshawar, Quetta and Hyderabad — each city page covers that market.";
 
 export const metadata: Metadata = {
   title: seoTitleAbsolute(metaTitle),

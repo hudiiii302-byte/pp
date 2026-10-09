@@ -10,10 +10,12 @@
  * caches. Until a screenshot has been committed for a product, the reel shows
  * that product's illustrated cover and says so in the alt text.
  *
- * Slide 1 is deliberately the real team photo: it stays the LCP element (local,
- * optimised, priority) so the speed work in the performance pass is not undone,
- * and it keeps the hero's "one accountable team" promise literally true before
- * the reel moves on to what that team shipped.
+ * Slide 1 is deliberately a local optimised team illustration (the WordbitX
+ * studio huddle, swapped in 2026-10-08 for a shot with the brand wall
+ * visible): it stays the LCP element (local, priority) so the speed work in
+ * the performance pass is not undone, and it keeps the hero's "one
+ * accountable team" promise visually concrete before the reel moves on to
+ * what that team shipped.
  *
  * Every line of product copy below is a fact that is visible on the live site
  * it describes. No client names, revenue or outcome claims — same bar as
@@ -66,7 +68,7 @@ export function getHeroSlides(): HeroSlide[] {
   const team: HeroSlide = {
     id: "team",
     src: media.heroTeam,
-    alt: "Illustration of a product team reviewing work together",
+    alt: "Illustration of a product team reviewing work together at a laptop in a WordbitX studio",
     local: true,
     eyebrow: "Founder-led delivery",
     title: "Scope, build and launch — one accountable team.",

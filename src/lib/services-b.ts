@@ -96,7 +96,7 @@ export const servicesB: Service[] = [
       "Technical SEO fixes, keyword-led content structures and on-page optimisation that grow qualified organic traffic.",
     metaTitle: "SEO Services Company | Technical & On-Page SEO Agency",
     metaDescription:
-      "SEO services from WordBitX: technical SEO audits, Core Web Vitals fixes, keyword strategy, on-page optimisation, schema and content architecture for sustainable rankings.",
+      "SEO services from WordbitX: technical audits, Core Web Vitals fixes, keyword strategy, on-page optimisation, schema and content architecture.",
     primaryKeyword: "SEO services",
     keywords: [
       "SEO services",
@@ -507,7 +507,7 @@ export const servicesB: Service[] = [
       "Cloud architecture, CI/CD automation, containerisation, monitoring and cost optimisation on AWS and Google Cloud.",
     metaTitle: "DevOps Services & Cloud Solutions | Infrastructure Engineering",
     metaDescription:
-      "DevOps services and cloud solutions: AWS and Google Cloud architecture, CI/CD pipelines, Docker and Kubernetes, monitoring, security and cloud cost optimisation.",
+      "DevOps and cloud solutions: AWS and Google Cloud architecture, CI/CD pipelines, Docker and Kubernetes, monitoring, security and cost optimisation.",
     primaryKeyword: "DevOps services",
     keywords: [
       "DevOps services",
@@ -589,7 +589,7 @@ export const servicesB: Service[] = [
       "Custom inventory and warehouse management systems with barcode operations, multi-location stock, batch tracking and purchase automation.",
     metaTitle: "Inventory Management Software Development | Warehouse & Stock Control",
     metaDescription:
-      "Custom inventory management software by WordBitX: real-time multi-warehouse stock, barcode scanning, batch and expiry tracking, reorder automation and profit reporting.",
+      "Custom inventory management software: real-time multi-warehouse stock, barcode scanning, batch and expiry tracking, reorder alerts and profit reporting.",
     primaryKeyword: "inventory management software",
     keywords: [
       "inventory management software",

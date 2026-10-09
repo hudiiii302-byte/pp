@@ -6,9 +6,9 @@ import { ArrowRight } from "@/components/icons";
 import { markets } from "@/lib/markets";
 
 export const metadata: Metadata = {
-  title: "Global Markets | Software Delivery for Pakistan, USA, UK, UAE, Canada, Australia",
+  title: "Global Software Delivery | Pakistan, USA, UK, UAE",
   description:
-    "WordbitX is a global software development company based in Pakistan, working with clients in the USA, UK, UAE, Canada and Australia through remote squads and scheduled overlap hours.",
+    "Pakistan-based software development company serving clients in the USA, UK, UAE, Canada and Australia with remote squads and scheduled overlap hours.",
   alternates: { canonical: "/global" },
 };
 

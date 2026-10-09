@@ -5,6 +5,7 @@ import { ContactForm } from "@/components/contact-form";
 import { FaqAccordion } from "@/components/accordion";
 import { FaqSchema } from "@/components/jsonld";
 import { MailIcon, PhoneIcon, GlobeIcon, WhatsAppIcon, ClockIcon, CheckIcon, SparkIcon } from "@/components/icons";
+import { TrustBadges } from "@/components/trust-badges";
 import { resolveServiceOption, serviceNames } from "@/lib/services";
 import { siteConfig, usWhatsappLink, whatsappLink } from "@/lib/site";
 import { getJob } from "@/lib/careers";
@@ -256,6 +257,8 @@ export default async function ContactPage({ searchParams }: PageProps) {
                 </a>
               </div>
             </Card>
+
+            <TrustBadges compact label="Registered company" />
 
             <Card>
               <h2 className="text-lg font-semibold text-ink-900">What to expect</h2>

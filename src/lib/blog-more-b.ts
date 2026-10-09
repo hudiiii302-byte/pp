@@ -13,7 +13,7 @@ export const morePostsB: BlogPost[] = [
       "How ASO works on Google Play and the App Store: keywords, screenshots, ratings and the tests that actually lift install conversion.",
     metaTitle: "App Store Optimization Guide 2026 | ASO for Play Store & App Store",
     metaDescription:
-      "Complete ASO guide: keyword metadata, screenshots, ratings and conversion testing for Google Play and the Apple App Store. Practical steps from a mobile app team.",
+      "Complete ASO guide: keyword metadata, screenshots, ratings and conversion testing on Google Play and the Apple App Store, from a mobile app team.",
     keywords: [
       "app store optimization",
       "ASO services",
@@ -59,7 +59,7 @@ export const morePostsB: BlogPost[] = [
       "What AdSense reviewers actually look for — content quality, navigation, policy pages, original work — and the mistakes that cause most rejections.",
     metaTitle: "How to Get Google AdSense Approval (2026 Checklist) | WordbitX",
     metaDescription:
-      "Google AdSense approval checklist: original content, navigation, about/contact/privacy pages, policy compliance and the technical mistakes that cause most rejections.",
+      "Google AdSense approval checklist: original content, site pages, policy compliance and the technical mistakes behind most application rejections.",
     keywords: [
       "Google AdSense approval",
       "how to get AdSense approved",
@@ -116,7 +116,7 @@ export const morePostsB: BlogPost[] = [
       "What a Pakistani retail or restaurant POS must do that cloud-only imports ignore — offline billing, tax invoices, multi-branch stock and Urdu receipts.",
     metaTitle: "POS Software for Retail in Pakistan | Custom POS Development",
     metaDescription:
-      "POS software for Pakistani retail and restaurants: offline billing, tax invoices, barcode, multi-branch inventory and the features imported cloud POS tools usually miss.",
+      "POS software for Pakistani retail and restaurants: offline billing, tax invoices, barcodes and multi-branch inventory the imported cloud POS tools miss.",
     keywords: [
       "POS software Pakistan",
       "POS software development",
@@ -160,7 +160,7 @@ export const morePostsB: BlogPost[] = [
       "The questions that separate a real Android team from a resume mill: Play Console experience, mid-range device testing, Kotlin vs Java, and who owns the listing.",
     metaTitle: "How to Hire Android App Developers | Android App Development Company",
     metaDescription:
-      "How to hire Android app developers: Play Console experience, Kotlin, mid-range device testing, code ownership and the red flags that predict a failed app project.",
+      "How to hire Android app developers: Play Console experience, Kotlin, mid-range testing, code ownership and the red flags that sink app projects.",
     keywords: [
       "hire Android app developers",
       "Android app development company",
@@ -206,7 +206,7 @@ export const morePostsB: BlogPost[] = [
       "The symptoms that mean spreadsheets and generic CRMs are costing you deals — and a practical way to decide between configuring a platform and building your own.",
     metaTitle: "Custom CRM for Growing Businesses | CRM Development | WordbitX",
     metaDescription:
-      "When to build a custom CRM: lost follow-ups, messy pipelines, per-seat costs and integrations no SaaS supports. A practical decision guide for growing businesses.",
+      "When to build a custom CRM: lost follow-ups, messy pipelines, per-seat costs and integrations no SaaS supports. A decision guide for growing teams.",
     keywords: [
       "custom CRM development",
       "CRM development",

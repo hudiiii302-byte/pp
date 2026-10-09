@@ -653,7 +653,7 @@ export const servicesG: Service[] = [
       "Domain registration guidance, DNS, SSL, web or cloud hosting and business email setup.",
     metaTitle: "Web Hosting, Domain Registration & Business Email",
     metaDescription:
-      "Domain registration, web hosting, cloud hosting, SSL and business email setup from WordbitX — billed in your name so you keep the company online if vendors change.",
+      "Domain registration, web hosting, cloud hosting, SSL and business email from WordbitX — billed in your name, so the website is never held hostage.",
     primaryKeyword: "web hosting and domain registration",
     keywords: [
       "web hosting services",

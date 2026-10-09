@@ -252,6 +252,31 @@ export default function AboutPage() {
                 </p>
               </div>
             ))}
+            <div className="rounded-3xl border border-slate-200 bg-white p-6">
+              <h3 className="text-lg font-semibold text-ink-900">Registered &amp; compliant</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-500">
+                WordbitX operates under its registered company name — not a freelance alias or a reseller
+                front. These details match the certificates held by the company.
+              </p>
+              <dl className="mt-5 grid gap-3 sm:grid-cols-2">
+                <div className="flex gap-2 rounded-xl bg-slate-50 px-3 py-2 text-sm text-ink-700">
+                  <CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-brand-600" />
+                  <span>Legal name — {siteConfig.legalName}</span>
+                </div>
+                <div className="flex gap-2 rounded-xl bg-slate-50 px-3 py-2 text-sm text-ink-700">
+                  <CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-brand-600" />
+                  <span>{siteConfig.registration.secp}</span>
+                </div>
+                <div className="flex gap-2 rounded-xl bg-slate-50 px-3 py-2 text-sm text-ink-700">
+                  <CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-brand-600" />
+                  <span>{siteConfig.registration.fbr}</span>
+                </div>
+                <div className="flex gap-2 rounded-xl bg-slate-50 px-3 py-2 text-sm text-ink-700">
+                  <CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-brand-600" />
+                  <span>{siteConfig.registration.founded}</span>
+                </div>
+              </dl>
+            </div>
           </div>
         </div>
       </Section>

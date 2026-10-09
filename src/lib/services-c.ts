@@ -14,7 +14,7 @@ export const servicesC: Service[] = [
       "Property listing portals, dealer CRM and society management systems with plot inventory, file transfers and instalment tracking.",
     metaTitle: "Real Estate Portal Development | Property Management Software Pakistan",
     metaDescription:
-      "Real estate portal and property management software development: society and plot inventory, file transfers, instalment plans, dealer CRM and lead routing for property businesses.",
+      "Real estate portal and property software development: plot inventory, file transfers, instalment plans, dealer CRM and lead routing for property businesses.",
     primaryKeyword: "real estate portal development",
     keywords: [
       "real estate portal development",
@@ -119,7 +119,7 @@ export const servicesC: Service[] = [
       "Hospital management systems, clinic portals and medical store software with prescriptions, batch tracking and departmental billing.",
     metaTitle: "Hospital Management Software | Medical Store & Pharmacy Portal Development",
     metaDescription:
-      "Hospital management software and medical store portal development: patient records, OPD/IPD workflows, lab orders, pharmacy billing with batch and expiry control, and departmental billing.",
+      "Hospital management software and medical store portals: patient records, OPD/IPD workflows, lab orders and pharmacy billing with batch and expiry control.",
     primaryKeyword: "hospital management software",
     keywords: [
       "hospital management software",
@@ -223,7 +223,7 @@ export const servicesC: Service[] = [
       "Campus management portals with online admissions, student records, attendance, exams, fee vouchers and separate parent and student logins.",
     metaTitle: "School Management System Pakistan",
     metaDescription:
-      "School, college and university portal development: online admissions, student records, attendance, examination management, fee vouchers and parent, student and teacher logins.",
+      "School, college and university portal development: online admissions, records, attendance, exams, fee vouchers and parent, student and teacher logins.",
     primaryKeyword: "school management software",
     keywords: [
       "school management software",

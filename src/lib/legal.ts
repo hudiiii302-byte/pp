@@ -18,7 +18,7 @@ export const legalDocs: Record<string, LegalDoc> = {
     title: "Privacy Policy",
     metaTitle: "Privacy Policy | WordBitX",
     metaDescription:
-      "How WordBitX collects, uses, stores and protects personal information submitted through wordbitxtech.com, including enquiry forms, analytics and third-party services.",
+      "How WordbitX collects, uses, stores and protects personal data submitted through wordbitxtech.com, including forms, analytics and third-party services.",
     intro:
       "This policy explains what information WordBitX collects when you use our website or contact us, why we collect it, and the choices you have.",
     updated: "1 March 2026",
@@ -232,7 +232,7 @@ export const legalDocs: Record<string, LegalDoc> = {
     title: "Editorial & Content Standards",
     metaTitle: "Editorial & Content Standards | WordbitX",
     metaDescription:
-      "How WordbitX produces original, human-reviewed content: our authorship, review process, pricing disclosures, update policy and corrections for articles, service pages and market data.",
+      "How WordbitX produces original, human-reviewed content: authorship, review process, pricing disclosures and the correction policy for all published pages.",
     intro:
       "WordbitX publishes software, technology and business content to genuinely help buyers make better decisions. This page explains how that content is researched, written, reviewed, priced and updated.",
     updated: "19 August 2026",

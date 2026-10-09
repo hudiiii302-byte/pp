@@ -66,6 +66,17 @@ export const siteConfig = {
     { label: "GitHub", href: "https://github.com/wordbitx", icon: "github" },
   ],
   /**
+   * Corporate registration, shown on the About page and in the
+   * Organization schema. Numbers (SECP file number, NTN) are added here
+   * and published once confirmed against the certificates.
+   */
+  registration: {
+    legalForm: "Private limited company (Pvt. Ltd.)",
+    secp: "Registered with the Securities and Exchange Commission of Pakistan (SECP)",
+    fbr: "Registered with the Federal Board of Revenue (FBR)",
+    founded: "Founded 2021, Lahore, Pakistan",
+  },
+  /**
    * Third-party directory profiles we can verify.
    *
    * Only facts that are actually published on the profile belong here. Clutch

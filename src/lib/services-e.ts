@@ -82,7 +82,7 @@ export const servicesE: Service[] = [
       "WooCommerce store setup, theme customisation, payment gateways and performance work for WordPress-based commerce.",
     metaTitle: "WooCommerce Development Company | Custom WooCommerce Stores",
     metaDescription:
-      "WooCommerce store development from WordbitX: custom product types, checkout, payment gateways, shipping rules and WordPress WooCommerce optimisation in Pakistan.",
+      "WooCommerce store development from WordbitX: custom product types, checkout, payment gateways, shipping rules and WooCommerce optimisation in Pakistan.",
     primaryKeyword: "WooCommerce development",
     keywords: [
       "WooCommerce development",
@@ -147,7 +147,7 @@ export const servicesE: Service[] = [
       "Headless and traditional CMS builds with structured fields, roles, preview and multi-language publishing.",
     metaTitle: "Custom CMS Development Company | Headless CMS",
     metaDescription:
-      "Custom CMS development from WordbitX: structured content models, headless CMS, editor roles, preview and multi-language publishing for marketing and product teams.",
+      "Custom CMS development from WordbitX: structured content models, headless CMS, editor roles, preview and multi-language publishing for your teams.",
     primaryKeyword: "custom CMS development",
     keywords: [
       "custom CMS development",
@@ -342,7 +342,7 @@ export const servicesE: Service[] = [
       "SaaS product engineering: tenancy, subscriptions, trials, admin, APIs and the first paying-customer launch.",
     metaTitle: "SaaS Application Development Company | Multi-Tenant SaaS",
     metaDescription:
-      "SaaS application development from WordbitX: multi-tenant products with billing, roles, onboarding, APIs and admin — from MVP to a store-ready subscription product.",
+      "SaaS application development from WordbitX: multi-tenant products with billing, roles, onboarding, APIs and admin — from MVP to subscription launch.",
     primaryKeyword: "SaaS application development",
     keywords: [
       "SaaS application development",
@@ -472,7 +472,7 @@ export const servicesE: Service[] = [
       "Graphic design for digital ads, social, presentations, packaging-adjacent artwork and marketing sites.",
     metaTitle: "Graphic Design Services | Brand & Campaign Design",
     metaDescription:
-      "Graphic design services from WordbitX: social creatives, ad sets, presentations, landing artwork and brand-consistent campaign design for web and mobile products.",
+      "Graphic design services from WordbitX: social creatives, ad sets, presentations and brand-consistent campaign design for web and mobile products.",
     primaryKeyword: "graphic design services",
     keywords: [
       "graphic design services",

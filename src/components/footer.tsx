@@ -31,7 +31,7 @@ export function Footer() {
               <span className="sr-only">{siteConfig.name} home</span>
             </SamePageTopLink>
             <p className="mt-2 text-[0.7rem] leading-relaxed tracking-wide text-slate-500">
-              {siteConfig.legalDisplayName}
+              {siteConfig.legalDisplayName} · SECP &amp; FBR Registered
             </p>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-400">
               WordbitX is a Pakistan-based software development company serving businesses worldwide. We build custom software, websites,

@@ -12,6 +12,8 @@ import { topics } from "@/lib/topics";
 import { societies } from "@/lib/societies";
 import { techPages } from "@/lib/tech-pages";
 import { isDuplicateTopic, sitemapPriority } from "@/lib/seo-focus";
+import { hirePages } from "@/lib/hire-developers";
+import { geoPages } from "@/lib/geo-pages";
 
 export type SitemapGroupKey =
   | "core"
@@ -25,7 +27,9 @@ export type SitemapGroupKey =
   | "portfolio"
   | "blog"
   | "topics"
-  | "legal";
+  | "legal"
+  | "hire"
+  | "geo";
 
 export type SitemapEntry = MetadataRoute.Sitemap[number];
 
@@ -70,6 +74,7 @@ export function getSitemapGroups(now = staticUpdated): Record<SitemapGroupKey, S
       entry("/topics", { lastModified: now, changeFrequency: "weekly", priority: 0.5 }),
       entry("/contact", { lastModified: now, changeFrequency: "monthly", priority: 0.7 }),
       entry("/pricing", { lastModified: now, changeFrequency: "weekly", priority: sitemapPriority("/pricing", 0.9) }),
+      entry("/tools/cost-calculator", { lastModified: now, changeFrequency: "monthly", priority: 0.85 }),
       entry("/process", { lastModified: now, changeFrequency: "monthly", priority: 0.8 }),
       entry("/careers", { lastModified: now, changeFrequency: "weekly", priority: 0.55 }),
     ],
@@ -120,6 +125,23 @@ export function getSitemapGroups(now = staticUpdated): Record<SitemapGroupKey, S
         priority: 0.3,
       }),
     ),
+    hire: [
+      entry("/hire-developers", { lastModified: now, changeFrequency: "monthly", priority: 0.8 }),
+      ...hirePages.map((page) =>
+        entry(`/hire-developers/${page.slug}`, {
+          lastModified: now,
+          changeFrequency: "monthly",
+          priority: 0.7,
+        }),
+      ),
+    ],
+    geo: geoPages.map((page) =>
+      entry(`/${page.slug}`, {
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: sitemapPriority(`/${page.slug}`, 0.72),
+      }),
+    ),
   };
 }
 
@@ -139,6 +161,8 @@ export const sitemapIndexItems: { key: SitemapGroupKey; path: string; label: str
   { key: "blog", path: "/sitemaps/blog.xml", label: "Blog articles" },
   { key: "topics", path: "/sitemaps/topics.xml", label: "Software topic guides" },
   { key: "legal", path: "/sitemaps/legal.xml", label: "Legal pages" },
+  { key: "hire", path: "/sitemaps/hire.xml", label: "Hire developers pages" },
+  { key: "geo", path: "/sitemaps/geo.xml", label: "Service × city pages" },
 ];
 
 export function publishedSitemapIndexItems() {

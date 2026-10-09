@@ -55,7 +55,7 @@ export const morePostsD: BlogPost[] = [
       "Monthly subscriptions, one-time licences and custom builds compared — plus the hardware, FBR integration and support costs most quotes leave out.",
     metaTitle: "POS Software Price in Pakistan (2026 Guide)",
     metaDescription:
-      "What POS software really costs in Pakistan in 2026: subscription vs one-time licence vs custom build, hardware, FBR integration, support, and the hidden costs that turn a cheap POS into an expensive one.",
+      "POS software price in Pakistan 2026: subscription vs one-time licence vs custom build, hardware, FBR integration and the hidden costs quotes leave out.",
     keywords: [
       "POS software price in Pakistan",
       "POS system cost Pakistan",
@@ -163,7 +163,7 @@ export const morePostsD: BlogPost[] = [
       "Realistic 2026 ranges for an MVP, a production app and a marketplace — what drives the number, and the post-launch costs nobody quotes.",
     metaTitle: "Mobile App Development Cost in Pakistan (2026)",
     metaDescription:
-      "Mobile app development cost in Pakistan for 2026: MVP, production and marketplace ranges, hourly rates, what actually drives the price, and the ongoing costs most quotes leave out.",
+      "Mobile app development cost in Pakistan (2026): MVP, production and marketplace ranges, hourly rates, and the ongoing costs most quotes leave out.",
     keywords: [
       "mobile app development cost Pakistan",
       "app development price Pakistan",
@@ -262,7 +262,7 @@ export const morePostsD: BlogPost[] = [
       "Per-student SaaS, one-time licences and custom builds compared for Pakistani schools — including fee collection, multi-campus and the costs that follow you.",
     metaTitle: "School Management System Price in Pakistan (2026)",
     metaDescription:
-      "What a school management system costs in Pakistan: per-student SaaS, one-time licence and custom build ranges, fee collection and multi-campus pricing, plus the setup and support costs quotes leave out.",
+      "School management system price in Pakistan: per-student SaaS, one-time licence and custom builds, fee collection, multi-campus pricing and hidden costs.",
     keywords: [
       "school management system price in Pakistan",
       "school management software cost",

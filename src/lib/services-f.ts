@@ -209,7 +209,7 @@ export const servicesF: Service[] = [
       "Walmart Marketplace onboarding support, catalogue setup and Seller Center routines for eligible brands.",
     metaTitle: "Walmart Marketplace Store Setup Services",
     metaDescription:
-      "Walmart Marketplace store setup from WordbitX: seller application support, item setup, Walmart Seller Center configuration and catalogue work for eligible brands.",
+      "Walmart Marketplace store setup from WordbitX: seller application support, item setup, Seller Center configuration and catalogue work for brands.",
     primaryKeyword: "Walmart Marketplace setup",
     keywords: [
       "Walmart Marketplace setup",
@@ -401,7 +401,7 @@ export const servicesF: Service[] = [
       "Google Merchant Center account, product feed, diagnostics and link to Google Ads or free product listings.",
     metaTitle: "Google Merchant Center Setup Services",
     metaDescription:
-      "Google Merchant Center setup from WordbitX: product feed, diagnostics, website verification and Shopping-ready listings for Google Ads and free product listings.",
+      "Google Merchant Center setup from WordbitX: product feeds, diagnostics, site verification and Shopping-ready listings for Google Ads.",
     primaryKeyword: "Google Merchant Center setup",
     keywords: [
       "Google Merchant Center setup",
@@ -530,7 +530,7 @@ export const servicesF: Service[] = [
       "Technical SEO: crawl budget, indexation, redirects, structured data, Core Web Vitals and sitemap hygiene.",
     metaTitle: "Technical SEO Services | Crawl, Index & Core Web Vitals",
     metaDescription:
-      "Technical SEO services from WordbitX: crawl and index fixes, canonicals, sitemaps, Core Web Vitals, structured data and redirect maps for sites Google already knows.",
+      "Technical SEO services from WordbitX: crawl and index fixes, canonicals, sitemaps, Core Web Vitals, structured data and redirect maps.",
     primaryKeyword: "technical SEO services",
     keywords: [
       "technical SEO services",

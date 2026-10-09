@@ -13,7 +13,7 @@ export const morePostsA: BlogPost[] = [
       "A realistic 2026 cost breakdown for business websites, custom web apps and eCommerce stores in Pakistan — plus what actually drives the price.",
     metaTitle: "Website Development Cost in Pakistan (2026) | WordbitX",
     metaDescription:
-      "Website development cost in Pakistan explained: business websites, custom web apps and eCommerce stores. What drives the price, typical timelines and how to get a quote you can trust.",
+      "Website development cost in Pakistan: business sites, custom web apps and eCommerce stores. What drives the price, timelines and how to read a quote.",
     keywords: [
       "website development cost Pakistan",
       "website development company Pakistan",
@@ -71,7 +71,7 @@ export const morePostsA: BlogPost[] = [
       "When Flutter is the right choice for Android and iOS, when native still wins, and what a realistic Flutter MVP looks like.",
     metaTitle: "Benefits of Flutter App Development | Android & iOS | WordbitX",
     metaDescription:
-      "Benefits of Flutter app development: one codebase for Android and iOS, faster MVPs, near-native performance, and when you should still choose native Kotlin or Swift.",
+      "Flutter app development benefits: one codebase for Android and iOS, faster MVPs and near-native performance — plus when to choose native Kotlin or Swift.",
     keywords: [
       "Flutter app development",
       "Flutter app development company",
@@ -126,7 +126,7 @@ export const morePostsA: BlogPost[] = [
       "A practical decision framework for choosing Android, iOS or both — based on audience, revenue, hardware needs and budget.",
     metaTitle: "Android vs iOS App Development: Which to Build First | WordbitX",
     metaDescription:
-      "Android vs iOS: which platform to launch first. Audience, revenue, hardware access, App Store vs Play Console, and when a Flutter cross-platform build is the smarter first release.",
+      "Android vs iOS: which to launch first? Audience, revenue, hardware access and store differences — and when a Flutter build is the smarter first release.",
     keywords: [
       "Android vs iOS app development",
       "Android app development company",
@@ -177,7 +177,7 @@ export const morePostsA: BlogPost[] = [
       "A launch checklist covering theme choice, payments, shipping, product data, tracking and the mistakes that quietly kill conversion.",
     metaTitle: "How to Launch a Shopify Store in 2026 | Shopify Development Guide",
     metaDescription:
-      "Practical Shopify store launch checklist: theme vs custom, payments and COD, shipping, product SEO, tracking and conversion mistakes to avoid before you spend on ads.",
+      "Shopify store launch checklist: theme vs custom, COD and payments, shipping, product SEO, tracking and the conversion mistakes to fix before you run ads.",
     keywords: [
       "launch a Shopify store",
       "Shopify development company",
@@ -279,7 +279,7 @@ export const morePostsA: BlogPost[] = [
       "The speed and technical SEO fixes that actually move rankings and conversions — Core Web Vitals, images, JavaScript, crawlability and internal links.",
     metaTitle: "How to Improve Website Speed and SEO | Technical SEO Checklist",
     metaDescription:
-      "Improve website speed and SEO: Core Web Vitals, image optimisation, JavaScript reduction, crawlability, internal linking and the technical fixes search engines reward.",
+      "Improve website speed and SEO: Core Web Vitals, image optimisation, JavaScript reduction, crawlability and the technical fixes search engines reward.",
     keywords: [
       "improve website speed",
       "website speed and SEO",
@@ -340,7 +340,7 @@ export const morePostsA: BlogPost[] = [
       "How search engine optimisation produces compounding, lower-cost leads — and the work that actually moves the needle for service businesses.",
     metaTitle: "How SEO Helps Businesses Grow | SEO Company Guide | WordbitX",
     metaDescription:
-      "How SEO helps businesses grow: compounding organic traffic, lower acquisition cost, commercial keyword mapping and the technical work behind sustainable rankings.",
+      "How SEO helps businesses grow: compounding organic traffic, lower acquisition cost, commercial keywords and the technical work behind sustainable rankings.",
     keywords: [
       "how SEO helps businesses",
       "SEO services",

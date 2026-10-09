@@ -45,7 +45,7 @@ export const productDetails: ProductDetail[] = [
     tagline: "Pakistan's property marketplace — built, launched and operated by WordbitX.",
     metaTitle: "Properties Pak — Our Pakistan Real Estate Portal | WordbitX Products",
     metaDescription:
-      "Properties Pak is WordbitX's own live property marketplace for Pakistan: city and society search, dealer profiles, new projects and listing management. See how we build real estate portals.",
+      "Properties Pak is WordbitX's own live property marketplace: city and society search, dealer profiles, new projects and listing management.",
     overview: [
       "Properties Pak is the one product on this page that is not a showcase build. It is a live, publicly trading property marketplace that WordbitX designed, built, launched and still operates. Buyers, sellers and estate agencies use it every day.",
       "We built it because a real estate portal is the hardest thing we are regularly asked to quote for, and the fastest way to prove we can deliver one was to run one ourselves. Everything a client asks for — listing intake, moderation, dealer accounts, map-led search, enquiry routing — exists on Properties Pak as working software rather than a wireframe.",
@@ -111,7 +111,7 @@ export const productDetails: ProductDetail[] = [
     tagline: "An automotive marketplace — used cars, new launches, bikes, EVs and rentals.",
     metaTitle: "MOTOR Pakistan — Automotive Marketplace Platform | WordbitX Products",
     metaDescription:
-      "MOTOR Pakistan is a WordbitX-built automotive marketplace: used and new car listings, bike and EV catalogues, brand pages, rentals and a sell-your-car flow. Bilingual English and Urdu.",
+      "MOTOR Pakistan is a WordbitX-built car marketplace: used and new listings, EV catalogues, brand pages, rentals and sell-your-car — in English and Urdu.",
     overview: [
       "MOTOR Pakistan is a full automotive marketplace, not a car-dealer brochure. It carries used car listings, a new-car catalogue with 2026 prices and specifications, bikes, electric and hybrid vehicles, car rentals and two different ways to sell a vehicle.",
       "The catalogue side is the part most templates skip. MOTOR carries brand pages for more than twenty marques with their Pakistan entry year and electrified model count, a launch calendar, and model pages with powertrain, body style and starting price in PKR.",
@@ -177,7 +177,7 @@ export const productDetails: ProductDetail[] = [
     tagline: "A clinic platform — consultants, OPD shifts, transparent PKR fees and online booking.",
     metaTitle: "Medicare Plus — Clinic & Appointment Platform | WordbitX Products",
     metaDescription:
-      "Medicare Plus is a WordbitX-built clinic platform: consultant panels, specialty filtering, PKR-priced services, online and WhatsApp appointment booking, and a medical content library.",
+      "Medicare Plus is a WordbitX-built clinic platform: consultant panels, specialty filters, PKR pricing and online or WhatsApp appointment booking.",
     overview: [
       "Medicare Plus is a private-clinic platform built around the one thing Pakistani patients complain about most: not knowing what a visit will cost or when it will actually happen.",
       "Every service on the site carries its duration, its preparation instructions and its fee in rupees before you book. Appointments run against real OPD shifts, and the booking path offers both a web form and WhatsApp, because a large share of patients will only ever use the second one.",
@@ -243,7 +243,7 @@ export const productDetails: ProductDetail[] = [
     tagline: "A school, academy and college ERP — thirty-seven modules, five role portals, fees in PKR.",
     metaTitle: "Education Management Platform (School ERP) | WordbitX Products",
     metaDescription:
-      "A WordbitX-built education ERP for Pakistani schools, academies, colleges, universities and madaris: admissions, attendance, exams, fee challans with JazzCash and Easypaisa, and five role portals.",
+      "Education ERP for Pakistani schools and colleges: admissions, attendance, exams, fee challans with JazzCash and Easypaisa, and five role portals.",
     overview: [
       "This is the largest product on the list. It is a complete education management platform — thirty-seven modules across academics, finance, communication, administration and enterprise — with an open admin dashboard you can click through without signing up.",
       "It was built specifically for how Pakistani institutions operate. Fees are challans in rupees paid through JazzCash, Easypaisa, bank transfer or cash at the counter. Madaris get Nazra, Hifz and Qirat tracking next to general subjects. Multi-campus groups get isolated branch data under one head-office login.",
@@ -314,7 +314,7 @@ export const productDetails: ProductDetail[] = [
     tagline: "A multi-currency premium storefront — nine departments, eight currencies, full checkout.",
     metaTitle: "Veranne — Multi-Currency E-Commerce Storefront | WordbitX Products",
     metaDescription:
-      "Veranne is a WordbitX-built premium e-commerce storefront: nine departments, eight currencies, collections, product pages with reviews, gifting, order tracking and a help centre.",
+      "Veranne is a WordbitX-built e-commerce storefront: nine departments, eight currencies, reviews, gifting, order tracking and a help centre.",
     overview: [
       "Veranne is a premium fashion, accessories and home store built to show what a serious storefront looks like when it is not a theme with the colours changed.",
       "It runs nine departments — womenswear, menswear, footwear, timepieces, leather goods, cashmere, home and living, fragrance and gifting — with curated collections layered on top of the category tree, which is how editorial retail actually merchandises.",
@@ -380,7 +380,7 @@ export const productDetails: ProductDetail[] = [
     tagline: "A restaurant platform — forty-dish menu, online ordering and table reservations.",
     metaTitle: "Maison Noor — Restaurant Ordering & Reservation Platform | WordbitX Products",
     metaDescription:
-      "Maison Noor is a WordbitX-built restaurant platform: a forty-dish menu with PKR prices, allergen and dietary tags, online ordering, table reservations and a photographic gallery.",
+      "Maison Noor is a WordbitX-built restaurant platform: forty-dish menu, allergen tags, online ordering, table reservations and a photo gallery.",
     overview: [
       "Maison Noor is a fine-dining platform for a Lahore restaurant concept, and it carries the three things a restaurant site is actually judged on: can I see the menu, can I order, can I book a table.",
       "The menu is forty dishes across starters, mains, steak and grill, seafood and desserts, each with a PKR price, its ingredients, a heat indicator and vegetarian, vegan and gluten-free tagging. Allergen information is a first-class field, not a footnote.",
@@ -446,7 +446,7 @@ export const productDetails: ProductDetail[] = [
     tagline: "A salon booking platform — service menu, specialist assignment and slot reservations.",
     metaTitle: "ÉLAN Beauty Studio — Salon Booking Platform | WordbitX Products",
     metaDescription:
-      "ÉLAN Beauty Studio is a WordbitX-built salon platform: a priced service menu covering hair, bridal, skin, nails and spa, specialist assignment, duration-aware slots and WhatsApp booking.",
+      "ÉLAN Beauty Studio is a WordbitX-built salon platform: priced service menu, specialist assignment, duration-aware slots and WhatsApp booking.",
     overview: [
       "ÉLAN is a salon and beauty studio platform built around the appointment, which is the only transaction a salon site has.",
       "Every service carries a starting price in rupees and a realistic duration — a haircut is an hour, keratin is three, bridal is four — and the booking engine uses that duration to work out what can actually fit in the day. A booking system that treats every service as a thirty-minute slot is the reason salons go back to a paper diary.",
