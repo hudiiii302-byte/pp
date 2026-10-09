@@ -203,7 +203,7 @@ export function ReviewSlider() {
     <div>
       <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-600">Client reviews</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-600">What clients say — so far</p>
           <h2 className="mt-3 text-3xl font-semibold text-ink-900 sm:text-4xl">Real reviews only — nothing invented</h2>
           <p className="mt-4 text-sm leading-relaxed text-ink-500">
             We do not buy reviews and we do not write fake testimonials. Reviews here come from people who actually

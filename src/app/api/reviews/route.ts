@@ -5,6 +5,10 @@ import { sendEnquiryEmail } from "@/lib/mailer";
 import { addMemoryReview, isReviewDeleted, listMemoryReviews } from "@/lib/review-store";
 import { reviewIndustries, siteReviews, type ReviewIndustry, type SiteReview } from "@/lib/reviews";
 import { siteConfig } from "@/lib/site";
+import { checkRateLimit, clientIp } from "@/lib/rate-limit";
+
+const REVIEW_LIMIT = 2;
+const REVIEW_WINDOW_MS = 24 * 60 * 60 * 1000;
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
@@ -91,6 +95,14 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
+  const limit = checkRateLimit(`review:${clientIp(request)}`, REVIEW_LIMIT, REVIEW_WINDOW_MS);
+  if (!limit.ok) {
+    return Response.json(
+      { ok: false, message: "You have already sent reviews today. Please try again later." },
+      { status: 429, headers: { "Retry-After": String(limit.retryAfterSec) } },
+    );
+  }
+
   let body: Payload;
   try {
     body = (await request.json()) as Payload;
