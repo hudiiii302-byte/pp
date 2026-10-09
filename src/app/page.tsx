@@ -198,7 +198,7 @@ export default function HomePage() {
       <TechIconSprite items={spriteIcons} />
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-navy-950 pb-10 pt-24 text-white sm:pb-12 sm:pt-32 lg:pb-14 lg:pt-36">
+      <section className="relative overflow-hidden bg-navy-950 pt-24 text-white sm:pt-32 lg:pt-36">
         <div className="absolute inset-0 grid-pattern opacity-60" aria-hidden="true" />
         <div className="absolute -left-32 top-10 h-[30rem] w-[30rem] rounded-full bg-brand-500/18 blur-[140px]" aria-hidden="true" />
         <div className="absolute -right-20 bottom-0 h-[26rem] w-[26rem] rounded-full bg-sky-500/12 blur-[130px]" aria-hidden="true" />
@@ -314,6 +314,10 @@ export default function HomePage() {
           </p>
         </div>
 
+        {/* Tech marquee sits flush at the hero's base (no bottom padding on
+            the section) so its bottom hairline is the only divider before the
+            "Built for" rail — the two strips read as one unit: what we build
+            with, then who we build for. */}
         <div className="relative mt-10 border-y border-white/10 py-4 sm:mt-14 sm:py-5">
           <div className="marquee-mask overflow-hidden">
             <div className="animate-marquee flex w-max items-center gap-10">

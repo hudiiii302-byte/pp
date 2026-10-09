@@ -271,14 +271,18 @@ export function Header() {
                 tight: on a 375px screen only about 169px is left once the
                 wordmark and the menu button are placed, so below sm the dot
                 and arrow are dropped and the label is shortened. WhatsApp is
-                still available inside the mobile menu. */}
+                still available inside the mobile menu.
+                2026-10-09: the old 0.7rem / tracking-tight label looked
+                squeezed inside a 40px-tall button. Label is now 0.8rem with
+                normal tracking, the button is pinned to h-10 so it lines up
+                with the menu button, and the arrow returns from 400px up. */}
             <span
               className="cta-halo relative inline-flex shrink-0 rounded-xl"
               style={{ "--cta-halo-color": "rgba(28, 168, 48, 0.5)" } as CSSProperties}
             >
               <Link
                 href="/contact"
-                className="cta-live cta-surface group inline-flex items-center gap-1.5 whitespace-nowrap rounded-xl px-2.5 py-2.5 text-[0.7rem] font-bold tracking-tight text-white sm:gap-2 sm:px-4 sm:text-sm"
+                className="cta-live cta-surface group inline-flex h-10 items-center gap-1.5 whitespace-nowrap rounded-xl px-3.5 text-[0.8rem] font-semibold text-white sm:gap-2 sm:px-4 sm:text-sm"
               >
                 <span className="relative hidden h-2 w-2 sm:flex" aria-hidden="true">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white" />
@@ -286,7 +290,7 @@ export function Header() {
                 </span>
                 <span className="sm:hidden">Discuss Project</span>
                 <span className="hidden sm:inline">Discuss Your Project</span>
-                <ArrowRight className="hidden h-4 w-4 transition-transform group-hover:translate-x-0.5 sm:block" />
+                <ArrowRight className="hidden h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 min-[400px]:block sm:h-4 sm:w-4" />
               </Link>
             </span>
             <button

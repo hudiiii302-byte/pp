@@ -34,13 +34,12 @@ export function IndustryStrip() {
   return (
     <nav
       aria-label="Industries we build software for"
-      className="relative isolate overflow-hidden border-t border-white/[0.07] bg-navy-950 py-4 text-white sm:py-5"
+      className="relative isolate overflow-hidden bg-navy-950 py-4 text-white sm:py-5"
     >
+      {/* No top border here: the hero's tech marquee ends with its own
+          hairline directly above this rail, and a second line (plus the old
+          gradient rule) stacked three dividers within a few pixels. */}
       <span aria-hidden="true" className="absolute inset-0 grid-pattern opacity-40" />
-      <span
-        aria-hidden="true"
-        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-500/30 to-transparent"
-      />
 
       <div className="container-page relative">
         <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-6">
