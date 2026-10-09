@@ -35,6 +35,7 @@
 | Header missing legal form | ✅ Logo now reads "WordbitX | SMC – Pvt. Ltd." | `src/components/icons.tsx` (`Logo` default `secondaryTagline`). |
 | Home title | ✅ Already "Software Development Company in Pakistan \| WordbitX" | `src/app/layout.tsx`, `src/app/page.tsx`. |
 | Build | ✅ `npm ci`, `tsc --noEmit`, `next build` all pass | Run on 9 Oct 2026. |
+| Review moderation (F4) | ✅ Pending → approve → live; delete works | Tested on production build: submit (not public), approve (public), delete (removed). |
 
 **Known limitation of the rate limit:** it is in memory. On serverless hosts it resets when an instance restarts. It stops a casual script, not a determined one. Real protection is the moderation step in §4.3.
 
@@ -47,7 +48,7 @@
 | F1 | **Zero off-site authority** (no backlinks, citations, reviews) | Very high | Owner (accounts are in the owner's name) | Open. Playbook in `BACKLINK-PLAYBOOK-2026-10-08.md`. |
 | F2 | **No Google Business Profile evidence** for "WordbitX Technology Lahore" | Very high for Lahore searches | Owner | Unknown. Check Google Maps today. |
 | F3 | **No real reviews on site**; 15 reviews from owner's screenshot not yet imported | High | Owner (source + text), Agent (import) | Waiting for the review text and the source (Google vs direct). |
-| F4 | **Review submissions publish instantly** with no moderation | High (spam, policy) | Agent (code) | Open. Needs a `status` column (`pending` / `approved`) and admin approval. |
+| F4 | **Review submissions publish instantly** with no moderation | High (spam, policy) | Agent (code) | ✅ Code done (9 Oct): reviews start `pending`, admin approves in `/admin/reviews`. Needs `drizzle-kit push` on the database. |
 | F5 | **`REVIEW_ADMIN_SECRET` not confirmed** on Vercel | Medium (cleanup UI returns 503 without it) | Owner | Set it in Vercel → Environment Variables, then redeploy. |
 | F6 | **NTN and SECP number** not published | High for trust and citations | Owner | Waiting. Do not publish until confirmed against the certificate. |
 | F7 | **Legal name mismatch**: code says "Wordbit X TECHNOLOGY SMC – PVT. LTD." while the owner says "SMC Pvt Ltd" | Medium (inconsistent NAP across citations) | Owner | Confirm exact name from the SECP certificate. Then fix everywhere in one pass. |
@@ -86,7 +87,7 @@
 5. **Import the 15 reviews** once the source and text are confirmed. *Covers F3.*
 
 ### 4.3 Weeks 4–8 (agent code, after owner OK)
-1. **Moderation:** new reviews save as `pending` and appear only after admin approval. Admin page gets an "Approve" button. *Covers F4.* This is the most important code change left.
+1. ~~**Moderation**~~ — done 9 Oct (see §1). *Covers F4.*
 2. **Review persistence:** reviews must survive restarts. Requires `DATABASE_URL` (Postgres). Without it the memory store still loses data. *Covers F3 risk.*
 3. **Trust strip** under the hero (SECP / FBR / verified profiles only). Only badges that are real. *Covers F10 in part.*
 

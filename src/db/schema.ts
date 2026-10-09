@@ -29,6 +29,8 @@ export const siteReviews = pgTable("site_reviews", {
   rating: integer("rating").notNull(),
   quote: text("quote").notNull(),
   source: varchar("source", { length: 120 }).default("website-review-form"),
+  /** "pending" until an admin approves it. Existing rows also start as pending on migration. */
+  status: varchar("status", { length: 20 }).default("pending").notNull(),
   createdAt: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
 });
 

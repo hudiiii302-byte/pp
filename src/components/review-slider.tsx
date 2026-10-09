@@ -175,19 +175,15 @@ export function ReviewSlider() {
         message?: string;
         errors?: FormErrors;
       };
-      if (!response.ok || !data.ok || !data.review) {
+      if (!response.ok || !data.ok) {
         if (data.errors) setErrors(data.errors);
-        throw new Error(data.message ?? "We could not publish your review.");
+        throw new Error(data.message ?? "We could not send your review.");
       }
 
-      const next = mergeReviews([data.review], reviews);
-      setReviews(next);
-      writeLocalReviews(mergeReviews([data.review], readLocalReviews()));
-      setFilter(data.review.industry);
-      setIndex(0);
+      // Moderation: the review is pending, so it is NOT added to the visible list here.
       setForm(emptyForm);
       setStatus("success");
-      setServerMessage(data.message ?? "Thank you — your review is now on the homepage.");
+      setServerMessage(data.message ?? "Thank you — your review has been received and will appear after we check it.");
     } catch (error) {
       setStatus("error");
       setServerMessage(error instanceof Error ? error.message : "Something went wrong. Please try again.");

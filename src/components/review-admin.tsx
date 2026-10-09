@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import type { SiteReview } from "@/lib/reviews";
 
-type ManagedReview = SiteReview & { id: string; email?: string };
+type ManagedReview = SiteReview & { id: string; email?: string; status?: "pending" | "approved" };
 
 const SESSION_KEY = "wordbitx-review-admin";
 
@@ -38,6 +38,29 @@ export function ReviewAdmin() {
     } catch (error) {
       setStatus("error");
       setMessage(error instanceof Error ? error.message : "Could not load reviews.");
+    }
+  }
+
+  async function approve(review: ManagedReview) {
+    setPendingId(review.id);
+    setMessage("");
+    try {
+      const response = await fetch("/api/reviews/manage", {
+        method: "PATCH",
+        headers: {
+          Authorization: `Bearer ${password}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ id: review.id }),
+      });
+      const data = (await response.json()) as { ok?: boolean; message?: string };
+      if (!response.ok || !data.ok) throw new Error(data.message ?? "Could not approve that review.");
+      setReviews((current) => current.map((item) => (item.id === review.id ? { ...item, status: "approved" } : item)));
+      setMessage(data.message ?? "Review approved.");
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : "Could not approve that review.");
+    } finally {
+      setPendingId(null);
     }
   }
 
@@ -113,7 +136,14 @@ export function ReviewAdmin() {
           <article key={review.id} className="rounded-2xl border border-slate-200 bg-white p-5">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
               <div>
-                <p className="text-sm font-semibold text-ink-900">{review.name}</p>
+                <p className="flex flex-wrap items-center gap-2 text-sm font-semibold text-ink-900">
+                  {review.name}
+                  {review.status === "approved" ? (
+                    <span className="rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs font-semibold text-emerald-700">Live</span>
+                  ) : (
+                    <span className="rounded-full bg-amber-50 px-2.5 py-0.5 text-xs font-semibold text-amber-700">Pending</span>
+                  )}
+                </p>
                 <p className="text-xs text-ink-500">
                   {review.place} · {review.industry} · {review.rating}★
                   {review.email ? ` · ${review.email}` : ""}
@@ -121,6 +151,16 @@ export function ReviewAdmin() {
                 <p className="mt-3 text-sm leading-relaxed text-ink-600">{review.quote}</p>
               </div>
               <div className="flex shrink-0 gap-2">
+                {review.status !== "approved" ? (
+                  <button
+                    type="button"
+                    onClick={() => void approve(review)}
+                    disabled={pendingId === review.id}
+                    className="shrink-0 rounded-xl bg-brand-500 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-600 disabled:opacity-60"
+                  >
+                    {pendingId === review.id ? "Approving…" : "Approve"}
+                  </button>
+                ) : null}
                 {confirmId === review.id ? (
                   <button
                     type="button"

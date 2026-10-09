@@ -3,6 +3,7 @@ import { db, isDatabaseConfigured } from "@/db";
 import { siteReviews as reviewTable } from "@/db/schema";
 import {
   authorizeReviewAdmin,
+  approveMemoryReview,
   findMemoryReview,
   getReviewAdminSecret,
   isReviewDeleted,
@@ -19,6 +20,8 @@ type DeletePayload = {
   id?: string;
   password?: string;
 };
+
+type ApprovePayload = DeletePayload;
 
 function isIndustry(value: string): value is ReviewIndustry {
   return (reviewIndustries as string[]).includes(value);
@@ -58,6 +61,7 @@ async function loadSubmitted(): Promise<StoredReview[]> {
           date: row.createdAt.toISOString(),
           quote: row.quote,
           source: "site",
+          status: row.status === "approved" ? "approved" : "pending",
         });
       }
     } catch (error) {
@@ -123,4 +127,50 @@ export async function DELETE(request: Request) {
   }
 
   return Response.json({ ok: true, message: "Review removed from the homepage." });
+}
+
+export async function PATCH(request: Request) {
+  if (!getReviewAdminSecret()) {
+    return Response.json({ ok: false, message: "Set REVIEW_ADMIN_SECRET to manage reviews." }, { status: 503 });
+  }
+
+  let body: ApprovePayload = {};
+  try {
+    body = (await request.json()) as ApprovePayload;
+  } catch {
+    body = {};
+  }
+
+  if (!authorizeReviewAdmin(request, body.password)) {
+    return Response.json({ ok: false, message: "Wrong password." }, { status: 401 });
+  }
+
+  const id = (body.id ?? "").trim();
+  if (!id) return Response.json({ ok: false, message: "Missing review id." }, { status: 400 });
+
+  const inMemory = approveMemoryReview(id);
+  let found = Boolean(inMemory);
+
+  if (isDatabaseConfigured && db && id.startsWith("db-")) {
+    const numericId = Number(id.slice(3));
+    if (Number.isInteger(numericId)) {
+      try {
+        const updated = await db
+          .update(reviewTable)
+          .set({ status: "approved" })
+          .where(eq(reviewTable.id, numericId))
+          .returning({ id: reviewTable.id });
+        if (updated.length > 0) found = true;
+      } catch (error) {
+        console.error("Failed to approve stored review", error);
+        return Response.json({ ok: false, message: "Could not approve that review. Try again." }, { status: 500 });
+      }
+    }
+  }
+
+  if (!found) {
+    return Response.json({ ok: false, message: "That review is already gone." }, { status: 404 });
+  }
+
+  return Response.json({ ok: true, message: "Review approved — it is now live on the homepage." });
 }

@@ -13,8 +13,8 @@ export default function ReviewAdminPage() {
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-600">Private</p>
         <h1 className="mt-3 text-3xl font-semibold text-ink-900">Homepage reviews</h1>
         <p className="mt-4 text-sm leading-relaxed text-ink-500">
-          Visitor-submitted reviews appear here. Remove anything that should not stay on the site. Built-in sample
-          reviews are edited in code, not from this page.
+          Visitor reviews arrive as <strong>Pending</strong>. Approve a review to put it live on the homepage, or delete
+          anything that should not appear. Nothing goes public until you approve it.
         </p>
         <div className="mt-8">
           <ReviewAdmin />

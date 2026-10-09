@@ -1,17 +1,17 @@
-import { desc } from "drizzle-orm";
+import { desc, eq } from "drizzle-orm";
 import { db, isDatabaseConfigured } from "@/db";
 import { siteReviews as reviewTable } from "@/db/schema";
 import { sendEnquiryEmail } from "@/lib/mailer";
-import { addMemoryReview, isReviewDeleted, listMemoryReviews } from "@/lib/review-store";
+import { addMemoryReview, isReviewDeleted, listApprovedMemoryReviews } from "@/lib/review-store";
 import { reviewIndustries, siteReviews, type ReviewIndustry, type SiteReview } from "@/lib/reviews";
 import { siteConfig } from "@/lib/site";
 import { checkRateLimit, clientIp } from "@/lib/rate-limit";
 
-const REVIEW_LIMIT = 2;
-const REVIEW_WINDOW_MS = 24 * 60 * 60 * 1000;
-
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
+
+const REVIEW_LIMIT = 2;
+const REVIEW_WINDOW_MS = 24 * 60 * 60 * 1000;
 
 type Payload = {
   name?: string;
@@ -67,12 +67,17 @@ function publicReview(review: SiteReview): SiteReview {
   };
 }
 
+/** Public list: approved visitor reviews only, plus any curated list in code (currently empty). */
 export async function GET() {
-  const extra: SiteReview[] = listMemoryReviews().map(publicReview);
+  const extra: SiteReview[] = listApprovedMemoryReviews().map(publicReview);
 
   if (isDatabaseConfigured && db) {
     try {
-      const rows = await db.select().from(reviewTable).orderBy(desc(reviewTable.createdAt));
+      const rows = await db
+        .select()
+        .from(reviewTable)
+        .where(eq(reviewTable.status, "approved"))
+        .orderBy(desc(reviewTable.createdAt));
       for (const row of rows) {
         if (!isIndustry(row.industry)) continue;
         extra.push({
@@ -133,6 +138,7 @@ export async function POST(request: Request) {
     return Response.json({ ok: false, message: "Please correct the highlighted fields.", errors }, { status: 422 });
   }
 
+  // Every visitor review starts as pending. It is NOT shown on the site until approved.
   const review = addMemoryReview({
     id: crypto.randomUUID(),
     name: name.slice(0, 80),
@@ -143,6 +149,7 @@ export async function POST(request: Request) {
     date: "Just now",
     quote: quote.slice(0, 600),
     source: "site",
+    status: "pending",
   });
 
   if (isDatabaseConfigured && db) {
@@ -157,6 +164,7 @@ export async function POST(request: Request) {
           rating: review.rating,
           quote: review.quote,
           source: "website-review-form",
+          status: "pending",
         })
         .returning({ id: reviewTable.id });
       if (inserted[0]?.id) {
@@ -171,13 +179,12 @@ export async function POST(request: Request) {
   await sendEnquiryEmail({
     fullName: review.name,
     email,
-    service: `Website review · ${review.industry} · ${review.rating}★`,
-    message: `${review.quote}\n\nLocation: ${review.place}\n\nTo remove this review: ${siteConfig.url}/admin/reviews`,
+    service: `Website review (pending approval) · ${review.industry} · ${review.rating}★`,
+    message: `${review.quote}\n\nLocation: ${review.place}\n\nApprove or delete at: ${siteConfig.url}/admin/reviews`,
   });
 
   return Response.json({
     ok: true,
-    review: publicReview(review),
-    message: "Thank you — your review is now on the homepage.",
+    message: "Thank you — your review has been received and will appear on the site after we check it.",
   });
 }

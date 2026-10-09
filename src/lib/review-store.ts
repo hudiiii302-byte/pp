@@ -1,9 +1,13 @@
 import { createHash, timingSafeEqual } from "crypto";
 import type { SiteReview } from "@/lib/reviews";
 
+export type ReviewStatus = "pending" | "approved";
+
 export type StoredReview = SiteReview & {
   id: string;
   email?: string;
+  /** Visitor submissions start as "pending" and only show on the site once approved. */
+  status?: ReviewStatus;
 };
 
 type MemoryStore = {
@@ -28,15 +32,28 @@ export function isReviewDeleted(review: Pick<SiteReview, "name" | "quote">): boo
   return store().deletedKeys.has(reviewKey(review));
 }
 
+/** Every stored review that has not been deleted (pending and approved). Admin use only. */
 export function listMemoryReviews(): StoredReview[] {
   return store().reviews.filter((review) => !isReviewDeleted(review));
 }
 
+/** Only reviews a human has approved. This is what the public site may show. */
+export function listApprovedMemoryReviews(): StoredReview[] {
+  return listMemoryReviews().filter((review) => review.status === "approved");
+}
+
 export function addMemoryReview(review: StoredReview): StoredReview {
-  const next = { ...review, id: review.id || crypto.randomUUID() };
+  const next: StoredReview = { ...review, id: review.id || crypto.randomUUID(), status: review.status ?? "pending" };
   store().reviews = [next, ...store().reviews.filter((item) => reviewKey(item) !== reviewKey(next))];
   store().deletedKeys.delete(reviewKey(next));
   return next;
+}
+
+export function approveMemoryReview(id: string): StoredReview | undefined {
+  const match = findMemoryReview(id);
+  if (!match) return undefined;
+  match.status = "approved";
+  return match;
 }
 
 export function rememberDeletedReview(review: Pick<SiteReview, "name" | "quote">, id?: string) {
